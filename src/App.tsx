@@ -11,7 +11,7 @@ import { NotFoundPage } from "@/pages/NotFoundPage";
 
 export function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/open-math-insights">
       <Routes>
         <Route element={<RootLayout />}>
           <Route index element={<HomePage />} />
