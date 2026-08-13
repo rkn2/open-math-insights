@@ -98,14 +98,14 @@ export function GraphingExplorer() {
   const [mode, setMode] = useState<Mode>("naep");
   const [showTable, setShowTable] = useState(false);
 
-  const naepRows = useCsvData<NaepRow>("/data/naep_math_scale_scores.csv", (r) => ({
+  const naepRows = useCsvData<NaepRow>(`${import.meta.env.BASE_URL}data/naep_math_scale_scores.csv`, (r) => ({
     year: Number(r.year),
     grade: Number(r.grade),
     jurisdiction: r.jurisdiction,
     jurisdiction_label: r.jurisdiction_label,
     avg_scale_score: Number(r.avg_scale_score),
   }));
-  const pisaRows = useCsvData<PisaRow>("/data/pisa_math_scores.csv", (r) => ({
+  const pisaRows = useCsvData<PisaRow>(`${import.meta.env.BASE_URL}data/pisa_math_scores.csv`, (r) => ({
     entity: r.entity,
     year: Number(r.year),
     pisa_math_all_average: Number(r.pisa_math_all_average),

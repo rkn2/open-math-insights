@@ -72,7 +72,7 @@ export function NotebookPreviewGallery() {
             <span className="font-semibold">{active.title} — static preview</span>
             <div className="flex items-center gap-3">
               <a
-                href={`/notebook-previews/${active.file}`}
+                href={`${import.meta.env.BASE_URL}notebook-previews/${active.file}`}
                 target="_blank"
                 rel="noreferrer noopener"
                 className="font-semibold text-primary-300 hover:text-primary-200"
@@ -90,7 +90,7 @@ export function NotebookPreviewGallery() {
           </div>
           <iframe
             title={active.title}
-            src={`/notebook-previews/${active.file}`}
+            src={`${import.meta.env.BASE_URL}notebook-previews/${active.file}`}
             className="h-[720px] w-full rounded-b-xl border border-t-0 border-slate-800 bg-white"
           />
         </div>
