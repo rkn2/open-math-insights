@@ -16,6 +16,7 @@ import { CodebooksPage } from "@/pages/learning/CodebooksPage";
 import { SchemasMetadataAnnotationPage } from "@/pages/learning/SchemasMetadataAnnotationPage";
 import { IntroToMLPage } from "@/pages/learning/IntroToMLPage";
 import { StatisticalFoundationsPage } from "@/pages/learning/StatisticalFoundationsPage";
+import { GlossaryPage } from "@/pages/GlossaryPage";
 import { NotFoundPage } from "@/pages/NotFoundPage";
 
 export function App() {
@@ -39,6 +40,7 @@ export function App() {
           <Route path="community" element={<CommunityPage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="researcher-guide" element={<ResearcherGuidePage />} />
+          <Route path="glossary" element={<GlossaryPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>

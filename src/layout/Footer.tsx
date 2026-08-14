@@ -9,6 +9,7 @@ const COLUMNS = [
       { label: "Use OMI", to: "/use-omi" },
       { label: "Learning Center", to: "/learning-center" },
       { label: "Researcher Guide", to: "/researcher-guide" },
+      { label: "Glossary", to: "/glossary" },
     ],
   },
   {
