@@ -11,6 +11,7 @@ const COLUMNS = [
       { label: "Researcher Guide", to: "/researcher-guide" },
       { label: "Glossary", to: "/glossary" },
       { label: "Use Cases", to: "/use-cases" },
+      { label: "Data Models", to: "/data-models" },
     ],
   },
   {

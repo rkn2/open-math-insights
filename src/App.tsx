@@ -19,6 +19,7 @@ import { StatisticalFoundationsPage } from "@/pages/learning/StatisticalFoundati
 import { GlossaryPage } from "@/pages/GlossaryPage";
 import { UseCasesPage } from "@/pages/UseCasesPage";
 import { ContributePage } from "@/pages/ContributePage";
+import { DataModelsPage } from "@/pages/DataModelsPage";
 import { NotFoundPage } from "@/pages/NotFoundPage";
 
 export function App() {
@@ -45,6 +46,7 @@ export function App() {
           <Route path="glossary" element={<GlossaryPage />} />
           <Route path="use-cases" element={<UseCasesPage />} />
           <Route path="contribute" element={<ContributePage />} />
+          <Route path="data-models" element={<DataModelsPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
