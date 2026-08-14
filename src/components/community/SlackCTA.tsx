@@ -1,4 +1,4 @@
-import { ButtonAnchor } from "@/components/ui/Button";
+import { Button } from "@/components/ui/Button";
 
 export function SlackCTA() {
   return (
@@ -8,9 +8,9 @@ export function SlackCTA() {
         Educators, researchers, and district data teams trade datasets, tools, and ideas in real
         time — no PII, just open math data and the people working with it.
       </p>
-      <ButtonAnchor href="#" variant="light" size="lg" className="mt-6">
-        Request a Slack invite
-      </ButtonAnchor>
+      <Button variant="light" size="lg" className="mt-6" disabled>
+        Slack invite — coming soon
+      </Button>
     </div>
   );
 }

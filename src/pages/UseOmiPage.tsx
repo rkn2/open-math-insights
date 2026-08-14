@@ -56,7 +56,7 @@ const TOOLS: {
     name: "Classroom Data Uploader",
     description: "A teacher-facing tool for contributing anonymized classroom data — real metadata, PII, and standards checks, reviewed by a human before anything is published.",
     status: "available",
-    href: "/contribute",
+    href: "/about",
     icon: (
       <svg className="h-6 w-6" {...ICON_PROPS}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 16V4m0 0 4 4m-4-4-4 4M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" />

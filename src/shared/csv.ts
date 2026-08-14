@@ -4,10 +4,6 @@
  * pisa_math_scores.csv) is plain comma-separated with no quoted or
  * embedded-comma fields (verified when they were downloaded — see their
  * SOURCE.md files), so a straight split is correct and sufficient.
- *
- * Lives in shared/ (not frontend/) because both the frontend's
- * GraphingExplorer AND the postInsightsChat Lambda parse these same two
- * files — one implementation, so they can never silently drift apart.
  */
 export function parseCsv(text: string): Record<string, string>[] {
   const lines = text.trim().split(/\r?\n/);

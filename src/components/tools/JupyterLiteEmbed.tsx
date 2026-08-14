@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/Button";
 
-const JUPYTERLITE_URL = "/jupyterlite/lab/index.html?path=01_naep_and_pisa_trends.ipynb";
+const JUPYTERLITE_URL = `${import.meta.env.BASE_URL}jupyterlite/lab/index.html?path=01_naep_and_pisa_trends.ipynb`;
 
 /**
  * A real Python kernel running entirely in the browser via Pyodide/WebAssembly

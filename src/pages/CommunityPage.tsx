@@ -1,5 +1,4 @@
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { ButtonLink } from "@/components/ui/Button";
 import { SlackCTA } from "@/components/community/SlackCTA";
 import { ContributorSpotlightCard } from "@/components/community/ContributorSpotlightCard";
 import { EventCard } from "@/components/community/EventCard";
@@ -69,9 +68,6 @@ export function CommunityPage() {
               <p className="mt-2 text-sm text-slate-600">{step.description}</p>
             </div>
           ))}
-        </div>
-        <div className="mt-8 text-center">
-          <ButtonLink to="/contribute">Start contributing →</ButtonLink>
         </div>
       </div>
     </div>

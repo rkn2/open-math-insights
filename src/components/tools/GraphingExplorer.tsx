@@ -9,7 +9,7 @@ import {
   Tooltip,
   Legend,
 } from "recharts";
-import { parseCsv } from "@/lib/csv";
+import { parseCsv } from "@/shared/csv";
 import { CATEGORICAL_PALETTE, CHART_INK } from "@/theme/vizPalette";
 
 type Mode = "naep" | "pisa";

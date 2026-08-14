@@ -2,7 +2,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { CourseCard } from "@/components/learning/CourseCard";
 import { TutorialListItem } from "@/components/learning/TutorialListItem";
 import { Card } from "@/components/ui/Card";
-import { ButtonAnchor } from "@/components/ui/Button";
+import { Button } from "@/components/ui/Button";
 
 const COURSES = [
   {
@@ -69,9 +69,9 @@ export function LearningCenterPage() {
             Lesson-plan templates for bringing Data Depot datasets into your classroom — aligned
             to common standards and ready to adapt.
           </p>
-          <ButtonAnchor href="#" size="sm" className="mt-4">
-            Download templates
-          </ButtonAnchor>
+          <Button size="sm" className="mt-4" disabled>
+            Download templates — coming soon
+          </Button>
         </Card>
       </div>
     </div>
