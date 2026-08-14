@@ -98,6 +98,10 @@ export function UseOmiPage() {
             analysis, trend visualization, and cross-dataset comparison — running on Google
             Colab with pandas, matplotlib, and scikit-learn pre-installed. No local setup required.
           </p>
+          <p className="mt-2 text-sm text-slate-500">
+            <strong>Note:</strong> Running notebooks in Colab requires a free Google account.
+            You can view notebook contents without signing in, but executing code cells requires authentication.
+          </p>
         </div>
         <div className="mt-6 flex flex-wrap gap-3">
           <a

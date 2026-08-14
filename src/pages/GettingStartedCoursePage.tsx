@@ -263,6 +263,10 @@ export function GettingStartedCoursePage() {
             The fastest way to start analyzing OMI data is with our pre-built Jupyter notebooks on
             Google Colab. No install, no setup — just click and run.
           </p>
+          <p className="rounded-lg border border-amber-200 bg-amber-50 px-4 py-2 text-sm text-amber-800">
+            <strong>Google account required:</strong> Running notebook code cells in Colab requires a
+            free Google account. You can view the notebook contents without signing in.
+          </p>
 
           <div className="grid gap-4 sm:grid-cols-2">
             <Card hover>

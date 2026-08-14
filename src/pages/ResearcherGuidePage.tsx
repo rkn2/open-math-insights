@@ -307,6 +307,9 @@ export function ResearcherGuidePage() {
           real data from OMI's Data Depot and walk through the kind of exploratory analysis
           that a first look at education data usually calls for.
         </p>
+        <p className="mt-2 max-w-3xl text-xs text-slate-400">
+          Running notebooks requires a free Google account. You can view notebook contents without signing in.
+        </p>
 
         <div className="mt-8 grid gap-6 sm:grid-cols-2">
           {NOTEBOOK_LINKS.map((nb) => (
