@@ -63,9 +63,46 @@ export function AboutPage() {
 
       <div className="mt-16">
         <SectionHeading eyebrow="Partners & supporters" title="Ecosystem" />
-        <p className="mt-3 max-w-2xl text-sm text-slate-500">
-          Partners will be listed here as the collaboratory grows.
-        </p>
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {[
+            {
+              name: "NSF CAMEL Program",
+              role: "Funding & network",
+              description: "OMI is part of the CAMEL Phase I collaboratory (Award #2621173), funded by the National Science Foundation.",
+            },
+            {
+              name: "Penn State University",
+              role: "Lead institution",
+              description: "PI Rebecca Napolitano and co-investigators in Architectural Engineering, Education, and Materials Science.",
+            },
+            {
+              name: "NCES / Nation's Report Card",
+              role: "Data source",
+              description: "NAEP math achievement data — national and state-level trends, publicly available and updated biennially.",
+            },
+            {
+              name: "OECD / PISA",
+              role: "Data source",
+              description: "International math scores for 15-year-olds across 80+ countries, published via Our World in Data under CC-BY.",
+            },
+            {
+              name: "ASSISTments / WPI",
+              role: "Data source",
+              description: "Student-level tutoring system data from Worcester Polytechnic Institute, openly shared on Figshare.",
+            },
+            {
+              name: "CSATS",
+              role: "Implementation partner",
+              description: "Penn State's Center for Science and the Schools — teacher professional development and school partnerships.",
+            },
+          ].map((partner) => (
+            <Card key={partner.name}>
+              <h3 className="font-display font-bold text-slate-900">{partner.name}</h3>
+              <p className="mt-0.5 text-xs font-medium text-primary-600">{partner.role}</p>
+              <p className="mt-2 text-sm text-slate-600">{partner.description}</p>
+            </Card>
+          ))}
+        </div>
       </div>
 
       <div className="mt-16 rounded-3xl bg-slate-900 px-8 py-10 text-center text-white">

@@ -4,9 +4,41 @@ import { SlackCTA } from "@/components/community/SlackCTA";
 import { ContributorSpotlightCard } from "@/components/community/ContributorSpotlightCard";
 import { EventCard } from "@/components/community/EventCard";
 
-const SPOTLIGHTS: { name: string; role: string; initials: string; quote: string }[] = [];
+const SPOTLIGHTS: { name: string; role: string; initials: string; quote: string }[] = [
+  {
+    name: "CAMEL Network",
+    role: "NSF Phase I Collaboratory",
+    initials: "CN",
+    quote: "OMI is the open-data arm of the CAMEL project — every dataset, tool, and notebook here is built to serve the network's mission of capturing student reasoning in K-12 math.",
+  },
+  {
+    name: "NCES / NAEP",
+    role: "Data Contributor",
+    initials: "NR",
+    quote: "The Nation's Report Card provides the U.S. math achievement trends that anchor OMI's Data Depot — publicly available, nationally representative, and updated every two years.",
+  },
+  {
+    name: "Our World in Data / OECD",
+    role: "Data Contributor",
+    initials: "OW",
+    quote: "PISA math scores from Our World in Data give OMI an international lens — 80+ countries, openly licensed, and ready for cross-system comparison.",
+  },
+];
 
-const EVENTS: { date: string; title: string; description: string; kind: "Recurring" | "Sprint" | "Webinar" }[] = [];
+const EVENTS: { date: string; title: string; description: string; kind: "Recurring" | "Sprint" | "Webinar" }[] = [
+  {
+    date: "August 2026",
+    title: "CAMEL Ideas Lab — Washington, DC",
+    description: "NSF-convened workshop bringing all Phase I CAMEL network teams together for solution generation, team formation, and cross-network collaboration.",
+    kind: "Sprint",
+  },
+  {
+    date: "Fall 2026",
+    title: "OMI Data Depot Launch",
+    description: "Public launch of the Data Depot with initial datasets, Colab notebooks, and the Researcher Guide for contributing data.",
+    kind: "Webinar",
+  },
+];
 
 const STEPS = [
   { title: "Prepare data", description: "De-identify and review your data — no student, teacher, or school identifiers." },

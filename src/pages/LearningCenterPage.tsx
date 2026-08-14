@@ -11,6 +11,7 @@ const COURSES = [
     description: "A guided tour of the Data Depot, dataset metadata, and how licensing and citation work here.",
     level: "Beginner" as const,
     duration: "30 min",
+    href: "/learning-center/getting-started",
   },
   {
     title: "Teaching Fractions with Open Data",
@@ -50,8 +51,8 @@ export function LearningCenterPage() {
       />
 
       <div className="mt-10 grid gap-6 sm:grid-cols-2">
-        {COURSES.map((course) => (
-          <CourseCard key={course.title} {...course} />
+        {COURSES.map(({ href, ...course }) => (
+          <CourseCard key={course.title} {...course} href={href} />
         ))}
       </div>
 
