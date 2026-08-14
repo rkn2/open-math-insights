@@ -141,9 +141,61 @@ export function HomePage() {
       </section>
 
       <section className="bg-slate-50 py-20">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="Platform at a glance"
+            title="What's on OMI today"
+            align="center"
+          />
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { value: "3", label: "Indexed datasets", detail: "NAEP, PISA, ASSISTments" },
+              { value: "526K+", label: "Data points", detail: "Across all indexed datasets" },
+              { value: "8", label: "Learning resources", detail: "Teacher + researcher tracks" },
+              { value: "2", label: "Colab notebooks", detail: "Runnable, no setup required" },
+            ].map((stat) => (
+              <div key={stat.label} className="rounded-2xl bg-white p-6 shadow-sm text-center">
+                <p className="font-display text-3xl font-bold text-primary-600">{stat.value}</p>
+                <p className="mt-1 text-sm font-semibold text-slate-900">{stat.label}</p>
+                <p className="mt-0.5 text-xs text-slate-500">{stat.detail}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { label: "Searchable glossary", detail: "28 cross-referenced terms across 5 categories", to: "/glossary" },
+              { label: "Use case workflows", detail: "End-to-end research examples: question → data → analysis → finding", to: "/use-cases" },
+              { label: "Data contribution guide", detail: "4-phase process with interactive pre-submission checklist", to: "/contribute" },
+              { label: "Researcher Guide", detail: "Repository comparison, de-identification checklist, FERPA reference", to: "/researcher-guide" },
+              { label: "Dataset discovery chat", detail: "Guided decision tree to find the right dataset for your question", to: null },
+              { label: "Standards Aligner", detail: "Match math problems to CCSS-style standards", to: "/use-omi" },
+            ].map((feature) => (
+              <div key={feature.label} className="flex items-start gap-3 rounded-xl bg-white p-4 shadow-sm">
+                <span className="mt-0.5 text-primary-500">
+                  <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </span>
+                <div>
+                  {feature.to ? (
+                    <ButtonLink to={feature.to} variant="ghost" size="sm" className="!p-0 !text-sm !font-bold !text-slate-900">
+                      {feature.label}
+                    </ButtonLink>
+                  ) : (
+                    <p className="text-sm font-bold text-slate-900">{feature.label}</p>
+                  )}
+                  <p className="mt-0.5 text-xs text-slate-500">{feature.detail}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-20">
         <div className="mx-auto max-w-4xl px-6 lg:px-8">
           <SectionHeading eyebrow="What's new" title="Latest from OMI" />
-          <ul className="mt-8 rounded-2xl bg-white p-2 shadow-card sm:p-6">
+          <ul className="mt-8 rounded-2xl bg-slate-50 p-2 shadow-card sm:p-6">
             {NEWS.map((item) => (
               <NewsFeedItem key={item.title} {...item} />
             ))}
