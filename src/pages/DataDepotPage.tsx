@@ -13,9 +13,9 @@ export function DataDepotPage() {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const search = searchParams.get("q") ?? "";
-  const gradeBand = (searchParams.get("grade") as GradeBand) ?? "all";
+  const gradeBand = (searchParams.get("grade") as GradeBand | null) ?? "all";
   const topic = searchParams.get("topic") ?? "all";
-  const license = (searchParams.get("license") as DatasetLicense) ?? "all";
+  const license = (searchParams.get("license") as DatasetLicense | null) ?? "all";
 
   /** Update one param while preserving the others; delete param when value is falsy or "all". */
   const setParam = useCallback(
