@@ -86,6 +86,60 @@ export function HomePage() {
         </div>
       </section>
 
+      <section className="bg-gradient-to-b from-white to-slate-50 py-20">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="Two tracks"
+            title="Whether you teach math or study how it's taught"
+            subtitle="The Learning Center has a path built for you."
+            align="center"
+          />
+          <div className="mt-12 grid gap-8 sm:grid-cols-2">
+            <div className="rounded-2xl border border-teal-200 bg-white p-8 shadow-sm">
+              <span className="inline-block rounded-full bg-teal-100 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-teal-700">
+                For teachers
+              </span>
+              <h3 className="mt-4 font-display text-xl font-bold text-slate-900">
+                Bring open data into your classroom
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                Activities with real NAEP and PISA data, a plain-English guide to what test scores
+                actually mean, and what to expect when researchers work in your school.
+              </p>
+              <ul className="mt-4 space-y-1.5 text-sm text-slate-500">
+                <li>→ Using Open Data in Your Classroom</li>
+                <li>→ Understanding Your Students' Data</li>
+                <li>→ When Researchers Visit</li>
+              </ul>
+              <ButtonLink to="/learning-center" variant="outline" size="sm" className="mt-6">
+                Teacher track →
+              </ButtonLink>
+            </div>
+
+            <div className="rounded-2xl border border-primary-200 bg-white p-8 shadow-sm">
+              <span className="inline-block rounded-full bg-primary-100 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary-700">
+                For researchers
+              </span>
+              <h3 className="mt-4 font-display text-xl font-bold text-slate-900">
+                Data science foundations for education research
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                Codebooks, schemas, annotation standards, intro to machine learning, and
+                statistical foundations — grounded in real datasets and CAMEL network questions.
+              </p>
+              <ul className="mt-4 space-y-1.5 text-sm text-slate-500">
+                <li>→ Codebooks & Data Dictionaries</li>
+                <li>→ Schemas, Metadata & Annotation</li>
+                <li>→ Intro to ML · Statistical Foundations</li>
+              </ul>
+              <ButtonLink to="/learning-center" variant="outline" size="sm" className="mt-6">
+                Researcher track →
+              </ButtonLink>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-slate-50 py-20">
         <div className="mx-auto max-w-4xl px-6 lg:px-8">
           <SectionHeading eyebrow="What's new" title="Latest from OMI" />
