@@ -7,6 +7,7 @@ const NAV_ITEMS = [
   { to: "/data-depot", label: "Data Depot" },
   { to: "/use-omi", label: "Use OMI" },
   { to: "/learning-center", label: "Learning Center" },
+  { to: "/researcher-guide", label: "Researcher Guide" },
   { to: "/community", label: "Community" },
   { to: "/about", label: "About" },
 ];

@@ -2,6 +2,25 @@ import { useState } from "react";
 import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 
+interface ColabEntry {
+  title: string;
+  description: string;
+  colabUrl: string;
+}
+
+const COLAB_NOTEBOOKS: ColabEntry[] = [
+  {
+    title: "Exploring Math Assessment Data",
+    description: "Load NAEP and PISA data, run descriptive stats, plot trends, and try a basic clustering analysis.",
+    colabUrl: "https://colab.research.google.com/github/rkn2/open-math-insights/blob/main/notebooks/01_exploring_math_data.ipynb",
+  },
+  {
+    title: "Comparing NAEP and PISA",
+    description: "What's comparable and what isn't — within-system trends, cross-system indexing, and which questions are valid.",
+    colabUrl: "https://colab.research.google.com/github/rkn2/open-math-insights/blob/main/notebooks/02_comparing_naep_and_pisa.ipynb",
+  },
+];
+
 interface PreviewEntry {
   file: string;
   title: string;
@@ -47,7 +66,31 @@ export function NotebookPreviewGallery() {
 
   return (
     <div>
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mb-10">
+        <h3 className="font-display text-lg font-bold text-slate-900">Runnable notebooks</h3>
+        <p className="mt-1 text-sm text-slate-500">Open in Google Colab — no setup required. Uses real data from the Data Depot.</p>
+        <div className="mt-4 grid gap-4 sm:grid-cols-2">
+          {COLAB_NOTEBOOKS.map((nb) => (
+            <Card key={nb.title} hover className="flex flex-col">
+              <Badge tone="primary">Google Colab</Badge>
+              <h4 className="mt-3 font-display text-base font-bold text-slate-900">{nb.title}</h4>
+              <p className="mt-2 flex-1 text-sm text-slate-600">{nb.description}</p>
+              <a
+                href={nb.colabUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex self-start items-center gap-2 rounded-lg bg-amber-50 px-4 py-2 text-sm font-semibold text-amber-800 transition-colors hover:bg-amber-100"
+              >
+                Open in Colab →
+              </a>
+            </Card>
+          ))}
+        </div>
+      </div>
+
+      <h3 className="font-display text-lg font-bold text-slate-900">Static previews</h3>
+      <p className="mt-1 text-sm text-slate-500">Pre-rendered charts — viewable with zero compute.</p>
+      <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {PREVIEWS.map((preview) => (
           <Card key={preview.file} hover className="flex flex-col">
             <Badge tone="teal">Static preview</Badge>

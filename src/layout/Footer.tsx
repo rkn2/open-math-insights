@@ -8,6 +8,7 @@ const COLUMNS = [
       { label: "Data Depot", to: "/data-depot" },
       { label: "Use OMI", to: "/use-omi" },
       { label: "Learning Center", to: "/learning-center" },
+      { label: "Researcher Guide", to: "/researcher-guide" },
     ],
   },
   {

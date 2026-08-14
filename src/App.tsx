@@ -7,6 +7,7 @@ import { UseOmiPage } from "@/pages/UseOmiPage";
 import { LearningCenterPage } from "@/pages/LearningCenterPage";
 import { CommunityPage } from "@/pages/CommunityPage";
 import { AboutPage } from "@/pages/AboutPage";
+import { ResearcherGuidePage } from "@/pages/ResearcherGuidePage";
 import { NotFoundPage } from "@/pages/NotFoundPage";
 
 export function App() {
@@ -21,6 +22,7 @@ export function App() {
           <Route path="learning-center" element={<LearningCenterPage />} />
           <Route path="community" element={<CommunityPage />} />
           <Route path="about" element={<AboutPage />} />
+          <Route path="researcher-guide" element={<ResearcherGuidePage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>

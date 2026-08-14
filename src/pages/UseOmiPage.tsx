@@ -3,7 +3,6 @@ import { useDocumentTitle } from "@/hooks/useDocumentTitle";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ToolCard } from "@/components/tools/ToolCard";
 import { JupyterLaunchButton } from "@/components/tools/JupyterLaunchButton";
-import { JupyterLiteEmbed } from "@/components/tools/JupyterLiteEmbed";
 import { NotebookPreviewGallery } from "@/components/tools/NotebookPreviewGallery";
 import { StandardsAlignerTool } from "@/components/tools/StandardsAlignerTool";
 import { Badge } from "@/components/ui/Badge";
@@ -112,17 +111,31 @@ export function UseOmiPage() {
         <div>
           <Badge tone="teal">Works everywhere — no setup</Badge>
           <h2 className="mt-3 font-display text-2xl font-bold text-slate-900">
-            Instant Python, right in your browser
+            Runnable notebooks on Google Colab
           </h2>
           <p className="mt-2 max-w-2xl text-slate-600">
-            A real Python kernel running entirely client-side via Pyodide/WebAssembly
-            (JupyterLite) — pandas and matplotlib included, preloaded with the NAEP and PISA
-            datasets. No install, no bridge, no server: this is the one compute tool here that
-            also works on the deployed, static CloudFront site.
+            Starter notebooks that load real Data Depot datasets and walk through exploratory
+            analysis, trend visualization, and cross-dataset comparison — running on Google
+            Colab with pandas, matplotlib, and scikit-learn pre-installed. No local setup required.
           </p>
         </div>
-        <div className="mt-6">
-          <JupyterLiteEmbed />
+        <div className="mt-6 flex flex-wrap gap-3">
+          <a
+            href="https://colab.research.google.com/github/rkn2/open-math-insights/blob/main/notebooks/01_exploring_math_data.ipynb"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-semibold text-slate-900 shadow-sm transition-colors hover:bg-slate-50"
+          >
+            Exploring Math Data →
+          </a>
+          <a
+            href="https://colab.research.google.com/github/rkn2/open-math-insights/blob/main/notebooks/02_comparing_naep_and_pisa.ipynb"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-semibold text-slate-900 shadow-sm transition-colors hover:bg-slate-50"
+          >
+            Comparing NAEP & PISA →
+          </a>
         </div>
       </div>
 
