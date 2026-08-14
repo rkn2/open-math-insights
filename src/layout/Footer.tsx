@@ -16,6 +16,7 @@ const COLUMNS = [
   {
     title: "Connect",
     links: [
+      { label: "Contribute Data", to: "/contribute" },
       { label: "Community", to: "/community" },
       { label: "About", to: "/about" },
       { label: "Our Principles", to: "/about#principles" },

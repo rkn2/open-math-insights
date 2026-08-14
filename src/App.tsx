@@ -18,6 +18,7 @@ import { IntroToMLPage } from "@/pages/learning/IntroToMLPage";
 import { StatisticalFoundationsPage } from "@/pages/learning/StatisticalFoundationsPage";
 import { GlossaryPage } from "@/pages/GlossaryPage";
 import { UseCasesPage } from "@/pages/UseCasesPage";
+import { ContributePage } from "@/pages/ContributePage";
 import { NotFoundPage } from "@/pages/NotFoundPage";
 
 export function App() {
@@ -43,6 +44,7 @@ export function App() {
           <Route path="researcher-guide" element={<ResearcherGuidePage />} />
           <Route path="glossary" element={<GlossaryPage />} />
           <Route path="use-cases" element={<UseCasesPage />} />
+          <Route path="contribute" element={<ContributePage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
