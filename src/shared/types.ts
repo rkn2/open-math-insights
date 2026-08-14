@@ -9,12 +9,10 @@ export type DatasetLicense = "CC-BY-4.0" | "CC0-1.0" | "Public Domain";
 export type PiiReviewStatus = "reviewed-no-pii" | "pending-review";
 
 /**
- * "public-external" = a real dataset downloaded from an outside public source (see
- * data/public/<id>/SOURCE.md for provenance) — shown with a "Verified public dataset"
- * badge and a link out to `sourceUrl`. "omi-consortium" (the default) = an
- * illustrative fixture attributed to a fictional OMI contributor, same as the
- * original 8 demo datasets. "community-contributed" = published via the
- * contribution/review workflow — shown with a "Community contributed" badge.
+ * "public-external" = a real dataset from an outside public source, shown with a
+ * "Verified public dataset" badge and a link out to `sourceUrl`.
+ * "community-contributed" = submitted via the contribution/review workflow.
+ * "omi-consortium" = reserved for future OMI-curated datasets.
  */
 export type DatasetSourceType = "public-external" | "omi-consortium" | "community-contributed";
 
@@ -41,17 +39,11 @@ export interface Dataset {
   doi: string;
   files: DatasetFileEntry[];
   relatedDatasetIds: string[];
-  /** Defaults to "omi-consortium" when omitted — see DatasetSourceType. */
+  /** See DatasetSourceType. */
   sourceType?: DatasetSourceType;
   /** Link to the original external source — set only when sourceType is "public-external". */
   sourceUrl?: string;
-  /**
-   * Exact citation text to display, taken verbatim from the dataset's SOURCE.md.
-   * Public-external datasets must set this rather than relying on the generated
-   * "Open Math Insights [publisher]" citation (see DatasetDetailPage's
-   * citationFor()) — that generated form is only accurate for the illustrative
-   * omi-consortium fixtures, which really are (fictionally) OMI-published.
-   */
+  /** Exact citation text to display. Public-external datasets should set this. */
   citationText?: string;
 }
 
