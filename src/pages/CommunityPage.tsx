@@ -7,21 +7,21 @@ import { EventCard } from "@/components/community/EventCard";
 const SPOTLIGHTS: { name: string; role: string; initials: string; quote: string }[] = [
   {
     name: "CAMEL Network",
-    role: "NSF Phase I Collaboratory",
+    role: "NSF Collaboratory",
     initials: "CN",
-    quote: "OMI is the open-data arm of the CAMEL project — every dataset, tool, and notebook here is built to serve the network's mission of capturing student reasoning in K-12 math.",
+    quote: "OMI is the open-data arm of the CAMEL collaboratory — five projects working together on K-12 math education data infrastructure.",
   },
   {
     name: "NCES / NAEP",
-    role: "Data Contributor",
+    role: "Public Data Source",
     initials: "NR",
-    quote: "The Nation's Report Card provides the U.S. math achievement trends that anchor OMI's Data Depot — publicly available, nationally representative, and updated every two years.",
+    quote: "The Nation's Report Card provides the U.S. math achievement trends indexed in the Data Depot — publicly available, nationally representative, and updated every two years.",
   },
   {
     name: "Our World in Data / OECD",
-    role: "Data Contributor",
+    role: "Public Data Source",
     initials: "OW",
-    quote: "PISA math scores from Our World in Data give OMI an international lens — 80+ countries, openly licensed, and ready for cross-system comparison.",
+    quote: "PISA math scores from Our World in Data provide the international lens — 80+ countries, openly licensed under CC-BY.",
   },
 ];
 
@@ -41,9 +41,9 @@ const EVENTS: { date: string; title: string; description: string; kind: "Recurri
 ];
 
 const STEPS = [
-  { title: "Prepare data", description: "De-identify and review your data — no student, teacher, or school identifiers." },
-  { title: "Tag metadata", description: "Add grade band, topic/standard, and license tags using the Standards Aligner." },
-  { title: "Submit", description: "Upload via the Data Depot's contribution tool and it's reviewed before publishing." },
+  { title: "Connect", description: "Reach out to a CAMEL network team — they'll help with study design, de-identification, and data preparation. Contact: nap@psu.edu" },
+  { title: "Prepare", description: "Work with the team to de-identify your data, write a data dictionary, choose a license, and tag with grade band and topic metadata." },
+  { title: "Publish", description: "Once reviewed, your dataset joins the Data Depot with full metadata, citation information, and a PII-clear status." },
 ];
 
 export function CommunityPage() {
@@ -61,7 +61,7 @@ export function CommunityPage() {
       </div>
 
       <div className="mt-16">
-        <SectionHeading eyebrow="Spotlights" title="From the community" />
+        <SectionHeading eyebrow="Data sources" title="Where the data comes from" />
         {SPOTLIGHTS.length > 0 ? (
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {SPOTLIGHTS.map((s) => (

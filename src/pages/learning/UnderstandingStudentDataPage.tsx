@@ -14,21 +14,21 @@ const SECTIONS = [
 ];
 
 export function UnderstandingStudentDataPage() {
-  useDocumentTitle("Understanding Your Students' Data");
+  useDocumentTitle("Making Sense of Test Score Data");
 
   return (
     <div className="mx-auto max-w-4xl px-6 py-16 lg:px-8">
       <Breadcrumbs
         items={[
           { label: "Learning Center", to: "/learning-center" },
-          { label: "Understanding Your Students' Data" },
+          { label: "Making Sense of Test Score Data" },
         ]}
       />
 
       <div className="mt-6">
         <SectionHeading
           eyebrow="For Teachers · Guide · 25 min"
-          title="Understanding Your Students' Data"
+          title="Making Sense of Test Score Data"
           subtitle="A plain-language guide to what standardized math scores mean, what they miss, how to avoid common misreadings, and how to talk to your students about data."
         />
       </div>

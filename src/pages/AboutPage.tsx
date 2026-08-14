@@ -68,7 +68,7 @@ export function AboutPage() {
             {
               name: "NSF CAMEL Program",
               role: "Funding & network",
-              description: "OMI is part of the CAMEL Phase I collaboratory (Award #2621173), funded by the National Science Foundation.",
+              description: "OMI is developed as part of the NSF CAMEL network (Award #2621173). The platform serves all five CAMEL collaboratory projects.",
             },
             {
               name: "Penn State University",

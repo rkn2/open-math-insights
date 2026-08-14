@@ -38,7 +38,7 @@ const PILLARS = [
     accent: "amber" as const,
     title: "Learning Center",
     description:
-      "Courses and tutorials for teachers and students — from a five-minute tour of the Data Depot to a full data-analysis unit.",
+      "Courses and tutorials for teachers and researchers — from classroom data collection to annotation best practices and statistical foundations.",
     icon: (
       <svg className="h-6 w-6" {...ICON_PROPS}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.5C10.5 5 8 4.5 5 5v13c3 -0.5 5.5 0 7 1.5 1.5-1.5 4-2 7-1.5V5c-3-0.5-5.5 0-7 1.5Zm0 0V19" />
@@ -50,7 +50,7 @@ const PILLARS = [
     accent: "coral" as const,
     title: "Community",
     description:
-      "Educators, researchers, and district data teams — trading datasets, tools, and ideas together on Slack.",
+      "Educators, researchers, and CAMEL network teams — sharing datasets, tools, and ideas across projects.",
     icon: (
       <svg className="h-6 w-6" {...ICON_PROPS}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M15 19v-1a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v1M13.5 3.4a4 4 0 0 1 0 7.2M21 19v-1a4 4 0 0 0-3-3.9M8.5 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z" />
@@ -100,15 +100,15 @@ export function HomePage() {
                 For teachers
               </span>
               <h3 className="mt-4 font-display text-xl font-bold text-slate-900">
-                Bring open data into your classroom
+                Data literacy for your classroom
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                Activities with real NAEP and PISA data, a plain-English guide to what test scores
-                actually mean, and what to expect when researchers work in your school.
+                How to collect meaningful data in your own classroom, what standardized test scores
+                actually tell you, and what to expect when researchers work in your school.
               </p>
               <ul className="mt-4 space-y-1.5 text-sm text-slate-500">
-                <li>→ Using Open Data in Your Classroom</li>
-                <li>→ Understanding Your Students' Data</li>
+                <li>→ Collecting Data in Your Classroom</li>
+                <li>→ Making Sense of Test Score Data</li>
                 <li>→ When Researchers Visit</li>
               </ul>
               <ButtonLink to="/learning-center" variant="outline" size="sm" className="mt-6">
@@ -167,7 +167,7 @@ export function HomePage() {
               { label: "Use case workflows", detail: "End-to-end research examples: question → data → analysis → finding", to: "/use-cases" },
               { label: "Data contribution guide", detail: "4-phase process with interactive pre-submission checklist", to: "/contribute" },
               { label: "Researcher Guide", detail: "Repository comparison, de-identification checklist, FERPA reference", to: "/researcher-guide" },
-              { label: "Dataset discovery chat", detail: "Guided decision tree to find the right dataset for your question", to: null },
+              { label: "Dataset discovery chat (planned)", detail: "Guided decision tree to find the right dataset for your question", to: null },
               { label: "Standards Aligner", detail: "Match math problems to CCSS-style standards", to: "/use-omi" },
             ].map((feature) => (
               <div key={feature.label} className="flex items-start gap-3 rounded-xl bg-white p-4 shadow-sm">
@@ -206,10 +206,10 @@ export function HomePage() {
       <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
         <div className="flex flex-col items-center justify-between gap-6 rounded-3xl bg-slate-900 px-8 py-12 text-center sm:flex-row sm:text-left sm:px-12">
           <div>
-            <h2 className="font-display text-2xl font-bold text-white">Have data to share?</h2>
+            <h2 className="font-display text-2xl font-bold text-white">Want to contribute?</h2>
             <p className="mt-2 max-w-md text-slate-300">
-              Contribute anonymized, openly licensed math data to the Data Depot and help build a
-              shared foundation for K-12 math research.
+              Researchers can share de-identified datasets. Teachers interested in data partnerships
+              can connect with CAMEL network teams who help with study design and privacy compliance.
             </p>
           </div>
           <ButtonLink to="/about" size="lg">

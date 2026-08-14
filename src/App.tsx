@@ -18,6 +18,7 @@ import { IntroToMLPage } from "@/pages/learning/IntroToMLPage";
 import { StatisticalFoundationsPage } from "@/pages/learning/StatisticalFoundationsPage";
 import { ScienceOfLearningPage } from "@/pages/learning/ScienceOfLearningPage";
 import { AnnotationBestPracticesPage } from "@/pages/learning/AnnotationBestPracticesPage";
+import { CollectingClassroomDataPage } from "@/pages/learning/CollectingClassroomDataPage";
 import { GlossaryPage } from "@/pages/GlossaryPage";
 import { UseCasesPage } from "@/pages/UseCasesPage";
 import { ContributePage } from "@/pages/ContributePage";
@@ -44,6 +45,7 @@ export function App() {
           <Route path="learning-center/statistical-foundations" element={<StatisticalFoundationsPage />} />
           <Route path="learning-center/science-of-learning" element={<ScienceOfLearningPage />} />
           <Route path="learning-center/annotation-best-practices" element={<AnnotationBestPracticesPage />} />
+          <Route path="learning-center/collecting-classroom-data" element={<CollectingClassroomDataPage />} />
           <Route path="community" element={<CommunityPage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="researcher-guide" element={<ResearcherGuidePage />} />

@@ -13,10 +13,11 @@ export function HeroSection() {
             The datasets behind K–12 math, finally findable
           </h1>
           <p className="mt-6 max-w-xl text-lg text-slate-300">
-            State assessments, item-response logs, classroom surveys — scattered across agencies
-            and hard drives. Open Math Insights catalogs them with grade band, topic, and PII
-            status so teachers and researchers can search, cite, and analyze without starting
-            from scratch.
+            National assessments, tutoring system logs, international comparisons — the
+            datasets behind K–12 math research exist, but finding, citing, and analyzing them
+            means navigating scattered agencies and formats. Open Math Insights brings them
+            together with consistent metadata so teachers and researchers can focus on the
+            questions, not the plumbing.
           </p>
           <div className="mt-9 flex flex-wrap gap-3">
             <ButtonLink to="/data-depot" size="lg">

@@ -22,11 +22,18 @@ const TEACHER_TRACK = [
     href: "/learning-center/using-data-in-classroom",
   },
   {
-    title: "Understanding Your Students' Data",
+    title: "Making Sense of Test Score Data",
     description: "What test scores actually measure, what they miss, how to interpret them responsibly, and how to talk to students about data.",
     level: "Beginner" as const,
     duration: "25 min",
     href: "/learning-center/understanding-student-data",
+  },
+  {
+    title: "Collecting Data in Your Classroom",
+    description: "What to measure, how to design good questions, how much data is enough, and when to bring in a researcher — a practical guide to classroom inquiry.",
+    level: "Beginner" as const,
+    duration: "25 min",
+    href: "/learning-center/collecting-classroom-data",
   },
   {
     title: "When Researchers Visit Your Classroom",
@@ -108,8 +115,8 @@ export function LearningCenterPage() {
           <SectionHeading eyebrow="Teacher track" title="For classroom teachers" as="h2" />
         </div>
         <p className="mt-2 max-w-3xl text-sm text-slate-500">
-          How to use open math data in your teaching, what standardized test scores actually mean,
-          and what to expect when researchers work in your classroom.
+          How to collect meaningful data in your own classroom, what standardized test scores
+          actually tell you, and what to expect when researchers work in your school.
         </p>
         <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {TEACHER_TRACK.map(({ href, ...course }) => (

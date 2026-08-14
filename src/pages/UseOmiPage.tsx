@@ -52,13 +52,13 @@ const TOOLS: {
   },
   {
     key: null,
-    name: "Classroom Data Uploader",
-    description: "A teacher-facing tool for contributing anonymized classroom data — real metadata, PII, and standards checks, reviewed by a human before anything is published.",
+    name: "Connect with the Network",
+    description: "Interested in contributing classroom data or partnering with researchers? Connect with a CAMEL network team who can help with study design, de-identification, and data preparation.",
     status: "available",
-    href: "/about",
+    href: "/community",
     icon: (
       <svg className="h-6 w-6" {...ICON_PROPS}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 16V4m0 0 4 4m-4-4-4 4M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M15 19v-1a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v1M13.5 3.4a4 4 0 0 1 0 7.2M21 19v-1a4 4 0 0 0-3-3.9M8.5 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z" />
       </svg>
     ),
   },
@@ -72,7 +72,7 @@ const TOOL_TITLES: Record<Exclude<OpenTool, null>, string> = {
 const STEPS = [
   { title: "Launch", description: "Open a notebook or tool directly in your browser — no local setup." },
   { title: "Explore", description: "Work with real, openly licensed math data using familiar tools like pandas and matplotlib." },
-  { title: "Stay safe", description: "No data leaves the platform, and nothing you touch here was ever tied to a real student." },
+  { title: "Stay safe", description: "All datasets are de-identified and openly licensed. No student-identifying information is ever published on OMI." },
 ];
 
 export function UseOmiPage() {
