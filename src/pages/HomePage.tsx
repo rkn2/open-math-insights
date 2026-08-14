@@ -1,3 +1,4 @@
+import { useDocumentTitle } from "@/hooks/useDocumentTitle";
 import { HeroSection } from "@/components/home/HeroSection";
 import { ImpactStatsStrip } from "@/components/home/ImpactStatsStrip";
 import { PillarCard } from "@/components/home/PillarCard";
@@ -65,6 +66,7 @@ const NEWS = [
 ];
 
 export function HomePage() {
+  useDocumentTitle("");
   return (
     <>
       <HeroSection />

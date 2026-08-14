@@ -1,3 +1,4 @@
+import { useDocumentTitle } from "@/hooks/useDocumentTitle";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { CourseCard } from "@/components/learning/CourseCard";
 import { TutorialListItem } from "@/components/learning/TutorialListItem";
@@ -39,6 +40,7 @@ const TUTORIALS = [
 ];
 
 export function LearningCenterPage() {
+  useDocumentTitle("Learning Center");
   return (
     <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
       <SectionHeading

@@ -14,35 +14,32 @@ import type { ReactNode } from "react";
  * surface for formatting a couple of sentences.
  */
 
-let keySeq = 0;
-function nextKey(): string {
-  keySeq += 1;
-  return `md-${keySeq}`;
-}
-
-function renderInline(text: string): ReactNode[] {
+function renderInline(text: string, prefix: string): ReactNode[] {
   const nodes: ReactNode[] = [];
   // Order matters: **bold** must be tried before single *italic* so a
   // double-asterisk run isn't mistaken for two single-asterisk matches.
   const pattern = /\*\*(.+?)\*\*|`(.+?)`|\*(.+?)\*|_(.+?)_/g;
   let lastIndex = 0;
+  let matchIndex = 0;
   let match: RegExpExecArray | null;
   while ((match = pattern.exec(text))) {
     if (match.index > lastIndex) nodes.push(text.slice(lastIndex, match.index));
+    const key = `${prefix}-${matchIndex}`;
     const [, bold, code, italicStar, italicUnderscore] = match;
     if (bold !== undefined) {
-      nodes.push(<strong key={nextKey()}>{bold}</strong>);
+      nodes.push(<strong key={key}>{bold}</strong>);
     } else if (code !== undefined) {
       nodes.push(
-        <code key={nextKey()} className="rounded bg-slate-200/70 px-1 py-0.5 text-[0.85em]">
+        <code key={key} className="rounded bg-slate-200/70 px-1 py-0.5 text-[0.85em]">
           {code}
         </code>,
       );
     } else if (italicStar !== undefined) {
-      nodes.push(<em key={nextKey()}>{italicStar}</em>);
+      nodes.push(<em key={key}>{italicStar}</em>);
     } else if (italicUnderscore !== undefined) {
-      nodes.push(<em key={nextKey()}>{italicUnderscore}</em>);
+      nodes.push(<em key={key}>{italicUnderscore}</em>);
     }
+    matchIndex += 1;
     lastIndex = pattern.lastIndex;
   }
   if (lastIndex < text.length) nodes.push(text.slice(lastIndex));
@@ -65,19 +62,19 @@ export function MarkdownText({ text }: { text: string }): ReactNode {
 
   return (
     <div className="space-y-2">
-      {blocks.map((block) => {
+      {blocks.map((block, bi) => {
         const lines = block.split("\n").filter((l) => l.trim().length > 0);
         if (lines.length === 0) return null;
 
         if (lines.every(isListLine)) {
           const ordered = /^\s*\d+\./.test(lines[0]);
-          const items = lines.map((line) => <li key={nextKey()}>{renderInline(stripListMarker(line))}</li>);
+          const items = lines.map((line, li) => <li key={`li-${bi}-${li}`}>{renderInline(stripListMarker(line), `li-${bi}-${li}`)}</li>);
           return ordered ? (
-            <ol key={nextKey()} className="list-decimal space-y-0.5 pl-5">
+            <ol key={`block-${bi}`} className="list-decimal space-y-0.5 pl-5">
               {items}
             </ol>
           ) : (
-            <ul key={nextKey()} className="list-disc space-y-0.5 pl-5">
+            <ul key={`block-${bi}`} className="list-disc space-y-0.5 pl-5">
               {items}
             </ul>
           );
@@ -87,17 +84,17 @@ export function MarkdownText({ text }: { text: string }): ReactNode {
         if (headerMatch) {
           // Demoted so a chat reply's "#" can never outrank real page headings.
           return (
-            <p key={nextKey()} className="font-semibold">
-              {renderInline(headerMatch[2])}
+            <p key={`block-${bi}`} className="font-semibold">
+              {renderInline(headerMatch[2], `block-${bi}`)}
             </p>
           );
         }
 
         return (
-          <p key={nextKey()}>
+          <p key={`block-${bi}`}>
             {lines.map((line, li) => (
-              <span key={nextKey()}>
-                {renderInline(line)}
+              <span key={`line-${bi}-${li}`}>
+                {renderInline(line, `line-${bi}-${li}`)}
                 {li < lines.length - 1 && <br />}
               </span>
             ))}

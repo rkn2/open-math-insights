@@ -1,3 +1,4 @@
+import { useDocumentTitle } from "@/hooks/useDocumentTitle";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
 
@@ -23,6 +24,7 @@ const PRINCIPLES = [
 ];
 
 export function AboutPage() {
+  useDocumentTitle("About");
   return (
     <div className="mx-auto max-w-5xl px-6 py-16 lg:px-8">
       <SectionHeading eyebrow="About" title="Open Math Insights (OMI)" />

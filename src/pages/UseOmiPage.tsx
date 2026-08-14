@@ -1,4 +1,5 @@
 import { lazy, Suspense, useState } from "react";
+import { useDocumentTitle } from "@/hooks/useDocumentTitle";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ToolCard } from "@/components/tools/ToolCard";
 import { JupyterLaunchButton } from "@/components/tools/JupyterLaunchButton";
@@ -77,6 +78,7 @@ const STEPS = [
 ];
 
 export function UseOmiPage() {
+  useDocumentTitle("Use OMI");
   const [openTool, setOpenTool] = useState<OpenTool>(null);
 
   return (

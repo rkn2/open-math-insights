@@ -1,7 +1,9 @@
+import { useDocumentTitle } from "@/hooks/useDocumentTitle";
 import { EmptyState } from "@/components/ui/EmptyState";
 import { ButtonLink } from "@/components/ui/Button";
 
 export function NotFoundPage() {
+  useDocumentTitle("Page Not Found");
   return (
     <div className="mx-auto max-w-3xl px-6 py-24 lg:px-8">
       <EmptyState

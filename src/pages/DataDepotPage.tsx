@@ -1,4 +1,6 @@
-import { useMemo, useState } from "react";
+import { useMemo, useCallback } from "react";
+import { useDocumentTitle } from "@/hooks/useDocumentTitle";
+import { useSearchParams } from "react-router-dom";
 import type { GradeBand, DatasetLicense } from "@/shared/types";
 import { useDatasets } from "@/hooks/useDatasets";
 import { DatasetFilterBar } from "@/components/datasets/DatasetFilterBar";
@@ -6,11 +8,30 @@ import { DatasetGrid } from "@/components/datasets/DatasetGrid";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function DataDepotPage() {
+  useDocumentTitle("Data Depot");
   const { datasets, loading } = useDatasets();
-  const [search, setSearch] = useState("");
-  const [gradeBand, setGradeBand] = useState<GradeBand | "all">("all");
-  const [topic, setTopic] = useState<string | "all">("all");
-  const [license, setLicense] = useState<DatasetLicense | "all">("all");
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const search = searchParams.get("q") ?? "";
+  const gradeBand = (searchParams.get("grade") as GradeBand) ?? "all";
+  const topic = searchParams.get("topic") ?? "all";
+  const license = (searchParams.get("license") as DatasetLicense) ?? "all";
+
+  /** Update one param while preserving the others; delete param when value is falsy or "all". */
+  const setParam = useCallback(
+    (key: string, value: string) => {
+      setSearchParams((prev) => {
+        const next = new URLSearchParams(prev);
+        if (!value || value === "all") {
+          next.delete(key);
+        } else {
+          next.set(key, value);
+        }
+        return next;
+      });
+    },
+    [setSearchParams],
+  );
 
   const availableTopics = useMemo(
     () => Array.from(new Set(datasets.flatMap((d) => d.topics))).sort(),
@@ -41,13 +62,13 @@ export function DataDepotPage() {
       <div className="mt-8">
         <DatasetFilterBar
           search={search}
-          onSearchChange={setSearch}
+          onSearchChange={(v) => setParam("q", v)}
           gradeBand={gradeBand}
-          onGradeBandChange={setGradeBand}
+          onGradeBandChange={(v) => setParam("grade", v)}
           topic={topic}
-          onTopicChange={setTopic}
+          onTopicChange={(v) => setParam("topic", v)}
           license={license}
-          onLicenseChange={setLicense}
+          onLicenseChange={(v) => setParam("license", v)}
           availableTopics={availableTopics}
         />
       </div>

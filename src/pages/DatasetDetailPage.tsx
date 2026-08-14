@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useDocumentTitle } from "@/hooks/useDocumentTitle";
 import { Link, useParams } from "react-router-dom";
 import { useDataset } from "@/hooks/useDataset";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
@@ -47,6 +48,7 @@ function CopyCitation({ citation }: { citation: string }) {
 export function DatasetDetailPage() {
   const { datasetId = "" } = useParams<{ datasetId: string }>();
   const { dataset, loading, notFound } = useDataset(datasetId);
+  useDocumentTitle(dataset?.title ?? "");
 
   if (!loading && (notFound || !dataset)) {
     return (
