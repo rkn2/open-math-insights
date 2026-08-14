@@ -2,7 +2,6 @@ import { lazy, Suspense, useState } from "react";
 import { useDocumentTitle } from "@/hooks/useDocumentTitle";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ToolCard } from "@/components/tools/ToolCard";
-import { JupyterLaunchButton } from "@/components/tools/JupyterLaunchButton";
 import { NotebookPreviewGallery } from "@/components/tools/NotebookPreviewGallery";
 import { StandardsAlignerTool } from "@/components/tools/StandardsAlignerTool";
 import { Badge } from "@/components/ui/Badge";
@@ -88,26 +87,7 @@ export function UseOmiPage() {
         subtitle="No installs required — everything here runs in your browser, backed by lightweight, cost-conscious infrastructure."
       />
 
-      <div className="mt-10 rounded-3xl border border-primary-100 bg-gradient-to-br from-primary-50 to-teal-50 p-8 sm:p-10">
-        <div>
-          <Badge tone="primary">Featured</Badge>
-          <h2 className="mt-3 font-display text-2xl font-bold text-slate-900">
-            OMI Jupyter Sandbox
-          </h2>
-          <p className="mt-2 max-w-2xl text-slate-600">
-            pandas, numpy, and matplotlib preloaded, with starter notebooks built around real,
-            downloaded Data Depot datasets (NAEP, PISA, and ASSISTments). Running this locally
-            with <code className="rounded bg-white/60 px-1">npm run bridge</code> launches an
-            actual JupyterLab process on your machine — otherwise you'll see an honest "not
-            connected" stub, since there's no live provisioning backend deployed yet.
-          </p>
-        </div>
-        <div className="mt-6">
-          <JupyterLaunchButton />
-        </div>
-      </div>
-
-      <div className="mt-6 rounded-3xl border border-teal-100 bg-gradient-to-br from-teal-50 to-amber-50 p-8 sm:p-10">
+      <div className="mt-10 rounded-3xl border border-teal-100 bg-gradient-to-br from-teal-50 to-amber-50 p-8 sm:p-10">
         <div>
           <Badge tone="teal">Works everywhere — no setup</Badge>
           <h2 className="mt-3 font-display text-2xl font-bold text-slate-900">
