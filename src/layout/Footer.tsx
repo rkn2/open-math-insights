@@ -29,8 +29,8 @@ export function Footer() {
             <p className="font-display text-lg font-bold text-slate-900">{SITE_NAME}</p>
             <p className="mt-3 max-w-sm text-sm text-slate-500">
               Open, accessible, and authentic K–12 math datasets, tools, and a community built for
-              collaboration — modeled on the same open-cyberinfrastructure ideas that power
-              research platforms like DesignSafe, reimagined for math classrooms.
+              collaboration — modeled on open-cyberinfrastructure principles, reimagined for
+              math classrooms.
             </p>
           </div>
           {COLUMNS.map((col) => (

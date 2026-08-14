@@ -7,15 +7,16 @@ export function HeroSection() {
       <div className="relative mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
         <div className="max-w-2xl">
           <span className="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-teal-200 ring-1 ring-inset ring-white/20">
-            Open cyberinfrastructure for K–12 math
+            Funded by NSF · Built for math educators
           </span>
           <h1 className="mt-6 font-display text-balance text-4xl font-extrabold leading-tight text-white sm:text-5xl lg:text-6xl">
-            Open math data and tools for every classroom
+            The datasets behind K–12 math, finally findable
           </h1>
           <p className="mt-6 max-w-xl text-lg text-slate-300">
-            Open Math Insights is a Data Depot, a set of accessible compute tools, a Learning
-            Center, and a community — built so teachers and researchers can find, use, and share
-            authentic K–12 math data without ever touching student PII.
+            State assessments, item-response logs, classroom surveys — scattered across agencies
+            and hard drives. Open Math Insights catalogs them with grade band, topic, and PII
+            status so teachers and researchers can search, cite, and analyze without starting
+            from scratch.
           </p>
           <div className="mt-9 flex flex-wrap gap-3">
             <ButtonLink to="/data-depot" size="lg">

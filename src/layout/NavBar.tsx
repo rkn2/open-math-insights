@@ -31,7 +31,7 @@ export function NavBar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-slate-100 bg-white/90 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-slate-100 bg-white/90 shadow-sm backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3.5 lg:px-8">
         <Logo />
         <nav className="hidden items-center gap-1 lg:flex">

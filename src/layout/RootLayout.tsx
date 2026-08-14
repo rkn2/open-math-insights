@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import { NavBar } from "@/layout/NavBar";
 import { Footer } from "@/layout/Footer";
+import { DatasetChatButton } from "@/components/chat/DatasetChatButton";
 
 export function RootLayout() {
   return (
@@ -16,6 +17,7 @@ export function RootLayout() {
         <Outlet />
       </main>
       <Footer />
+      <DatasetChatButton />
     </div>
   );
 }

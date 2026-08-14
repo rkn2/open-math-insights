@@ -7,12 +7,16 @@ export function PillarCard({
   description,
   to,
   accent,
+  featured = false,
+  className = "",
 }: {
   icon: ReactNode;
   title: string;
   description: string;
   to: string;
   accent: "primary" | "teal" | "amber" | "coral";
+  featured?: boolean;
+  className?: string;
 }) {
   const accentClasses: Record<typeof accent, string> = {
     primary: "bg-primary-50 text-primary-600 group-hover:bg-primary-600",
@@ -24,16 +28,22 @@ export function PillarCard({
   return (
     <Link
       to={to}
-      className="group flex h-full flex-col rounded-2xl border border-slate-100 bg-white p-7 shadow-card transition-all hover:-translate-y-1 hover:shadow-soft"
+      className={`group flex h-full rounded-xl border border-slate-100 bg-white shadow-card transition-all hover:-translate-y-1 hover:shadow-soft ${
+        featured ? "flex-row items-center gap-8 p-8" : "flex-col p-7"
+      } ${className}`}
     >
       <span
-        className={`flex h-12 w-12 items-center justify-center rounded-xl transition-colors group-hover:text-white ${accentClasses[accent]}`}
+        className={`flex items-center justify-center rounded-xl transition-colors group-hover:text-white ${
+          featured ? "h-16 w-16" : "h-12 w-12"
+        } ${accentClasses[accent]}`}
       >
         {icon}
       </span>
-      <h3 className="mt-5 font-display text-xl font-bold text-slate-900">{title}</h3>
-      <p className="mt-2 flex-1 text-sm text-slate-600">{description}</p>
-      <span className="mt-4 text-sm font-semibold text-primary-600">Learn more →</span>
+      <div className={featured ? "flex-1" : ""}>
+        <h3 className={`font-display font-bold text-slate-900 ${featured ? "text-2xl" : "mt-5 text-xl"}`}>{title}</h3>
+        <p className={`mt-2 text-slate-600 ${featured ? "text-base" : "flex-1 text-sm"}`}>{description}</p>
+        <span className="mt-4 inline-block text-sm font-semibold text-primary-600">Learn more →</span>
+      </div>
     </Link>
   );
 }

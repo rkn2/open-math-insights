@@ -77,9 +77,9 @@ export function HomePage() {
           subtitle="Modeled on the same open-cyberinfrastructure pattern that powers research data platforms — reimagined for K-12 math."
           align="center"
         />
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {PILLARS.map((p) => (
-            <PillarCard key={p.title} {...p} />
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {PILLARS.map((p, i) => (
+            <PillarCard key={p.title} {...p} featured={i === 0} className={i === 0 ? "sm:col-span-2 lg:col-span-3" : ""} />
           ))}
         </div>
       </section>
