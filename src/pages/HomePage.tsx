@@ -14,7 +14,7 @@ const PILLARS = [
     accent: "primary" as const,
     title: "Data Depot",
     description:
-      "Browse, search, and cite openly licensed K-12 math datasets — every one tagged with grade band, topic, and a PII review status.",
+      "Browse, search, and cite openly licensed K-12 math datasets. Every one is tagged with grade band, topic, and a PII review status.",
     icon: (
       <svg className="h-6 w-6" {...ICON_PROPS}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M4 6c0-1.1 3.58-2 8-2s8 .9 8 2-3.58 2-8 2-8-.9-8-2Zm0 0v12c0 1.1 3.58 2 8 2s8-.9 8-2V6M4 12c0 1.1 3.58 2 8 2s8-.9 8-2" />
@@ -26,7 +26,7 @@ const PILLARS = [
     accent: "teal" as const,
     title: "Use OMI",
     description:
-      "Accessible compute — launch notebooks and lightweight tools to explore, visualize, and analyze open math data in your browser.",
+      "Accessible compute tools. Launch notebooks and lightweight tools to explore, visualize, and analyze open math data in your browser.",
     icon: (
       <svg className="h-6 w-6" {...ICON_PROPS}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M3 5.5A1.5 1.5 0 0 1 4.5 4h15A1.5 1.5 0 0 1 21 5.5v10A1.5 1.5 0 0 1 19.5 17h-15A1.5 1.5 0 0 1 3 15.5v-10ZM8 21h8M12 17v4M8 9l3 3 2-2 3 3" />
@@ -38,7 +38,7 @@ const PILLARS = [
     accent: "amber" as const,
     title: "Learning Center",
     description:
-      "Courses and tutorials for teachers and researchers — from classroom data collection to annotation best practices and statistical foundations.",
+      "Courses and tutorials for teachers and researchers, from classroom data collection to annotation best practices and statistical foundations.",
     icon: (
       <svg className="h-6 w-6" {...ICON_PROPS}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.5C10.5 5 8 4.5 5 5v13c3 -0.5 5.5 0 7 1.5 1.5-1.5 4-2 7-1.5V5c-3-0.5-5.5 0-7 1.5Zm0 0V19" />
@@ -50,7 +50,7 @@ const PILLARS = [
     accent: "coral" as const,
     title: "Community",
     description:
-      "Educators, researchers, and CAMEL network teams — sharing datasets, tools, and ideas across projects.",
+      "Educators, researchers, and CAMEL network teams sharing datasets, tools, and ideas across projects.",
     icon: (
       <svg className="h-6 w-6" {...ICON_PROPS}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M15 19v-1a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v1M13.5 3.4a4 4 0 0 1 0 7.2M21 19v-1a4 4 0 0 0-3-3.9M8.5 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z" />
@@ -75,8 +75,8 @@ export function HomePage() {
       <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
         <SectionHeading
           eyebrow="Four pillars"
-          title="Standards, catalog, tools, and community — for K-12 math data that's open and trustworthy"
-          subtitle="Modeled on the same open-cyberinfrastructure pattern that powers research data platforms — reimagined for K-12 math."
+          title="Standards, catalog, tools, and community for open, trustworthy K-12 math data"
+          subtitle="Modeled on the open-cyberinfrastructure patterns behind research data platforms, adapted for K-12 math."
           align="center"
         />
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -90,8 +90,8 @@ export function HomePage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <SectionHeading
             eyebrow="Two tracks"
-            title="Whether you teach math or study how it's taught"
-            subtitle="The Learning Center has a path built for you."
+            title="Two paths through the Learning Center"
+            subtitle="Courses organized by audience and role."
             align="center"
           />
           <div className="mt-12 grid gap-8 sm:grid-cols-2">
@@ -125,7 +125,7 @@ export function HomePage() {
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-slate-600">
                 Codebooks, schemas, annotation standards, intro to machine learning, and
-                statistical foundations — grounded in real datasets and CAMEL network questions.
+                statistical foundations. All grounded in real datasets and CAMEL network questions.
               </p>
               <ul className="mt-4 space-y-1.5 text-sm text-slate-500">
                 <li>→ Codebooks & Data Dictionaries</li>
@@ -164,7 +164,7 @@ export function HomePage() {
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {[
               { label: "Searchable glossary", detail: "28 cross-referenced terms across 5 categories", to: "/glossary" },
-              { label: "Use case workflows", detail: "End-to-end research examples: question → data → analysis → finding", to: "/use-cases" },
+              { label: "Use case workflows", detail: "End-to-end research examples from question to finding", to: "/use-cases" },
               { label: "Data contribution guide", detail: "4-phase process with interactive pre-submission checklist", to: "/contribute" },
               { label: "Researcher Guide", detail: "Repository comparison, de-identification checklist, FERPA reference", to: "/researcher-guide" },
               { label: "Dataset discovery chat (planned)", detail: "Guided decision tree to find the right dataset for your question", to: null },

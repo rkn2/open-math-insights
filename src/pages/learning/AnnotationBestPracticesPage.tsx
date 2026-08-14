@@ -43,8 +43,8 @@ const CODEBOOK_COMPONENTS = [
   },
   {
     component: "Examples from real data",
-    description: "At least two annotated examples — one clear positive case and one boundary case — drawn from actual data, not hypotheticals.",
-    example: 'Positive: Student on problem 4.2a clicks "Show hint" at 0:03, 0:08, 0:11, and 0:14 with no answer-field activity. Boundary: Student clicks at 0:03, 0:18, 0:31 — three hints but over 28 seconds, with brief pauses. Code as HINT-ABUSE because the 30-second window criterion is met, even though the pace is slower.',
+    description: "At least two annotated examples, one clear positive case and one boundary case, drawn from actual data, not hypotheticals.",
+    example: 'Positive: Student on problem 4.2a clicks "Show hint" at 0:03, 0:08, 0:11, and 0:14 with no answer-field activity. Boundary: Student clicks at 0:03, 0:18, 0:31, three hints but over 28 seconds, with brief pauses. Code as HINT-ABUSE because the 30-second window criterion is met, even though the pace is slower.',
   },
 ];
 
@@ -116,7 +116,7 @@ export function AnnotationBestPracticesPage() {
         <SectionHeading
           eyebrow="For Researchers"
           title="Annotation Best Practices"
-          subtitle="How to design codebooks, train coders, measure reliability, and navigate AI-assisted annotation — so the labels you apply to education data are trustworthy enough for others to build on."
+          subtitle="How to design codebooks, train coders, measure reliability, and navigate AI-assisted annotation. The goal is to ensure that the labels you apply to education data are trustworthy enough for others to build on."
         />
       </div>
 
@@ -155,8 +155,8 @@ export function AnnotationBestPracticesPage() {
             But annotation is only as good as the process behind it. Poorly defined codes, untrained
             coders, and unreported reliability produce annotations that{" "}
             <strong className="text-slate-900">look like data but encode noise</strong>. When
-            another researcher builds on your annotations — or when a machine learning model trains
-            on them — errors in the annotation layer propagate silently. There is no error message;
+            another researcher builds on your annotations, or when a machine learning model trains
+            on them, errors in the annotation layer propagate silently. There is no error message;
             there is only a downstream finding that was never true.
           </p>
 
@@ -173,7 +173,7 @@ export function AnnotationBestPracticesPage() {
               <h4 className="font-display font-bold text-slate-900">For ML training</h4>
               <p className="mt-1 text-sm text-slate-600">
                 A model trained on noisy labels learns noise. Annotation quality sets the ceiling
-                on model performance — no algorithm can recover signal that the labels destroyed.
+                on model performance. No algorithm can recover signal that the labels destroyed.
               </p>
             </Card>
             <Card>
@@ -203,7 +203,7 @@ export function AnnotationBestPracticesPage() {
             it, and how to handle edge cases. The foundational reference is{" "}
             <strong className="text-slate-900">MacQueen et al. (1998)</strong>, who established
             that every code in a codebook needs six components to be operationally complete.
-            Without all six, coders fill in the gaps with their own assumptions — and different
+            Without all six, coders fill in the gaps with their own assumptions, and different
             coders fill them differently.
           </p>
 
@@ -235,7 +235,7 @@ export function AnnotationBestPracticesPage() {
               <strong>MacQueen's key maxim:</strong> "Do not assume that anything is obvious; always
               state specifically what the code should and should not capture." Roberts et al. (2019)
               found that even meticulous adherence to these guidelines produced inadequate agreement
-              without iterative calibration — detailed definitions are necessary but not sufficient.
+              without iterative calibration. Detailed definitions are necessary but not sufficient.
             </p>
           </div>
 
@@ -287,8 +287,8 @@ export function AnnotationBestPracticesPage() {
               <strong>Watch for coder drift:</strong> Coders develop "implicit rules" over time
               without realizing the codebook no longer reflects their actual practice (MacQueen et
               al., 1998). A coder who initially applied a strict definition may gradually relax it,
-              or develop private shortcuts that are never documented. Regular calibration sessions —
-              monthly at minimum — catch drift before it corrupts the data.
+              or develop private shortcuts that are never documented. Regular calibration sessions,
+              monthly at minimum, catch drift before it corrupts the data.
             </p>
           </div>
 
@@ -299,7 +299,7 @@ export function AnnotationBestPracticesPage() {
             Research on working memory and coding tasks suggests that coders can reasonably manage{" "}
             <strong className="text-slate-900">30-40 codes</strong> at once. Beyond that threshold,
             accuracy degrades as coders struggle to hold all the distinctions in mind simultaneously.
-            If your scheme has more than 40 codes, consider coding in stages: first apply a
+            If your scheme has more than 40 codes, consider coding in stages. First apply a
             high-level category (e.g., "error type"), then apply a finer-grained sub-code within
             each category in a separate pass.
           </p>
@@ -313,7 +313,7 @@ export function AnnotationBestPracticesPage() {
             whether it stems from ambiguity in the codebook (fix the codebook), insufficient
             training (retrain), or genuine boundary cases that reasonable people will code
             differently (document the decision rule and move on). The worst outcome is resolving
-            disagreements informally without updating the codebook — this creates an oral tradition
+            disagreements informally without updating the codebook. This creates an oral tradition
             that new coders cannot access.
           </p>
         </div>
@@ -346,7 +346,7 @@ export function AnnotationBestPracticesPage() {
           <p>
             Suppose two coders classify 100 student responses as either "correct" or "incorrect,"
             and 90 responses are correct. If both coders simply label everything "correct," they
-            will agree 90% of the time — but they have done no actual work. Percent agreement does
+            will agree 90% of the time, but they have done no actual work. Percent agreement does
             not account for the agreement expected by chance alone. Cohen's kappa (Cohen, 1960)
             subtracts out this chance agreement, giving a more honest measure of how much the
             coders' judgments actually align.
@@ -413,7 +413,7 @@ export function AnnotationBestPracticesPage() {
                 Always report confidence intervals
               </h4>
               <p className="mt-1 text-sm text-slate-600">
-                A kappa of 0.72 sounds comfortably above the 0.70 threshold — but if the 95%
+                A kappa of 0.72 sounds comfortably above the 0.70 threshold, but if the 95%
                 confidence interval is [0.58, 0.86], the true reliability might be well below
                 acceptable. Baker et al. (2022) emphasize that point estimates without intervals
                 are incomplete.
@@ -435,7 +435,7 @@ export function AnnotationBestPracticesPage() {
           <div className="rounded-xl border border-amber-200 bg-amber-50 p-4">
             <p className="text-sm text-amber-800">
               <strong>The N &lt; 10 problem:</strong> If you have fewer than 10 double-coded units
-              for a particular code, do not compute kappa at all — the estimate will be
+              for a particular code, do not compute kappa at all. The estimate will be
               dominated by individual cases and can swing wildly with a single change. Instead,
               report the raw agreement counts and flag the code as having insufficient data for
               reliability estimation.
@@ -466,7 +466,7 @@ export function AnnotationBestPracticesPage() {
             that of trained crowd-workers on several text classification tasks. This generated
             understandable excitement about replacing expensive human annotation with cheap,
             scalable AI annotation. However, Pangakis et al. (2023) showed that LLM performance
-            is "highly contingent on both the dataset and the type of annotation task" — models
+            is "highly contingent on both the dataset and the type of annotation task." Models
             that excel on sentiment classification may perform poorly on domain-specific codes that
             require expert judgment, like distinguishing conceptual errors from procedural errors
             in mathematics.
@@ -476,10 +476,10 @@ export function AnnotationBestPracticesPage() {
             The anchoring problem
           </h3>
           <p>
-            Beck et al. (2026) documented a critical risk in human-AI workflows:{" "}
+            Beck et al. (2026) documented a critical risk in human-AI workflows, namely{" "}
             <strong className="text-slate-900">anchoring bias</strong>. When human annotators see
             AI-generated labels before making their own judgments, their annotations are
-            systematically pulled toward the AI's suggestion — even when the AI is wrong. This
+            systematically pulled toward the AI's suggestion, even when the AI is wrong. This
             means that the common "model proposes, human confirms" workflow does not measure
             genuine agreement between human and AI. It measures human compliance with the AI's
             suggestion.
@@ -492,7 +492,7 @@ export function AnnotationBestPracticesPage() {
             <Card>
               <Badge tone="teal">Do</Badge>
               <ul className="mt-3 space-y-2 text-sm text-slate-600">
-                <li>Use AI as an <strong className="text-slate-900">independent second coder</strong> — the AI annotates without seeing human labels, and the human annotates without seeing AI labels</li>
+                <li>Use AI as an <strong className="text-slate-900">independent second coder</strong>. The AI annotates without seeing human labels, and the human annotates without seeing AI labels</li>
                 <li>Report human-AI kappa separately from human-human kappa</li>
                 <li>Validate AI performance on your specific codes and data before scaling up</li>
                 <li>Document the exact model, version, prompt, and parameters used</li>
@@ -502,10 +502,10 @@ export function AnnotationBestPracticesPage() {
             <Card>
               <Badge tone="coral">Don't</Badge>
               <ul className="mt-3 space-y-2 text-sm text-slate-600">
-                <li>Use AI as a pre-labeler that humans then "verify" — this introduces anchoring bias and inflates apparent agreement</li>
+                <li>Use AI as a pre-labeler that humans then "verify," as this introduces anchoring bias and inflates apparent agreement</li>
                 <li>Assume that high accuracy on one task generalizes to another</li>
                 <li>Report human-AI agreement without also reporting human-human agreement as a baseline</li>
-                <li>Treat LLM outputs as deterministic — the same prompt can produce different labels across runs</li>
+                <li>Treat LLM outputs as deterministic, because the same prompt can produce different labels across runs</li>
                 <li>Skip reliability measurement because "the AI is consistent with itself"</li>
               </ul>
             </Card>
@@ -514,7 +514,7 @@ export function AnnotationBestPracticesPage() {
           <div className="rounded-xl border border-amber-200 bg-amber-50 p-4">
             <p className="text-sm text-amber-800">
               <strong>Pre-register your prompts:</strong> Baumann et al. (2025) demonstrated that
-              LLM output varies significantly across semantically equivalent prompts — minor
+              LLM output varies significantly across semantically equivalent prompts. Minor
               rephrasing can shift classification rates by 10-20 percentage points. If you use LLMs
               for annotation, treat your prompt as a methodological instrument: develop it
               systematically, freeze it before production coding begins, and report the exact prompt
@@ -528,8 +528,8 @@ export function AnnotationBestPracticesPage() {
           <p>
             Unlike a human coder who internalizes a codebook and applies it with some stability,
             an LLM's behavior is exquisitely sensitive to prompt wording. Two prompts that a human
-            would consider identical — "classify this response as correct or incorrect" vs. "label
-            this answer as right or wrong" — can produce meaningfully different annotation
+            would consider identical, such as "classify this response as correct or incorrect" vs. "label
+            this answer as right or wrong," can produce meaningfully different annotation
             distributions. This means that the "codebook" for an LLM annotator is the prompt
             itself, and it must be developed and validated with the same rigor as a human codebook.
           </p>
@@ -549,7 +549,7 @@ export function AnnotationBestPracticesPage() {
             of failure. As coders encounter real data, they discover edge cases the original
             definitions did not anticipate, ambiguities that seemed clear in the abstract, and
             distinctions that matter in practice but were not part of the original scheme. The
-            question is not whether to revise — it is how to revise without losing track of what
+            question is not whether to revise. It is how to revise without losing track of what
             was annotated under which definitions.
           </p>
 
@@ -586,7 +586,7 @@ export function AnnotationBestPracticesPage() {
                   <p className="mt-1 text-sm text-slate-600">
                     When codes are merged, split, or renamed, document the mapping between old and new
                     codes. A crosswalk table lets downstream users translate annotations from one
-                    version to another — or decide that the versions are too different to combine.
+                    version to another, or decide that the versions are too different to combine.
                   </p>
                 </div>
               </div>
@@ -600,7 +600,7 @@ export function AnnotationBestPracticesPage() {
                     Revise the codebook when you see systematic disagreements between coders on the
                     same type of case, recurring edge cases that the existing codes cannot capture,
                     or new data that does not fit any existing code. Do not revise for isolated
-                    disagreements on individual cases — those are resolved through calibration
+                    disagreements on individual cases. Those are resolved through calibration
                     discussion, not codebook changes.
                   </p>
                 </div>
@@ -613,7 +613,7 @@ export function AnnotationBestPracticesPage() {
           </h3>
           <p>
             The most revealing test of codebook quality: give your codebook and a sample of your
-            data to someone <strong className="text-slate-900">outside your project</strong> — a
+            data to someone <strong className="text-slate-900">outside your project</strong>, such as a
             colleague in a different lab, a graduate student from another department, or even a
             collaborator at another institution. Ask them to annotate the sample using only the
             codebook, with no additional guidance. If they cannot produce annotations that agree
@@ -764,7 +764,7 @@ export function AnnotationBestPracticesPage() {
                 Schemas, Metadata & Annotation
               </h4>
               <p className="mt-1 text-sm text-slate-600">
-                Defines schema, metadata, and annotation as distinct data layers — essential
+                Defines schema, metadata, and annotation as distinct data layers. Essential
                 background for understanding where annotation fits in the data lifecycle.
               </p>
               <ButtonLink
@@ -779,7 +779,7 @@ export function AnnotationBestPracticesPage() {
             <Card hover>
               <h4 className="font-display font-bold text-slate-900">Researcher Guide</h4>
               <p className="mt-1 text-sm text-slate-600">
-                The full guide to contributing data to OMI — including de-identification,
+                The full guide to contributing data to OMI, including de-identification,
                 licensing, and metadata standards.
               </p>
               <ButtonLink to="/researcher-guide" variant="outline" size="sm" className="mt-3">
@@ -804,7 +804,7 @@ export function AnnotationBestPracticesPage() {
       <div className="mt-16 rounded-3xl bg-gradient-to-br from-teal-600 to-primary-700 px-8 py-10 text-center text-white">
         <h2 className="font-display text-2xl font-bold">Annotation done right</h2>
         <p className="mt-2 text-teal-100">
-          Good annotation is invisible — it lets the data speak clearly. The practices on this
+          Good annotation is invisible. It lets the data speak clearly. The practices on this
           page ensure that when someone builds on your annotations, they are building on solid
           ground.
         </p>

@@ -37,7 +37,7 @@ const USE_CASES: UseCase[] = [
       { label: "Visualize", detail: "Plot a grouped bar chart: 2019→2022 change (red) vs 2022→2024 change (green) for each jurisdiction. Add a horizontal line at zero. States above the line in 2022→2024 are recovering; below means continued decline." },
       { label: "Interpret", detail: "Compare the magnitude of recovery to the magnitude of decline. Did any state fully recover? Did grade 4 and grade 8 recover at different rates?" },
     ],
-    finding: "Nationally, grade 4 showed a partial recovery (+2.4 points) after a −5.1 point decline, while grade 8's recovery was smaller. State-level patterns varied — Massachusetts recovered more strongly than the national average.",
+    finding: "Nationally, grade 4 showed a partial recovery (+2.4 points) after a −5.1 point decline, while grade 8's recovery was smaller. State-level patterns varied. Massachusetts recovered more strongly than the national average.",
     caveat: "NAEP is biennial and this dataset contains only aggregate scores. Individual student trajectories, the role of specific interventions, and within-district variation are not visible in this data.",
     notebookUrl: "https://colab.research.google.com/github/rkn2/open-math-insights/blob/main/notebooks/01_exploring_math_data.ipynb",
   },
@@ -55,8 +55,8 @@ const USE_CASES: UseCase[] = [
       { label: "Cluster by trajectory", detail: "Use K-Means clustering (k=4) on the country × year pivot table to find natural groupings. Plot each cluster's mean trajectory with individual country lines faded behind." },
       { label: "Test for convergence", detail: "Compute the standard deviation of all country scores within each PISA cycle. If SD is shrinking over time, scores are converging. Plot SD by year." },
     ],
-    finding: "The top-performing cluster (including Singapore, Japan, South Korea) shows a slight downward trajectory since 2012, while the bottom cluster shows modest improvement. Cross-country SD has narrowed slightly — suggestive of convergence, but the 2022 pandemic cycle makes the trend hard to disentangle from a global shock.",
-    caveat: "PISA scores are country-level averages of 15-year-olds. They don't tell you about specific curricula, policies, or demographics driving the changes. The 2022 cycle was disrupted by COVID — interpretation of that data point requires extra caution.",
+    finding: "The top-performing cluster (including Singapore, Japan, South Korea) shows a slight downward trajectory since 2012, while the bottom cluster shows modest improvement. Cross-country SD has narrowed slightly, suggestive of convergence, but the 2022 pandemic cycle makes the trend hard to disentangle from a global shock.",
+    caveat: "PISA scores are country-level averages of 15-year-olds. They don't tell you about specific curricula, policies, or demographics driving the changes. The 2022 cycle was disrupted by COVID, so interpretation of that data point requires extra caution.",
     notebookUrl: "https://colab.research.google.com/github/rkn2/open-math-insights/blob/main/notebooks/02_comparing_naep_and_pisa.ipynb",
   },
   {
@@ -67,14 +67,14 @@ const USE_CASES: UseCase[] = [
     datasets: ["NAEP Math Scale Scores (2003–2024)"],
     tools: ["OMI Graphing Explorer", "printed charts"],
     steps: [
-      { label: "Choose your angle", detail: "Use the NAEP dataset to compare your state to the national average over time. Students will see real data about students their age — that's more engaging than textbook examples." },
+      { label: "Choose your angle", detail: "Use the NAEP dataset to compare your state to the national average over time. Students will see real data about students their age, which is more engaging than textbook examples." },
       { label: "Generate the chart", detail: "Use OMI's Graphing Explorer to plot your state vs. national for grade 8. Print or project the chart. Alternatively, have students open the Data Depot and look at the raw numbers." },
       { label: "Discuss 'average'", detail: "Ask: 'If Massachusetts averages 10 points above the national average, does that mean every student in MA scored higher?' This opens a conversation about distributions, variation, and what averages hide." },
       { label: "Look for the pandemic signal", detail: "Students will notice the 2022 dip. Ask them to generate hypotheses: 'Why might scores have dropped that year? What other data would you need to confirm your hypothesis?'" },
       { label: "Discuss responsible interpretation", detail: "Prompt: 'If a news article said your state is bad at math because of this data, would you agree? What's missing from the story?' This teaches critical evaluation of data claims." },
     ],
     finding: "Students engage more deeply with data about people like them. The pandemic dip is a natural hook for discussing confounding variables. The state-vs-national comparison teaches that 'above average' and 'below average' are relative, not absolute judgments.",
-    caveat: "NAEP data is aggregate — it cannot identify individual students or schools. Remind students that these numbers represent thousands of peers, not a judgment on any one person or teacher.",
+    caveat: "NAEP data is aggregate and cannot identify individual students or schools. Remind students that these numbers represent thousands of peers, not a judgment on any one person or teacher.",
   },
 ];
 
@@ -90,7 +90,7 @@ export function UseCasesPage() {
       <SectionHeading
         eyebrow="Use Cases"
         title="Research question to finding, step by step"
-        subtitle="Complete workflows showing how to use OMI datasets to answer real questions — from framing a question through data selection, analysis, and interpretation."
+        subtitle="Complete workflows showing how to use OMI datasets to answer real questions. Each walks through framing a question, data selection, analysis, and interpretation."
       />
 
       <div className="mt-12 space-y-16">

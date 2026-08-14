@@ -97,8 +97,8 @@ export function CodebooksPage() {
         <div className="mt-4 max-w-none space-y-4 text-sm leading-relaxed text-slate-600">
           <p>
             A <strong className="text-slate-900">codebook</strong> is the document that tells
-            another person what every variable in your dataset means. It is not the data itself
-            — it is the key to reading it.
+            another person what every variable in your dataset means. It is not the data itself.
+            It is the key to reading it.
           </p>
           <p>
             Think of a codebook like the legend on a map. Without it, a reader staring at your
@@ -111,12 +111,12 @@ export function CodebooksPage() {
             is the average NAEP mathematics scale score for that jurisdiction, grade, and year.
           </p>
           <p>
-            A good codebook answers three questions for every variable:
+            A good codebook answers three questions for every variable.
           </p>
           <ul className="ml-4 list-disc space-y-1">
-            <li><strong className="text-slate-900">What does this variable represent?</strong> — a plain-language description</li>
-            <li><strong className="text-slate-900">What values can it take?</strong> — the set of valid values or range</li>
-            <li><strong className="text-slate-900">What do coded values mean?</strong> — decode tables for any abbreviations or numeric codes</li>
+            <li><strong className="text-slate-900">What does this variable represent?</strong> A plain-language description.</li>
+            <li><strong className="text-slate-900">What values can it take?</strong> The set of valid values or range.</li>
+            <li><strong className="text-slate-900">What do coded values mean?</strong> Decode tables for any abbreviations or numeric codes.</li>
           </ul>
           <p>
             Codebooks are written for human readers. They prioritize clarity, context, and
@@ -139,7 +139,7 @@ export function CodebooksPage() {
             writing code to load or validate the data.
           </p>
           <p>
-            Here is a concrete example — the data dictionary for the{" "}
+            Here is a concrete example: the data dictionary for the{" "}
             <ButtonLink to="/data-depot/naep-math-scale-scores-2003-2024" variant="ghost" size="sm">
               NAEP Math Scale Scores
             </ButtonLink>{" "}
@@ -172,9 +172,9 @@ export function CodebooksPage() {
             </table>
           </div>
           <p>
-            Notice what the table gives you that a column header alone does not:{" "}
+            Notice what the table gives you that a column header alone does not.{" "}
             <code className="rounded bg-slate-100 px-1.5 py-0.5 text-xs text-slate-800">jurisdiction</code>{" "}
-            could be a full state name, a FIPS code, or an abbreviation — the data dictionary
+            could be a full state name, a FIPS code, or an abbreviation. The data dictionary
             resolves that ambiguity. It also tells you that{" "}
             <code className="rounded bg-slate-100 px-1.5 py-0.5 text-xs text-slate-800">avg_scale_score</code>{" "}
             is a float (two decimal places in this dataset), not an integer, and that no rows
@@ -185,7 +185,7 @@ export function CodebooksPage() {
             <ButtonLink to="/data-depot/pisa-math-scores-owid-2009-2022" variant="ghost" size="sm">
               PISA Math Scores
             </ButtonLink>{" "}
-            dataset, which stores the same concept — a country-level average math score — under
+            dataset, which stores the same concept, a country-level average math score, under
             the column name{" "}
             <code className="rounded bg-slate-100 px-1.5 py-0.5 text-xs text-slate-800">pisa_math_all_average</code>{" "}
             (a float with five decimal places, observed range 317.96 {"–"} 574.66). Without a
@@ -236,7 +236,7 @@ export function CodebooksPage() {
               <p className="mt-2 text-sm text-slate-600">
                 Answers: where did this data come from? Who collected it? When was it last
                 updated? What license applies? How should it be cited? The first file a new
-                user reads — it points them to the codebook and dictionary.
+                user reads. It points them to the codebook and dictionary.
               </p>
             </Card>
           </div>
@@ -258,7 +258,7 @@ export function CodebooksPage() {
           <p>
             You do not need special software. A codebook can be a Markdown file, a sheet in a
             spreadsheet, or a section of a PDF. What matters is completeness and clarity. Here
-            is a step-by-step process:
+            is a step-by-step process.
           </p>
           <ol className="ml-4 list-decimal space-y-3">
             <li>
@@ -278,7 +278,7 @@ export function CodebooksPage() {
               For categorical columns, list every possible value. For numeric columns, state
               the observed range. The observed NAEP scale scores in the OMI file fall between
               227.09 and 300.57. If the instrument's documentation declares a wider valid range,
-              cite that too — distinguishing "what the data contains" from "what the scale
+              cite that too, distinguishing "what the data contains" from "what the scale
               allows" is itself useful information for a reader.
             </li>
             <li>
@@ -288,7 +288,7 @@ export function CodebooksPage() {
             </li>
             <li>
               <strong className="text-slate-900">Note your missingness conventions.</strong>{" "}
-              How are missing values represented? Empty cell, "NA", -999, "." — different tools
+              How are missing values represented? Empty cell, "NA", -999, "."; different tools
               interpret these differently. If the dataset has no missing values (as in the current
               NAEP file), say that too.
             </li>
@@ -300,7 +300,7 @@ export function CodebooksPage() {
             </li>
             <li>
               <strong className="text-slate-900">Version it alongside the data.</strong>{" "}
-              When the data changes, the codebook must change with it. Store them together — same
+              When the data changes, the codebook must change with it. Store them together: same
               folder, same repository, same release. A codebook for last year's data is worse
               than no codebook at all, because it is actively misleading.
             </li>
@@ -322,7 +322,7 @@ export function CodebooksPage() {
               <p className="mt-1 text-sm text-slate-600">
                 What does jurisdiction "NP" mean? Without a decode table, a researcher might
                 assume it is Nepal (the ISO country code), a typo, or a null marker. In the
-                NAEP dataset, it means "National public" — but that is obvious only if you
+                NAEP dataset, it means "National public," but that is obvious only if you
                 already know NAEP conventions, which your reader may not.
               </p>
             </Card>
@@ -344,7 +344,7 @@ export function CodebooksPage() {
                 A column named{" "}
                 <code className="rounded bg-slate-100 px-1.5 py-0.5 text-xs text-slate-800">code</code>{" "}
                 in the PISA dataset is usually a three-letter ISO country code (like "ALB" for
-                Albania) — but not always. Kosovo appears as "OWID_KOS" (a non-ISO code from the
+                Albania), but not always. Kosovo appears as "OWID_KOS" (a non-ISO code from the
                 Our World in Data source), and aggregate rows like "OECD average" have a blank
                 code entirely. Without a data dictionary, a reader filtering on three-letter codes
                 silently drops those rows. Column names are mnemonics, not documentation.
@@ -356,7 +356,7 @@ export function CodebooksPage() {
                 Datasets evolve. Columns get added, codes get redefined, years get appended. If
                 the codebook describes last year's file but the data is this year's, a reader
                 following the codebook will encounter columns that do not exist or values that
-                the codebook says are invalid. Version the codebook with the data — same commit,
+                the codebook says are invalid. Version the codebook with the data: same commit,
                 same release, same update date.
               </p>
             </Card>
@@ -383,8 +383,8 @@ export function CodebooksPage() {
         <div className="mt-4 space-y-4 text-sm leading-relaxed text-slate-600">
           <p>
             For publication on OMI, a dataset's documentation must clear a specific bar. This
-            is not about format — Markdown, PDF, and spreadsheets are all fine. It is about
-            completeness:
+            is not about format. Markdown, PDF, and spreadsheets are all fine. It is about
+            completeness.
           </p>
           <div className="rounded-2xl border border-slate-100 bg-slate-50 p-6">
             <h4 className="text-sm font-semibold uppercase tracking-wider text-slate-500">
@@ -410,7 +410,7 @@ export function CodebooksPage() {
           </div>
           <p>
             The test is simple: could a researcher who has never seen this data before load it,
-            understand every column, and use it correctly — without emailing you to ask what
+            understand every column, and use it correctly, without emailing you to ask what
             something means? If yes, it is ready to share.
           </p>
         </div>
@@ -428,7 +428,7 @@ export function CodebooksPage() {
             <Card hover>
               <h4 className="font-display font-bold text-slate-900">Researcher Guide</h4>
               <p className="mt-1 text-sm text-slate-600">
-                The full guide to preparing education data for open publication — including
+                The full guide to preparing education data for open publication, including
                 de-identification, repository comparison, and licensing.
               </p>
               <ButtonLink to="/researcher-guide" variant="outline" size="sm" className="mt-3">

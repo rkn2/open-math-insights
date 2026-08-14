@@ -32,7 +32,7 @@ const METADATA_LEVELS = [
   },
   {
     level: "Variable-level",
-    description: "Describes each column or field — your data dictionary",
+    description: "Describes each column or field (your data dictionary)",
     examples: "What each column name means, its data type, valid values, units of measurement, how missing values are coded",
     tone: "teal" as const,
   },
@@ -73,7 +73,7 @@ export function SchemasMetadataAnnotationPage() {
         <SectionHeading
           eyebrow="For Researchers"
           title="Schemas, Metadata & Annotation"
-          subtitle="Three terms that education researchers use constantly — and often differently. This guide defines each one precisely, explains why the distinctions matter for cross-project work, and offers practical advice for making your data both human-readable and machine-ready."
+          subtitle="Three terms that education researchers use constantly, and often differently. This guide defines each one precisely, explains why the distinctions matter for cross-project work, and offers practical advice for making your data both human-readable and machine-ready."
         />
       </div>
 
@@ -103,12 +103,12 @@ export function SchemasMetadataAnnotationPage() {
           <p>
             A <strong className="text-slate-900">schema</strong> is the structure of your data: what
             fields exist, their types, and how they relate to each other. Think of it as a blueprint
-            for a building versus the building itself — the schema defines the shape; the data fills
+            for a building versus the building itself. The schema defines the shape; the data fills
             it in.
           </p>
           <p>
             A schema answers: <em>What columns does this dataset have? What kind of value goes in each
-            one? Are there relationships between tables?</em> It says nothing about the actual values —
+            one? Are there relationships between tables?</em> It says nothing about the actual values,
             only about the containers those values live in.
           </p>
 
@@ -162,11 +162,11 @@ export function SchemasMetadataAnnotationPage() {
         <div className="mt-4 space-y-4 text-sm leading-relaxed text-slate-600">
           <p>
             <strong className="text-slate-900">Metadata</strong> is data about data. It tells you
-            what a dataset contains, where it came from, and how you are allowed to use it — without
+            what a dataset contains, where it came from, and how you are allowed to use it, without
             requiring you to open the data itself.
           </p>
           <p>
-            There are two levels of metadata that education researchers need to think about:
+            There are two levels of metadata that education researchers need to think about.
           </p>
 
           <div className="grid gap-4 sm:grid-cols-2">
@@ -183,18 +183,18 @@ export function SchemasMetadataAnnotationPage() {
             On OMI, every dataset's detail page includes both levels: a <strong>metadata card</strong> for
             dataset-level information and a <strong>data dictionary</strong> section that documents each
             variable. Together, these tell a new user everything they need to decide whether a dataset fits
-            their research question — before downloading a single row.
+            their research question, before downloading a single row.
           </p>
 
           <h3 className="mt-6 font-display text-base font-bold text-slate-900">
             Metadata vs schema: what is the difference?
           </h3>
           <p>
-            The schema tells you the structure — "this dataset has a column called{" "}
+            The schema tells you the structure. For example, this dataset has a column called{" "}
             <code className="rounded bg-slate-100 px-1 text-xs">grade</code> of type{" "}
-            <code className="rounded bg-slate-100 px-1 text-xs">int</code>." The metadata tells you
-            the context — "this dataset was collected by NCES in 2022, covers grades 4 and 8, and is
-            licensed CC0-1.0." A schema is part of your metadata, but metadata is much broader.
+            <code className="rounded bg-slate-100 px-1 text-xs">int</code>. The metadata tells you
+            the context. For example, this dataset was collected by NCES in 2022, covers grades 4 and 8, and is
+            licensed CC0-1.0. A schema is part of your metadata, but metadata is much broader.
           </p>
         </div>
       </section>
@@ -205,7 +205,7 @@ export function SchemasMetadataAnnotationPage() {
         <div className="mt-4 space-y-4 text-sm leading-relaxed text-slate-600">
           <p>
             <strong className="text-slate-900">Annotation</strong> is the act of applying labels to
-            raw data — by a human coder, by a machine, or by some combination of both. The raw data
+            raw data, whether by a human coder, a machine, or some combination of both. The raw data
             is the student response, the transcript segment, or the test item; the annotation is the
             judgment layered on top of it.
           </p>
@@ -236,7 +236,7 @@ export function SchemasMetadataAnnotationPage() {
             Annotation vs coding
           </h3>
           <p>
-            In qualitative research, "coding" often means the same thing as annotation — applying
+            In qualitative research, "coding" often means the same thing as annotation, applying
             categorical labels to segments of data. Some researchers reserve "coding" for qualitative
             work and "annotation" for computational contexts, but the underlying operation is the same:
             a human (or machine) reads a piece of data and assigns it a label from a defined set.
@@ -246,7 +246,7 @@ export function SchemasMetadataAnnotationPage() {
             The codebook problem
           </h3>
           <p>
-            Every annotation scheme depends on a <strong>codebook</strong> — the document that defines
+            Every annotation scheme depends on a <strong>codebook</strong>, the document that defines
             what each label means, when to apply it, and how to handle edge cases. This is where
             research teams diverge most. Two teams studying "productive struggle" may define and
             operationalize the concept differently, use different granularity in their codes, and
@@ -279,7 +279,7 @@ export function SchemasMetadataAnnotationPage() {
                 Some teams use "annotation" to mean any human-applied label. Others mean specifically
                 the process of a trained coder applying codes from a codebook. Still others use it
                 interchangeably with "tagging" or "markup." When teams say they have "annotated data,"
-                they may be describing very different things — different levels of rigor, different
+                they may be describing very different things: different levels of rigor, different
                 theoretical frameworks, different reliability guarantees.
               </p>
               <div className="mt-3">
@@ -297,7 +297,7 @@ export function SchemasMetadataAnnotationPage() {
                 and Project B uses{" "}
                 <code className="rounded bg-slate-100 px-1 text-xs">learner, item_code, answer, correctness</code>,
                 the data describes similar things but cannot be merged without a manual crosswalk. Common
-                schemas — even partial ones — make it possible for tools, analyses, and models to work
+                schemas, even partial ones, make it possible for tools, analyses, and models to work
                 across datasets without custom glue code for each pair.
               </p>
               <div className="mt-3">
@@ -338,7 +338,7 @@ export function SchemasMetadataAnnotationPage() {
         />
         <div className="mt-4 space-y-4 text-sm leading-relaxed text-slate-600">
           <p>
-            There is growing interest in making education data "AI-ready" — structured so that
+            There is growing interest in making education data "AI-ready," structured so that
             machine learning models can train on it or large language models can process it. But
             AI-readiness and human-readiness are not the same thing, and both matter.
           </p>
@@ -349,7 +349,7 @@ export function SchemasMetadataAnnotationPage() {
               <ul className="mt-3 space-y-2 text-sm text-slate-600">
                 <li>Consistent, well-defined schemas (no ambiguous column names)</li>
                 <li>Standardized annotation labels (no free-text codes that vary by coder)</li>
-                <li>Machine-readable formats (CSV, JSON, Parquet — not PDF tables)</li>
+                <li>Machine-readable formats (CSV, JSON, Parquet, not PDF tables)</li>
                 <li>Explicit missing-value coding (not blank cells that could mean anything)</li>
                 <li>Structured metadata that software can parse programmatically</li>
               </ul>
@@ -412,7 +412,7 @@ export function SchemasMetadataAnnotationPage() {
                   <h4 className="font-display font-bold text-slate-900">Separate your metadata from your data</h4>
                   <p className="mt-1 text-sm text-slate-600">
                     Dataset-level metadata (collection context, population, license) belongs in a
-                    dedicated metadata file or header — not buried in a README that lives in a different
+                    dedicated metadata file or header, not buried in a README that lives in a different
                     folder. Use a standard format like{" "}
                     <code className="rounded bg-slate-100 px-1 text-xs">datapackage.json</code> or at
                     minimum a structured YAML file that travels with the data.
@@ -428,7 +428,7 @@ export function SchemasMetadataAnnotationPage() {
                   <h4 className="font-display font-bold text-slate-900">Version your codebook alongside your annotations</h4>
                   <p className="mt-1 text-sm text-slate-600">
                     If you add a new code, refine a definition, or merge two codes, the codebook version
-                    must change — and your annotations must record which codebook version they were produced
+                    must change, and your annotations must record which codebook version they were produced
                     under. Without this, you cannot distinguish between "these two coders disagreed" and
                     "these two coders used different codebook versions."
                   </p>
@@ -444,7 +444,7 @@ export function SchemasMetadataAnnotationPage() {
                   <p className="mt-1 text-sm text-slate-600">
                     Decide upfront how you will represent missing data and document it in your schema.
                     A blank cell, the string "NA", the number -999, and a null JSON value all mean
-                    "missing" — but they are not interchangeable, and mixing them within a dataset
+                    "missing," but they are not interchangeable, and mixing them within a dataset
                     creates silent analysis errors.
                   </p>
                 </div>
@@ -472,7 +472,7 @@ export function SchemasMetadataAnnotationPage() {
                 <div>
                   <h4 className="font-display font-bold text-slate-900">Test your data with a stranger</h4>
                   <p className="mt-1 text-sm text-slate-600">
-                    Give your dataset — with its schema, metadata, and codebook — to someone outside
+                    Give your dataset, with its schema, metadata, and codebook, to someone outside
                     your project. If they cannot load the data, understand what each field means, and
                     reproduce a basic analysis without asking you questions, your documentation is not
                     sufficient. This is the simplest and most reliable usability test.
@@ -495,7 +495,7 @@ export function SchemasMetadataAnnotationPage() {
             <Card hover>
               <h4 className="font-display font-bold text-slate-900">Researcher Guide</h4>
               <p className="mt-1 text-sm text-slate-600">
-                The full guide to contributing data to OMI — including de-identification review,
+                The full guide to contributing data to OMI, including de-identification review,
                 licensing decisions, repository selection, and metadata standards.
               </p>
               <ButtonLink to="/researcher-guide" variant="outline" size="sm" className="mt-3">
@@ -515,7 +515,7 @@ export function SchemasMetadataAnnotationPage() {
             <Card hover>
               <h4 className="font-display font-bold text-slate-900">Data Depot</h4>
               <p className="mt-1 text-sm text-slate-600">
-                Browse real examples of schemas and metadata in action — every dataset in the
+                Browse real examples of schemas and metadata in action. Every dataset in the
                 Data Depot includes a metadata card and data dictionary.
               </p>
               <ButtonLink to="/data-depot" variant="outline" size="sm" className="mt-3">
@@ -525,8 +525,8 @@ export function SchemasMetadataAnnotationPage() {
             <Card hover>
               <h4 className="font-display font-bold text-slate-900">Science of Learning for Math Data</h4>
               <p className="mt-1 text-sm text-slate-600">
-                The cognitive frameworks — productive struggle, mathematical modeling, statistical
-                reasoning — that determine what annotation codes capture and why.
+                The cognitive frameworks (productive struggle, mathematical modeling, statistical
+                reasoning) that determine what annotation codes capture and why.
               </p>
               <ButtonLink to="/learning-center/science-of-learning" variant="outline" size="sm" className="mt-3">
                 Science of Learning →
@@ -536,7 +536,7 @@ export function SchemasMetadataAnnotationPage() {
               <h4 className="font-display font-bold text-slate-900">Annotation Best Practices</h4>
               <p className="mt-1 text-sm text-slate-600">
                 How to build codebooks that work, train coders, measure reliability, and use AI as
-                a second coder — the methodology behind high-quality annotation.
+                a second coder. The methodology behind high-quality annotation.
               </p>
               <ButtonLink to="/learning-center/annotation-best-practices" variant="outline" size="sm" className="mt-3">
                 Annotation Best Practices →
@@ -560,8 +560,8 @@ export function SchemasMetadataAnnotationPage() {
       <div className="mt-16 rounded-3xl bg-gradient-to-br from-teal-600 to-primary-700 px-8 py-10 text-center text-white">
         <h2 className="font-display text-2xl font-bold">Key takeaway</h2>
         <p className="mt-2 text-teal-100">
-          Schema, metadata, and annotation are not synonyms. Treating them as distinct layers —
-          and documenting each one explicitly — is what makes education data reusable across teams,
+          Schema, metadata, and annotation are not synonyms. Treating them as distinct layers
+          and documenting each one explicitly is what makes education data reusable across teams,
           disciplines, and tools.
         </p>
       </div>

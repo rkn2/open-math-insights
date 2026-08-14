@@ -31,7 +31,7 @@ export function IntroToMLPage() {
         <SectionHeading
           eyebrow="For Researchers"
           title="Intro to Machine Learning for Education Data"
-          subtitle="A conceptual introduction to ML techniques that are relevant to education research — what they do, when they're useful, and what they can't tell you. No coding required; links to hands-on notebooks at the end."
+          subtitle="A conceptual introduction to ML techniques that are relevant to education research. It covers what they do, when they are useful, and what they cannot tell you. No coding required; links to hands-on notebooks at the end."
         />
       </div>
 
@@ -69,7 +69,7 @@ export function IntroToMLPage() {
           </p>
           <p>
             It is not magic, and it is not sentient. At its core, ML is{" "}
-            <strong className="text-slate-900">pattern matching at scale</strong> — the same kind of
+            <strong className="text-slate-900">pattern matching at scale</strong>, the same kind of
             pattern recognition you do when you read student work, but applied to thousands or
             millions of data points at once.
           </p>
@@ -79,9 +79,9 @@ export function IntroToMLPage() {
             </h4>
             <p className="mt-2 text-sm text-slate-600">
               Think of how an experienced teacher develops intuitions about which students need
-              intervention — they notice patterns across many students over many years. ML does
+              intervention. They notice patterns across many students over many years. ML does
               something similar, but with explicit data instead of tacit knowledge, and at a
-              scale no single teacher could match. The tradeoff: ML sees the numbers but not the
+              scale no single teacher could match. The tradeoff is that ML sees the numbers but not the
               context. A teacher sees both.
             </p>
           </div>
@@ -104,7 +104,7 @@ export function IntroToMLPage() {
             <Card>
               <h4 className="font-display font-bold text-slate-900">Supervised learning</h4>
               <p className="mt-2 text-sm text-slate-600">
-                You provide the algorithm with <strong>labeled examples</strong> — data where you
+                You provide the algorithm with <strong>labeled examples</strong>, data where you
                 already know the answer. For instance: "this student response is{" "}
                 <em>productive struggle</em>, this one is <em>unproductive</em>." The algorithm
                 learns to predict the label for new, unseen data.
@@ -116,7 +116,7 @@ export function IntroToMLPage() {
             <Card>
               <h4 className="font-display font-bold text-slate-900">Unsupervised learning</h4>
               <p className="mt-2 text-sm text-slate-600">
-                You give the algorithm data with <strong>no labels</strong> — no "right answers" —
+                You give the algorithm data with <strong>no labels</strong>, no "right answers,"
                 and it finds natural groupings or structure on its own. You don't tell it what to
                 look for; it discovers patterns in how the data points relate to each other.
               </p>
@@ -128,7 +128,7 @@ export function IntroToMLPage() {
           <p>
             Education research uses both. Supervised learning is common when you have coded data
             (human-labeled rubric scores, correct/incorrect flags). Unsupervised learning is
-            useful when you want to explore — to ask "what groups naturally exist in this data?"
+            useful when you want to explore, to ask "what groups naturally exist in this data?"
             before imposing your own categories.
           </p>
         </div>
@@ -154,17 +154,17 @@ export function IntroToMLPage() {
           <ul className="ml-5 list-disc space-y-2">
             <li>
               <strong className="text-slate-900">Finding groups of countries with similar
-              assessment trajectories</strong> — e.g., which countries show similar patterns of
+              assessment trajectories</strong>, e.g., which countries show similar patterns of
               change in PISA math scores over time?
             </li>
             <li>
-              <strong className="text-slate-900">Identifying student learning profiles</strong>{" "}
-              — grouping students by combinations of behavior (time on task, hint usage, accuracy)
+              <strong className="text-slate-900">Identifying student learning profiles</strong>,{" "}
+              grouping students by combinations of behavior (time on task, hint usage, accuracy)
               rather than by a single measure.
             </li>
             <li>
               <strong className="text-slate-900">Exploratory analysis before hypothesis
-              testing</strong> — discovering structure in data before committing to a specific
+              testing</strong>, discovering structure in data before committing to a specific
               research question.
             </li>
           </ul>
@@ -185,7 +185,7 @@ export function IntroToMLPage() {
               </li>
               <li>
                 <strong>The "right" number of clusters.</strong> Choosing <em>k</em> requires
-                judgment — techniques like the elbow method or silhouette scores can help, but
+                judgment. Techniques like the elbow method or silhouette scores can help, but
                 they don't replace domain expertise.
               </li>
             </ul>
@@ -201,7 +201,7 @@ export function IntroToMLPage() {
             >
               Exploring Math Assessment Data notebook
             </a>{" "}
-            on OMI includes a worked clustering example using PISA data — a good place to see
+            on OMI includes a worked clustering example using PISA data, a good place to see
             K-Means applied to real education data.
           </p>
         </div>
@@ -229,7 +229,7 @@ export function IntroToMLPage() {
               <h4 className="font-display font-bold text-slate-900">Decision trees</h4>
               <p className="mt-2 text-sm text-slate-600">
                 A series of yes/no questions about the data, organized as a tree. Easy to
-                interpret — you can read the decision rules directly — but a single tree is
+                interpret (you can read the decision rules directly) but a single tree is
                 often too simple to capture complex patterns.
               </p>
             </Card>
@@ -238,7 +238,7 @@ export function IntroToMLPage() {
               <p className="mt-2 text-sm text-slate-600">
                 Many decision trees trained on random subsets of the data, whose predictions are
                 combined by majority vote. More accurate than a single tree, and resistant to
-                overfitting — but harder to interpret because you're reading an ensemble, not a
+                overfitting, but harder to interpret because you're reading an ensemble, not a
                 single tree.
               </p>
             </Card>
@@ -251,8 +251,8 @@ export function IntroToMLPage() {
             <p className="mt-2 text-sm text-slate-600">
               The CAMEL project (Collaborative Annotation for Math Education Learning) built a
               proof-of-concept classifier as part of its deliverable D8 that does exactly this:
-              given features of student interactions with a math tutoring system — correctness
-              history, hint usage, time spent — it predicts productive vs. unproductive struggle.
+              given features of student interactions with a math tutoring system (correctness
+              history, hint usage, time spent), it predicts productive vs. unproductive struggle.
               This is a concrete example of classification applied to a real education research
               question.
             </p>
@@ -265,11 +265,7 @@ export function IntroToMLPage() {
         <SectionHeading eyebrow="Section 5" title="Feature importance" as="h2" />
         <div className="mt-4 space-y-4 text-sm leading-relaxed text-slate-600">
           <p>
-            Once you have a trained model, a natural question is:{" "}
-            <strong className="text-slate-900">
-              which variables matter most for the prediction?
-            </strong>{" "}
-            Feature importance techniques answer this by measuring how much each input variable
+            Feature importance techniques measure how much each input variable
             contributes to the model's accuracy.
           </p>
 
@@ -281,7 +277,7 @@ export function IntroToMLPage() {
             can tell you whether <strong className="text-slate-900">prior correctness</strong>,{" "}
             <strong className="text-slate-900">time spent per problem</strong>, or{" "}
             <strong className="text-slate-900">hint usage</strong> is the strongest predictor.
-            This doesn't establish causation — but it tells you where to look, and it can
+            This doesn't establish causation, but it tells you where to look, and it can
             challenge assumptions about what drives learning outcomes.
           </p>
 
@@ -317,7 +313,7 @@ export function IntroToMLPage() {
                     If shuffling a feature hurts accuracy a lot, it was important.
                   </td>
                   <td className="py-3 text-slate-600">
-                    Model-agnostic — works with any algorithm. Slower, and can underestimate
+                    Model-agnostic. Works with any algorithm. Slower, and can underestimate
                     importance of correlated features.
                   </td>
                 </tr>
@@ -330,7 +326,7 @@ export function IntroToMLPage() {
                     prediction, grounded in game theory.
                   </td>
                   <td className="py-3 text-slate-600">
-                    Most informative — explains individual predictions, not just global trends.
+                    Most informative. Explains individual predictions, not just global trends.
                     Computationally expensive for large datasets.
                   </td>
                 </tr>
@@ -363,7 +359,7 @@ export function IntroToMLPage() {
               <ul className="mt-3 ml-5 list-disc space-y-2 text-sm text-slate-600">
                 <li>
                   <strong className="text-slate-900">Find patterns humans miss.</strong>{" "}
-                  Interactions between variables, nonlinear relationships, subtle subgroups — ML
+                  Interactions between variables, nonlinear relationships, subtle subgroups. ML
                   can surface structure in data that would be invisible in summary statistics.
                 </li>
                 <li>
@@ -384,7 +380,7 @@ export function IntroToMLPage() {
                 <li>
                   <strong className="text-slate-900">Establish causation.</strong> ML finds
                   correlations and predictive relationships. It cannot tell you whether X causes
-                  Y — that requires experimental or quasi-experimental designs.
+                  Y. That requires experimental or quasi-experimental designs.
                 </li>
                 <li>
                   <strong className="text-slate-900">Be better than its training data.</strong>{" "}
@@ -393,8 +389,8 @@ export function IntroToMLPage() {
                 </li>
                 <li>
                   <strong className="text-slate-900">Encode bias it doesn't have.</strong>{" "}
-                  Conversely, ML can <em>amplify</em> existing biases in historical data —
-                  patterns of inequity become patterns of prediction.
+                  Conversely, ML can <em>amplify</em> existing biases in historical data.
+                  Patterns of inequity become patterns of prediction.
                 </li>
               </ul>
             </Card>
@@ -463,7 +459,7 @@ export function IntroToMLPage() {
           </div>
           <p>
             The best use of ML in education research is often{" "}
-            <strong className="text-slate-900">complementary</strong>: use ML to find patterns
+            <strong className="text-slate-900">complementary</strong>. Use ML to find patterns
             and generate hypotheses, then use traditional statistical methods or experimental
             designs to test them.
           </p>
@@ -485,7 +481,7 @@ export function IntroToMLPage() {
               </h4>
               <p className="mt-2 text-sm text-slate-600">
                 Descriptive statistics, trend plotting, and a K-Means clustering analysis using
-                PISA data — a hands-on introduction to the techniques covered in Sections 1-3.
+                PISA data, a hands-on introduction to the techniques covered in Sections 1-3.
               </p>
               <a
                 href="https://colab.research.google.com/github/rkn2/open-math-insights/blob/main/notebooks/01_exploring_math_data.ipynb"
@@ -499,7 +495,7 @@ export function IntroToMLPage() {
             <Card hover>
               <h4 className="font-display font-bold text-slate-900">Browse the Data Depot</h4>
               <p className="mt-2 text-sm text-slate-600">
-                Explore the datasets available on OMI — including the ASSISTments tutoring data,
+                Explore the datasets available on OMI, including the ASSISTments tutoring data,
                 which is the kind of student-level interaction data used in classification and
                 feature importance work.
               </p>
@@ -515,7 +511,7 @@ export function IntroToMLPage() {
       <div className="mt-16 rounded-3xl bg-gradient-to-br from-teal-600 to-primary-700 px-8 py-10 text-center text-white">
         <h2 className="font-display text-2xl font-bold">Key takeaway</h2>
         <p className="mt-2 text-teal-100">
-          Machine learning finds patterns at scale. It complements — but does not replace —
+          Machine learning finds patterns at scale. It complements, but does not replace,
           domain expertise, causal inference, and careful research design.
         </p>
       </div>

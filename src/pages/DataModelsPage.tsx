@@ -53,7 +53,7 @@ const MODELS: DataModel[] = [
     id: "classroom-observation",
     name: "Classroom Observation",
     icon: "👁️",
-    description: "Structured records of what happens in classrooms during instruction — teacher behaviors, student engagement, discourse patterns, or implementation fidelity. Collected by trained observers using a rubric or protocol.",
+    description: "Structured records of what happens in classrooms during instruction, including teacher behaviors, student engagement, discourse patterns, or implementation fidelity. Collected by trained observers using a rubric or protocol.",
     examples: [
       "CLASS (Classroom Assessment Scoring System) observation ratings",
       "Mathematical Quality of Instruction (MQI) scores",
@@ -78,7 +78,7 @@ const MODELS: DataModel[] = [
     id: "student-work",
     name: "Student Work & Responses",
     icon: "📝",
-    description: "Artifacts of student mathematical thinking — written solutions, digital notebook logs, problem-solving traces, or item responses. The richest source of reasoning data, but also the highest privacy sensitivity.",
+    description: "Artifacts of student mathematical thinking, including written solutions, digital notebook logs, problem-solving traces, or item responses. The richest source of reasoning data, but also the highest privacy sensitivity.",
     examples: [
       "Scanned written math solutions (de-identified)",
       "Jupyter notebook telemetry logs (keystroke/cell-execution level)",
@@ -103,7 +103,7 @@ const MODELS: DataModel[] = [
     id: "survey",
     name: "Survey & Questionnaire",
     icon: "📋",
-    description: "Self-report data from students, teachers, or parents — attitudes, beliefs, self-efficacy, pedagogical practices, or demographic information. Collected via structured instruments with established psychometric properties.",
+    description: "Self-report data from students, teachers, or parents, covering attitudes, beliefs, self-efficacy, pedagogical practices, or demographic information. Collected via structured instruments with established psychometric properties.",
     examples: [
       "STEM Identity survey (pre/post per module)",
       "Teacher self-efficacy questionnaire",
@@ -128,7 +128,7 @@ const MODELS: DataModel[] = [
     id: "tutoring-logs",
     name: "Tutoring & Learning System Logs",
     icon: "🖥️",
-    description: "Machine-generated records from intelligent tutoring systems, learning management systems, or educational software — capturing student interactions at the action level. High volume, structured, and already digital.",
+    description: "Machine-generated records from intelligent tutoring systems, learning management systems, or educational software. These capture student interactions at the action level. High volume, structured, and already digital.",
     examples: [
       "ASSISTments problem-level logs with hints and correctness",
       "Khan Academy exercise completion logs",
@@ -164,7 +164,7 @@ export function DataModelsPage() {
       <SectionHeading
         eyebrow="Data Models"
         title="Five types of education data"
-        subtitle="Structured data models with metadata templates — so every dataset on OMI is documented consistently, regardless of where it came from or who collected it."
+        subtitle="Structured data models with metadata templates. Every dataset on OMI is documented consistently, regardless of where it came from or who collected it."
       />
 
       <p className="mt-4 max-w-3xl text-sm leading-relaxed text-slate-600">
@@ -178,7 +178,7 @@ export function DataModelsPage() {
           DesignSafe-CI's data models
         </a>{" "}
         for natural hazards engineering, OMI defines five structured types for K–12 math education data.
-        Each type has its own metadata template — a checklist of required and recommended fields that
+        Each type has its own metadata template, a checklist of required and recommended fields that
         ensure the dataset is findable, interpretable, and reusable.
       </p>
 

@@ -12,7 +12,7 @@ const SECTIONS = [
   { id: "garbage-in-garbage-out", label: "5. Garbage in, garbage out" },
   { id: "protecting-privacy", label: "6. Protecting student privacy" },
   { id: "when-to-bring-in-researcher", label: "7. When to bring in a researcher" },
-  { id: "getting-started", label: "8. Getting started -- your first week" },
+  { id: "getting-started", label: "8. Getting started: your first week" },
 ];
 
 export function CollectingClassroomDataPage() {
@@ -31,7 +31,7 @@ export function CollectingClassroomDataPage() {
         <SectionHeading
           eyebrow="For Teachers · Practical Guide"
           title="Collecting Data in Your Classroom"
-          subtitle="You don't need a research degree to collect meaningful data about your students' learning. This guide shows you how to add structure to what you already notice -- so you can make data-informed decisions in your own space."
+          subtitle="You don't need a research degree to collect meaningful data about your students' learning. This guide shows you how to add structure to what you already notice. The goal is to help you make data-informed decisions in your own space."
           as="h1"
         />
       </div>
@@ -61,21 +61,21 @@ export function CollectingClassroomDataPage() {
         <div className="mt-4 max-w-none space-y-4 text-sm leading-relaxed text-slate-600">
           <p>
             Every time you give a quiz, watch students work through a problem, or notice who asks
-            for help and who doesn't -- you're collecting data. The difference between informal
+            for help and who doesn't, you are collecting data. The difference between informal
             observation and systematic data collection is structure: deciding in advance what you'll
             look for, how you'll record it, and how much is enough to draw a conclusion.
           </p>
           <p>
             You already have instincts about what's working and what isn't. You notice when a
             lesson lands and when it doesn't, when a student is struggling and when they're
-            coasting. That's valuable -- it's just not systematic yet. Systematic doesn't mean
+            coasting. That's valuable, but it's not systematic yet. Systematic doesn't mean
             complicated. It means consistent: the same question, asked the same way, at the same
             point in the lesson, recorded somewhere you can look at later.
           </p>
           <p>
             This guide walks you through how to add that structure without adding a second job.
             The goal is to give you tools for turning what you already notice into evidence you
-            can act on -- and, when the time is right, share with others.
+            can act on, and when the time is right, share with others.
           </p>
         </div>
       </section>
@@ -95,7 +95,7 @@ export function CollectingClassroomDataPage() {
               <p className="mt-1 text-sm text-slate-600">
                 Written solutions, notebook entries, problem-solving explanations. What strategies
                 did students use? Where did they get stuck? What errors show up repeatedly? Work
-                products capture the end result of thinking -- and when you collect them
+                products capture the end result of thinking, and when you collect them
                 systematically, patterns emerge that are invisible on any single day.
               </p>
             </Card>
@@ -104,7 +104,7 @@ export function CollectingClassroomDataPage() {
               <p className="mt-1 text-sm text-slate-600">
                 How students approach problems before they arrive at an answer. Time on task,
                 whether they try multiple strategies, whether they ask peers vs. teacher vs. give
-                up. These are the behaviors that standardized tests miss entirely -- and they often
+                up. These are the behaviors that standardized tests miss entirely, and they often
                 tell you more about learning than the final answer does.
               </p>
             </Card>
@@ -113,7 +113,7 @@ export function CollectingClassroomDataPage() {
               <p className="mt-1 text-sm text-slate-600">
                 Exit tickets, warm-up problems, periodic check-ins. Short, focused, designed to
                 answer one question: "Did students understand X after today's lesson?" The power of
-                quick assessments is frequency -- three exit tickets in a week tells you more than
+                quick assessments is frequency. Three exit tickets in a week tells you more than
                 one test at the end of the month.
               </p>
             </Card>
@@ -122,14 +122,13 @@ export function CollectingClassroomDataPage() {
               <p className="mt-1 text-sm text-slate-600">
                 Brief surveys about confidence, confusion, interest. "Rate how well you understood
                 today's lesson 1-5" captures something no test score can. Students often know when
-                they're lost before their quiz scores show it -- if you give them a way to tell you.
+                they're lost before their quiz scores show it, if you give them a way to tell you.
               </p>
             </Card>
           </div>
           <p>
             You don't need to collect all four types at once. Start with one. The category you
-            choose should match the question you're trying to answer -- and that brings us to the
-            next section.
+            choose should match the question you're trying to answer.
           </p>
         </div>
       </section>
@@ -172,7 +171,7 @@ export function CollectingClassroomDataPage() {
                 Match the question to what you'll do with the answer
               </h4>
               <p className="mt-2 text-sm text-slate-600">
-                If you want to know whether to reteach fractions, ask about fractions -- not "math
+                If you want to know whether to reteach fractions, ask about fractions, not "math
                 in general." If you want to know whether students are ready to move on, ask them to
                 demonstrate the specific skill you're assessing. Every question should connect to a
                 decision you might make.
@@ -208,7 +207,7 @@ export function CollectingClassroomDataPage() {
         <SectionHeading eyebrow="Section 4" title="How much data is enough?" as="h2" />
         <div className="mt-4 max-w-none space-y-4 text-sm leading-relaxed text-slate-600">
           <p>
-            This is the question teachers ask most often -- and the answer is more intuitive than
+            This is the question teachers ask most often, and the answer is more intuitive than
             you might expect. You don't need a statistics course to think clearly about sample size.
           </p>
 
@@ -218,7 +217,7 @@ export function CollectingClassroomDataPage() {
                 If you have 25 students, that IS your population
               </h4>
               <p className="mt-1 text-sm text-slate-600">
-                You're not sampling -- you're measuring everyone. You don't need statistical
+                You are not sampling. You are measuring everyone. You don't need statistical
                 significance to say "18 out of 25 students got this wrong." That's a fact about
                 your class, not an estimate. For decisions about your own classroom, this is the
                 most important thing to understand: you already have complete data.
@@ -231,7 +230,7 @@ export function CollectingClassroomDataPage() {
               </h4>
               <p className="mt-1 text-sm text-slate-600">
                 Two classes of 25 is a small sample for drawing general conclusions. Differences you
-                see might be real, or they might be noise -- different students, different day,
+                see might be real, or they might be noise. Different students, different day,
                 different energy in the room. The smaller the groups, the larger the difference
                 needs to be before you can trust it.
               </p>
@@ -243,7 +242,7 @@ export function CollectingClassroomDataPage() {
               </h4>
               <p className="mt-1 text-sm text-slate-600">
                 If yes, you probably have enough data. If you're not sure, you probably don't. This
-                is the practical version of statistical reliability -- and it's a surprisingly good
+                is the practical version of statistical reliability, and it's a surprisingly good
                 gut check for whether your data is telling you something real.
               </p>
             </Card>
@@ -290,7 +289,7 @@ export function CollectingClassroomDataPage() {
               <p className="mt-2 text-sm text-slate-600">
                 Not students' understanding. A question that's ambiguous, poorly worded, or tests
                 reading comprehension instead of math will give you data about the wrong thing. Test
-                your questions on a colleague first -- if they have to ask what you mean, your
+                your questions on a colleague first. If they have to ask what you mean, your
                 students will too.
               </p>
             </div>
@@ -301,7 +300,7 @@ export function CollectingClassroomDataPage() {
               </h4>
               <p className="mt-2 text-sm text-slate-600">
                 It's tempting to skip the exit ticket on the day everything went sideways. But those
-                days are part of the picture too. Consistency matters more than perfection -- three
+                days are part of the picture too. Consistency matters more than perfection. Three
                 data points that include a bad day are more honest than three data points from your
                 best lessons.
               </p>
@@ -324,7 +323,7 @@ export function CollectingClassroomDataPage() {
                 after
               </h4>
               <p className="mt-2 text-sm text-slate-600">
-                It's fine to improve your questions over time -- but if you change the exit ticket
+                It's fine to improve your questions over time, but if you change the exit ticket
                 format halfway through the unit, you have two different measurements, not a trend.
                 Decide your measures at the beginning and stick with them for the duration.
               </p>
@@ -349,7 +348,7 @@ export function CollectingClassroomDataPage() {
           <p>
             Collecting data about your students comes with a responsibility to protect it. Most
             classroom data collection is part of normal teaching practice and doesn't require formal
-            research approval -- but privacy still matters, especially if you ever want to share
+            research approval, but privacy still matters, especially if you ever want to share
             what you find.
           </p>
 
@@ -395,7 +394,7 @@ export function CollectingClassroomDataPage() {
               <p className="mt-1 text-sm text-slate-600">
                 FERPA and IRB requirements exist for good reasons, but they're complex. If you're
                 interested in contributing your classroom data to a research study, don't try to
-                navigate the legal and ethical landscape alone -- partner with a researcher who does
+                navigate the legal and ethical landscape alone. Partner with a researcher who does
                 this regularly.
               </p>
             </Card>
@@ -404,7 +403,7 @@ export function CollectingClassroomDataPage() {
           <div className="rounded-xl border border-amber-200 bg-amber-50 p-4">
             <p className="text-sm text-amber-800">
               <strong>If you're excited about what your classroom data shows and want to share it
-              more broadly -- that's great.</strong> But please don't try to de-identify and
+              more broadly, that's great.</strong> But please don't try to de-identify and
               publish student data on your own. Reach out to a CAMEL network researcher who can
               help you do it safely. Contact:{" "}
               <a
@@ -424,11 +423,11 @@ export function CollectingClassroomDataPage() {
         <div className="mt-4 max-w-none space-y-4 text-sm leading-relaxed text-slate-600">
           <p>
             Classroom-scale data collection is powerful for your own teaching decisions. But there
-            are moments when you've hit the limits of what one classroom can tell you -- and that's
-            when partnerships with education researchers add real value.
+            are moments when you have reached the limits of what one classroom can tell you, and
+            that is when partnerships with education researchers add real value.
           </p>
           <p>
-            You've reached that point when:
+            You have likely reached that point when the following apply.
           </p>
 
           <div className="space-y-4">
@@ -438,7 +437,7 @@ export function CollectingClassroomDataPage() {
               </h4>
               <p className="mt-2 text-sm text-slate-600">
                 Your classroom data tells you about your students. To know if a pattern is specific
-                to your class or shows up more broadly, you need data from other contexts -- and
+                to your class or shows up more broadly, you need data from other contexts, and
                 that requires a study design that accounts for differences between settings.
               </p>
             </div>
@@ -448,7 +447,7 @@ export function CollectingClassroomDataPage() {
                 You want to know if an intervention "worked" in a statistically rigorous sense
               </h4>
               <p className="mt-2 text-sm text-slate-600">
-                Trying a new approach and seeing improvement is encouraging -- but it's not proof.
+                Trying a new approach and seeing improvement is encouraging, but it's not proof.
                 Was it the new approach, or was it the extra attention, or was it that students were
                 more motivated that week? A researcher can help you design a comparison that
                 controls for these factors.
@@ -474,14 +473,14 @@ export function CollectingClassroomDataPage() {
               <p className="mt-2 text-sm text-slate-600">
                 If you've noticed something genuinely surprising or useful in your classroom data, a
                 researcher can help you determine whether it's a finding that would interest the
-                broader field -- and help you navigate the process of turning classroom observations
+                broader field, and help you navigate the process of turning classroom observations
                 into a published contribution.
               </p>
             </div>
           </div>
 
           <p>
-            This is where the CAMEL network comes in. The network connects teachers with
+            The CAMEL network connects teachers with
             researchers who study math learning. You bring the classroom expertise and the data;
             they bring the statistical tools and study design. It's a partnership, not a handoff.
           </p>
@@ -505,11 +504,11 @@ export function CollectingClassroomDataPage() {
 
       {/* ── Section 8 ──────────────────────────────────── */}
       <section id="getting-started" className="mt-20 scroll-mt-24">
-        <SectionHeading eyebrow="Section 8" title="Getting started -- your first week" as="h2" />
+        <SectionHeading eyebrow="Section 8" title="Getting started: your first week" as="h2" />
         <div className="mt-4 max-w-none space-y-4 text-sm leading-relaxed text-slate-600">
           <p>
-            You don't need to overhaul your practice to start collecting useful data. Here's a
-            concrete, minimal plan for your first week:
+            You don't need to overhaul your practice to start collecting useful data. Here is a
+            concrete, minimal plan for your first week.
           </p>
 
           <div className="space-y-4">
@@ -522,7 +521,7 @@ export function CollectingClassroomDataPage() {
                   Pick ONE question you want to answer about your students' learning this week
                 </h4>
                 <p className="mt-1 text-sm text-slate-600">
-                  Not three questions, not a broad topic -- one specific question. "Do my students
+                  Not three questions, not a broad topic. One specific question. "Do my students
                   understand how to set up a proportion?" or "Are students more confused by the
                   concept or the procedure?"
                 </p>
@@ -587,7 +586,7 @@ export function CollectingClassroomDataPage() {
                 <p className="mt-1 text-sm text-slate-600">
                   No software required. No statistical training. One question, one instrument,
                   three data points. You now know something about your students' learning that you
-                  didn't know on Monday -- and you have evidence to back it up.
+                  didn't know on Monday, and you have evidence to back it up.
                 </p>
               </div>
             </div>
@@ -603,7 +602,7 @@ export function CollectingClassroomDataPage() {
               </h4>
               <p className="mt-2 text-sm text-slate-600">
                 Learn what large-scale assessment data (like NAEP) can tell you about trends in math
-                learning -- and what it can't.
+                learning, and what it can't.
               </p>
               <ButtonLink
                 to="/learning-center/understanding-student-data"
@@ -619,7 +618,7 @@ export function CollectingClassroomDataPage() {
                 When Researchers Visit
               </h4>
               <p className="mt-2 text-sm text-slate-600">
-                What to expect when education researchers want to work with your classroom -- your
+                What to expect when education researchers want to work with your classroom, your
                 rights, what's protected, and what questions to ask.
               </p>
               <ButtonLink
@@ -636,7 +635,8 @@ export function CollectingClassroomDataPage() {
                 Statistical Foundations
               </h4>
               <p className="mt-2 text-sm text-slate-600">
-                A plain-language introduction to the stats concepts behind education data --
+                A plain-language introduction to the stats concepts behind education data,
+                including
                 confidence intervals, effect sizes, and sample size.
               </p>
               <ButtonLink
@@ -658,8 +658,8 @@ export function CollectingClassroomDataPage() {
           You have everything you need to start
         </h2>
         <p className="mt-2 text-teal-100">
-          One question, one exit ticket, one week. The data will tell you something -- and once
-          you see it, you'll want to collect more.
+          One question, one exit ticket, one week. Once you see what the data tells you, you
+          will want to collect more.
         </p>
       </div>
     </div>

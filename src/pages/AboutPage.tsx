@@ -19,7 +19,7 @@ const PRINCIPLES = [
     title: "Built for Collaboration",
     icon: "🤝",
     description:
-      "Datasets are openly licensed and citable, tools are free to use, and the community lives in the open on Slack — collaboration is the point, not an afterthought.",
+      "Datasets are openly licensed and citable, tools are free to use, and the community lives in the open on Slack. Collaboration is central to the project.",
   },
 ];
 
@@ -29,11 +29,11 @@ export function AboutPage() {
     <div className="mx-auto max-w-5xl px-6 py-16 lg:px-8">
       <SectionHeading eyebrow="About" title="Open Math Insights (OMI)" />
       <p className="mt-6 max-w-3xl text-lg text-slate-600">
-        OMI is an open, accessible, and authentic data infrastructure for K-12 math — a Data
-        Depot, a set of accessible compute tools, a Learning Center, and a community, tied
-        together on one platform. It's modeled on the same open-cyberinfrastructure ideas that
-        power research data platforms, reimagined for math classrooms: open licensing, clear
-        metadata, and a community built to share rather than gatekeep.
+        OMI is an open, accessible, and authentic data infrastructure for K-12 math education.
+        It includes a Data Depot, a set of accessible compute tools, a Learning Center, and
+        a community, tied together on one platform. It's modeled on the open-cyberinfrastructure
+        ideas that power research data platforms, adapted for math classrooms with open licensing,
+        clear metadata, and a community built to share rather than gatekeep.
       </p>
 
       <div id="principles" className="mt-16 scroll-mt-24">
@@ -78,7 +78,7 @@ export function AboutPage() {
             {
               name: "NCES / Nation's Report Card",
               role: "Data source",
-              description: "NAEP math achievement data — national and state-level trends, publicly available and updated biennially.",
+              description: "NAEP math achievement data covering national and state-level trends, publicly available and updated biennially.",
             },
             {
               name: "OECD / PISA",
@@ -93,7 +93,7 @@ export function AboutPage() {
             {
               name: "CSATS",
               role: "Implementation partner",
-              description: "Penn State's Center for Science and the Schools — teacher professional development and school partnerships.",
+              description: "Penn State's Center for Science and the Schools, supporting teacher professional development and school partnerships.",
             },
           ].map((partner) => (
             <Card key={partner.name}>

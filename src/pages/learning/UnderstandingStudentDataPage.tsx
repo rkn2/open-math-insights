@@ -65,7 +65,7 @@ export function UnderstandingStudentDataPage() {
           <p>
             But a test score is a <strong className="text-slate-900">sample, not a census</strong>.
             It captures a slice of what a student knows on one day, under one set of conditions.
-            Here is what most standardized math tests do not measure:
+            Here is what most standardized math tests do not measure.
           </p>
           <div className="grid gap-4 sm:grid-cols-2">
             {[
@@ -94,9 +94,8 @@ export function UnderstandingStudentDataPage() {
           </div>
           <p>
             None of this means test scores are useless. It means they answer a narrow question.
-            When you look at your students' data, keep asking:{" "}
-            <strong className="text-slate-900">what is this score telling me, and what is it
-            silent about?</strong>
+            When you look at your students' data, keep asking what the score is telling you
+            and what it is silent about.
           </p>
         </div>
       </section>
@@ -111,7 +110,7 @@ export function UnderstandingStudentDataPage() {
         <div className="mt-4 space-y-4 text-sm leading-relaxed text-slate-600">
           <p>
             Reports from different tests use different numbers, and they do not mean the same
-            thing. Here is a quick guide to the three most common types:
+            thing. Here is a quick guide to the three most common types.
           </p>
           <div className="overflow-x-auto">
             <table className="w-full text-left text-sm">
@@ -150,7 +149,7 @@ export function UnderstandingStudentDataPage() {
                   <td className="py-3 pr-4 font-medium text-slate-900">Percentile</td>
                   <td className="py-3 pr-4 text-slate-600">
                     A ranking that tells you what percentage of test-takers scored at or below a
-                    given score. It says nothing about what a student actually knows — only where
+                    given score. It says nothing about what a student actually knows, only where
                     they fall relative to others.
                   </td>
                   <td className="py-3 text-slate-600">
@@ -187,7 +186,7 @@ export function UnderstandingStudentDataPage() {
           </p>
           <p>
             <strong className="text-slate-900">NAEP's 0-500 scale</strong> is the most commonly
-            cited national benchmark. Here is how to put changes in perspective:
+            cited national benchmark. Here is how to put changes in perspective.
           </p>
           <div className="grid gap-4 sm:grid-cols-3">
             <Card>
@@ -200,8 +199,8 @@ export function UnderstandingStudentDataPage() {
             <Card>
               <p className="text-2xl font-bold text-slate-900">~8-10 pts</p>
               <p className="mt-1 text-sm text-slate-600">
-                A meaningful shift. The 2020-2022 decline in grade 8 NAEP math was about 8 points
-                — widely described as historically large.
+                A meaningful shift. The 2020-2022 decline in grade 8 NAEP math was about 8 points,
+                widely described as historically large.
               </p>
             </Card>
             <Card>
@@ -214,7 +213,7 @@ export function UnderstandingStudentDataPage() {
           </div>
           <p>
             The national average NAEP grade 8 math score in 2022 was 274 (out of 500). That
-            number sits in the "Basic" range — below the "Proficient" cut of 299. But "Basic"
+            number sits in the "Basic" range, below the "Proficient" cut of 299. But "Basic"
             does not mean students know nothing. It means they demonstrated partial mastery of
             the skills NAEP tests at that grade level.
           </p>
@@ -244,7 +243,7 @@ export function UnderstandingStudentDataPage() {
               <p className="mt-2 text-sm text-slate-600">
                 NAEP, PISA, and your state test all use different scales, test different content,
                 and sample different populations. A student who scores "Proficient" on your state
-                test might not score "Proficient" on NAEP — not because they got worse, but
+                test might not score "Proficient" on NAEP, not because they got worse, but
                 because the tests measure different things at different difficulty levels. You
                 cannot compare a NAEP score of 282 to a PISA score of 478. They are not on the
                 same ruler.
@@ -258,7 +257,7 @@ export function UnderstandingStudentDataPage() {
               <p className="mt-2 text-sm text-slate-600">
                 Every reported score has a margin of error. When NAEP reports that a state average
                 dropped from 285 to 282, that 3-point change may be within the confidence interval
-                — meaning we cannot be sure it is a real decline rather than normal sampling
+                , meaning we cannot be sure it is a real decline rather than normal sampling
                 variation. Always look for the error bars or the footnote that says "not
                 significantly different." If a report does not mention confidence intervals, treat
                 small changes with extra caution.
@@ -284,7 +283,7 @@ export function UnderstandingStudentDataPage() {
               <p className="mt-2 text-sm text-slate-600">
                 A school average tells you about the school, not about any particular student.
                 Knowing that your school's average dropped 5 points does not tell you which
-                students struggled or why. Averages can also mask divergent trends — the top
+                students struggled or why. Averages can also mask divergent trends. The top
                 quartile might be improving while the bottom quartile is declining, producing a
                 flat average that hides both stories.
               </p>
@@ -299,7 +298,7 @@ export function UnderstandingStudentDataPage() {
         <div className="mt-4 space-y-4 text-sm leading-relaxed text-slate-600">
           <p>
             As a teacher, you handle student data every day. Understanding the basics of data
-            privacy is not just a legal obligation — it is part of the trust your students and
+            privacy is not just a legal obligation. It is part of the trust your students and
             their families place in you.
           </p>
 
@@ -321,13 +320,13 @@ export function UnderstandingStudentDataPage() {
               request corrections.
             </li>
             <li>
-              Posting grades publicly — even by student ID number — can violate FERPA if students
+              Posting grades publicly, even by student ID number, can violate FERPA if students
               can be identified.
             </li>
           </ul>
 
           <h3 className="mt-6 font-display text-base font-bold text-slate-900">
-            What your district shares — and with whom
+            What your district shares and with whom
           </h3>
           <p>
             Your district likely shares student data with state education agencies (required for
@@ -344,7 +343,7 @@ export function UnderstandingStudentDataPage() {
           <p>
             <strong className="text-slate-900">De-identified data</strong> has had names, IDs,
             and other identifying information removed so that no individual student can be
-            recognized. The NAEP and PISA data on OMI are de-identified — they report group
+            recognized. The NAEP and PISA data on OMI are de-identified. They report group
             averages, not individual scores.
           </p>
           <p>
@@ -355,8 +354,8 @@ export function UnderstandingStudentDataPage() {
           <div className="rounded-xl border border-amber-200 bg-amber-50 p-4">
             <p className="text-sm text-amber-800">
               <strong>Rule of thumb:</strong> If you are sharing student data outside your
-              classroom — in a presentation, a blog post, a department meeting, or with a
-              colleague — ask yourself whether any individual student could be identified from
+              classroom, whether in a presentation, a blog post, a department meeting, or with a
+              colleague, ask yourself whether any individual student could be identified from
               what you are showing. If yes, you need consent or you need to aggregate further.
             </p>
           </div>
@@ -368,8 +367,8 @@ export function UnderstandingStudentDataPage() {
         <SectionHeading eyebrow="Section 6" title="What to be wary of" as="h2" />
         <div className="mt-4 space-y-4 text-sm leading-relaxed text-slate-600">
           <p>
-            Data can be a powerful tool for understanding your students. It can also be misused —
-            sometimes with good intentions. Here are patterns to watch for:
+            Data can be a powerful tool for understanding your students, but it can also be
+            misused, sometimes with good intentions. Here are patterns to watch for.
           </p>
 
           <div className="space-y-6">
@@ -381,7 +380,7 @@ export function UnderstandingStudentDataPage() {
                 When test scores are used primarily to rank teachers, close schools, or allocate
                 punishment, the data stops serving its educational purpose. Scores become something
                 to fear rather than something to learn from. If your school treats data as a weapon,
-                that is a systemic problem — not a reason to distrust data itself.
+                that is a systemic problem, not a reason to distrust data itself.
               </p>
             </Card>
 
@@ -391,8 +390,8 @@ export function UnderstandingStudentDataPage() {
               </h4>
               <p className="mt-2 text-sm text-slate-600">
                 Breaking data down by race, disability status, English learner status, or other
-                categories is important for equity. But when the group is very small — say, 5
-                students — reporting their average score can effectively identify individuals. Most
+                categories is important for equity. But when the group is very small, say 5
+                students, reporting their average score can effectively identify individuals. Most
                 reporting standards suppress groups smaller than 10, but not all do. Be cautious
                 about sharing disaggregated data when your subgroups are small enough that people
                 in the building could figure out who is who.
@@ -437,8 +436,8 @@ export function UnderstandingStudentDataPage() {
         />
         <div className="mt-4 space-y-4 text-sm leading-relaxed text-slate-600">
           <p>
-            Your students are going to encounter data about themselves — test scores, report
-            cards, percentile rankings — for the rest of their lives. Math class is a natural
+            Your students will encounter data about themselves, including test scores, report
+            cards, and percentile rankings, for the rest of their lives. Math class is a natural
             place to help them understand what data means and what it does not.
           </p>
 
@@ -457,7 +456,7 @@ export function UnderstandingStudentDataPage() {
           </h3>
           <p>
             Students can handle terms like "scale score," "percentile," and "margin of error"
-            if you explain them in plain language. This is math class — these are mathematical
+            if you explain them in plain language. This is math class. These are mathematical
             concepts. Teaching students to read a score report critically is a real-world data
             literacy skill.
           </p>
@@ -478,8 +477,8 @@ export function UnderstandingStudentDataPage() {
           </h3>
           <p>
             Show students that even teachers ask questions about data: Where did this come from?
-            Who was tested? What was not measured? Teaching students to interrogate data — rather
-            than accept or reject it wholesale — is one of the most transferable skills math
+            Who was tested? What was not measured? Teaching students to interrogate data, rather
+            than accept or reject it wholesale, is one of the most transferable skills math
             class can offer.
           </p>
 
@@ -487,7 +486,7 @@ export function UnderstandingStudentDataPage() {
             <p className="text-sm text-amber-800">
               <strong>Try this:</strong> Next time your class gets test scores back, spend 10
               minutes on a "what does this number actually tell us?" discussion. Use the
-              vocabulary from Section 2. Ask students what they think the test measured — and
+              vocabulary from Section 2. Ask students what they think the test measured, and
               what it did not. You may be surprised how much they already sense about the
               limitations.
             </p>
@@ -501,7 +500,7 @@ export function UnderstandingStudentDataPage() {
         <p className="mt-2 text-teal-100">
           You now have a foundation for reading student data critically, protecting student
           privacy, and helping your students build their own data literacy. The numbers are a
-          starting point — your professional knowledge fills in the rest.
+          starting point. Your professional knowledge fills in the rest.
         </p>
       </div>
     </div>

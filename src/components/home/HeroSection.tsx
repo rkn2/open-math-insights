@@ -10,14 +10,14 @@ export function HeroSection() {
             Funded by NSF · Built for math educators
           </span>
           <h1 className="mt-6 font-display text-balance text-4xl font-extrabold leading-tight text-white sm:text-5xl lg:text-6xl">
-            The datasets behind K–12 math, finally findable
+            Open data infrastructure for K-12 math education
           </h1>
           <p className="mt-6 max-w-xl text-lg text-slate-300">
-            National assessments, tutoring system logs, international comparisons — the
-            datasets behind K–12 math research exist, but finding, citing, and analyzing them
-            means navigating scattered agencies and formats. Open Math Insights brings them
-            together with consistent metadata so teachers and researchers can focus on the
-            questions, not the plumbing.
+            The datasets behind K-12 math research exist. National assessments, tutoring
+            system logs, and international comparisons are all publicly available, but finding,
+            citing, and analyzing them means navigating scattered agencies and formats. Open Math
+            Insights brings them together with consistent metadata so teachers and researchers
+            can focus on the questions, not the plumbing.
           </p>
           <div className="mt-9 flex flex-wrap gap-3">
             <ButtonLink to="/data-depot" size="lg">

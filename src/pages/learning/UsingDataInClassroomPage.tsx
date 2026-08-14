@@ -56,7 +56,7 @@ export function UsingDataInClassroomPage() {
         <SectionHeading
           eyebrow="For Teachers · Resource Guide"
           title="Using Open Data in Your Classroom"
-          subtitle="Real datasets can make math more concrete, relevant, and interesting for students. This guide shows you how to bring openly available math data into your teaching — no coding experience required."
+          subtitle="Real datasets can make math more concrete, relevant, and interesting for students. This guide shows you how to bring openly available math data into your teaching. No coding experience required."
         />
       </div>
 
@@ -86,10 +86,10 @@ export function UsingDataInClassroomPage() {
           <p>
             When people talk about "open data" in education, it can sound like something meant for
             researchers and policy analysts. But openly available math data is genuinely useful for
-            classroom teachers too — and you don't need a statistics degree to use it.
+            classroom teachers too, and you don't need a statistics degree to use it.
           </p>
           <p>
-            Here's why it matters:
+            Open data matters for classroom teachers for several reasons.
           </p>
           <div className="grid gap-4 sm:grid-cols-2">
             <Card>
@@ -103,7 +103,7 @@ export function UsingDataInClassroomPage() {
             <Card>
               <h4 className="font-display font-bold text-slate-900">Data literacy is a life skill</h4>
               <p className="mt-1 text-sm text-slate-600">
-                Students will encounter charts and statistics constantly — in news, in jobs, in
+                Students will encounter charts and statistics constantly, in news, in jobs, in
                 daily decisions. Working with real data teaches them to ask "Where did this come
                 from?" and "What does this actually show?"
               </p>
@@ -119,7 +119,7 @@ export function UsingDataInClassroomPage() {
             <Card>
               <h4 className="font-display font-bold text-slate-900">It connects to what you teach</h4>
               <p className="mt-1 text-sm text-slate-600">
-                NAEP and PISA data map directly onto Common Core math standards — interpreting
+                NAEP and PISA data map directly onto Common Core math standards, including interpreting
                 data, understanding variability, making comparisons, and constructing arguments
                 with evidence.
               </p>
@@ -154,7 +154,7 @@ export function UsingDataInClassroomPage() {
             </li>
             <li>
               <strong>Understanding big-picture shifts.</strong> The pandemic's impact on math
-              achievement shows up clearly in NAEP data — scores dropped significantly between
+              achievement shows up clearly in NAEP data. Scores dropped significantly between
               2019 and 2022 across nearly every state.
             </li>
             <li>
@@ -171,7 +171,7 @@ export function UsingDataInClassroomPage() {
             <p className="text-sm text-amber-800">
               <strong>NAEP scores are not a report card for your classroom.</strong> They describe
               large populations, not individual students or teachers. A state's average score
-              reflects decades of policy, funding, demographics, and systemic factors — not
+              reflects decades of policy, funding, demographics, and systemic factors, not
               whether any particular teacher is doing a good or bad job. Use NAEP to spark
               questions, not to draw conclusions about your own students' abilities.
             </p>
@@ -223,7 +223,7 @@ export function UsingDataInClassroomPage() {
               </h4>
               <p className="mt-2 text-sm text-slate-600">
                 Focus on <strong>reading and drawing simple charts</strong>. The NAEP dataset
-                works well here — it's small, it's organized by state, and you can pull out
+                works well here. It's small, it's organized by state, and you can pull out
                 a handful of rows for students to work with on paper. Have them build bar charts
                 by hand comparing five or six states, practice reading values from a chart, or
                 sort states from highest to lowest score. Keep it concrete: printed tables, hand-drawn
@@ -237,7 +237,7 @@ export function UsingDataInClassroomPage() {
               </h4>
               <p className="mt-2 text-sm text-slate-600">
                 Students at this level can handle <strong>multi-variable comparisons and basic
-                trend analysis</strong>. The PISA dataset is a natural fit — students can compare
+                trend analysis</strong>. The PISA dataset is a natural fit. Students can compare
                 countries, calculate changes over time, and discuss what makes a fair comparison.
                 They can also start using the{" "}
                 <ButtonLink to="/data-depot" variant="ghost" size="sm">Data Depot</ButtonLink>{" "}
@@ -257,7 +257,7 @@ export function UsingDataInClassroomPage() {
                 to generate charts, modify parameters to explore different subsets, and write up
                 their observations. This is also the right level for discussing data limitations:
                 sampling bias, confounding variables, and what "statistically significant" actually
-                means. The ASSISTments tutoring dataset adds another dimension — over 500,000 rows
+                means. The ASSISTments tutoring dataset adds another dimension, with over 500,000 rows
                 of real student interaction data that connects to their own experience with math
                 practice.
               </p>
@@ -306,7 +306,7 @@ export function UsingDataInClassroomPage() {
                 Small samples can mislead
               </h4>
               <p className="mt-2 text-sm text-slate-600">
-                If students look at a subset of the data — say, three countries over two years —
+                If students look at a subset of the data, say three countries over two years,
                 the patterns they see may not hold up in the full dataset. This is actually a
                 great teaching moment: it's a concrete way to introduce why sample size matters
                 and why we should be cautious about drawing big conclusions from small slices of
@@ -471,8 +471,8 @@ export function UsingDataInClassroomPage() {
           Your students can handle real data
         </h2>
         <p className="mt-2 text-teal-100">
-          Start small. Pick one dataset, one chart, one question. Let the data do what
-          textbook problems can't — connect math to the world your students already live in.
+          Start small. Pick one dataset, one chart, one question. Real data connects math
+          to the world your students already live in, in ways that textbook problems cannot.
         </p>
       </div>
     </div>

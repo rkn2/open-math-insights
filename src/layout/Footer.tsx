@@ -33,8 +33,8 @@ export function Footer() {
           <div className="lg:col-span-2">
             <p className="font-display text-lg font-bold text-slate-900">{SITE_NAME}</p>
             <p className="mt-3 max-w-sm text-sm text-slate-500">
-              Open, accessible, and authentic K–12 math datasets, tools, and a community built for
-              collaboration — modeled on open-cyberinfrastructure principles, reimagined for
+              Open, accessible, and authentic K-12 math datasets, tools, and a community built for
+              collaboration. Modeled on open-cyberinfrastructure principles and adapted for
               math classrooms.
             </p>
           </div>
@@ -55,7 +55,7 @@ export function Footer() {
         </div>
         <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-slate-200 pt-6 text-xs text-slate-400 sm:flex-row">
           <p>Part of the NSF CAMEL network. Site content is illustrative and subject to change as the collaboratory develops.</p>
-          <p>Datasets openly licensed — see each dataset's citation for details.</p>
+          <p>Datasets openly licensed. See each dataset's citation for details.</p>
         </div>
       </div>
     </footer>

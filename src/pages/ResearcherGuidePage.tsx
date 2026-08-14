@@ -14,16 +14,16 @@ const REPOSITORIES: {
   {
     name: "OSF (Open Science Framework)",
     url: "https://osf.io/",
-    focus: "Reproducible research workflows — preregistration, version control, and multi-format archiving in one place.",
+    focus: "Reproducible research workflows. Preregistration, version control, and multi-format archiving in one place.",
     bestFor: "Studies where you want preregistration, supplemental materials, and data archived together.",
     doi: true,
-    costNote: "Free for public projects (private storage capped — check current limits).",
+    costNote: "Free for public projects (private storage capped; check current limits).",
   },
   {
     name: "Hugging Face Datasets",
     url: "https://huggingface.co/docs/datasets",
     focus: "ML-ready datasets with built-in versioning, dataset cards, and one-line Python loading.",
-    bestFor: "Data you expect others to load programmatically — especially for ML/NLP research pipelines.",
+    bestFor: "Data you expect others to load programmatically, especially for ML/NLP research pipelines.",
     doi: false,
     costNote: "Free for public datasets. See their docs for private-repo and storage tiers.",
   },
@@ -41,7 +41,7 @@ const REPOSITORIES: {
     focus: "Curated social science data archive with disclosure review, restricted-use tiers, and long-term preservation.",
     bestFor: "Sensitive education or survey data requiring restricted access, disclosure review, or formal data-use agreements.",
     doi: true,
-    costNote: "Deposit is free for many institutions. Membership-based access model — check your institution.",
+    costNote: "Deposit is free for many institutions. Membership-based access model; check your institution.",
   },
   {
     name: "Figshare",
@@ -49,7 +49,7 @@ const REPOSITORIES: {
     focus: "Quick, low-friction sharing of figures, datasets, and supplemental files with DOI minting.",
     bestFor: "Supplemental data, figures, or small-to-medium datasets you want citable and shareable fast.",
     doi: true,
-    costNote: "Free tier available. Institutional portals may offer more storage — check your university.",
+    costNote: "Free tier available. Institutional portals may offer more storage; check your university.",
   },
 ];
 
@@ -58,7 +58,7 @@ const DEID_DIRECT = [
   "Student ID numbers, Social Security numbers",
   "Email addresses, phone numbers, home addresses",
   "Photographs, biometric data",
-  "Dates of birth (day-level — year or age range may be acceptable)",
+  "Dates of birth (day-level; year or age range may be acceptable)",
 ];
 
 const DEID_INDIRECT = [
@@ -95,7 +95,7 @@ const DEID_STEPS = [
 const DATA_PREP = [
   {
     title: "Use open, non-proprietary formats",
-    description: "CSV for tabular data, JSON for structured metadata, Parquet for large datasets. Avoid Excel-only formats — they drop precision and embed formatting that breaks reproducibility.",
+    description: "CSV for tabular data, JSON for structured metadata, Parquet for large datasets. Avoid Excel-only formats. They drop precision and embed formatting that breaks reproducibility.",
   },
   {
     title: "Include a data dictionary",
@@ -103,7 +103,7 @@ const DATA_PREP = [
   },
   {
     title: "Choose a license explicitly",
-    description: "CC-BY-4.0 (attribution required), CC0-1.0 (public domain dedication), or Public Domain. If you don't choose, downstream users can't legally reuse your data. OMI uses these three — pick the one that fits your funder and institution.",
+    description: "CC-BY-4.0 (attribution required), CC0-1.0 (public domain dedication), or Public Domain. If you don't choose, downstream users can't legally reuse your data. OMI uses these three, so pick the one that fits your funder and institution.",
   },
   {
     title: "Write a citation string",
@@ -111,14 +111,14 @@ const DATA_PREP = [
   },
   {
     title: "Add a SOURCE or README file",
-    description: "Explain where the data came from, how it was collected, what population it represents, and any known limitations. A dataset without provenance is a dataset nobody trusts.",
+    description: "Explain where the data came from, how it was collected, what population it represents, and any known limitations. Datasets without provenance information are difficult for others to trust and reuse.",
   },
 ];
 
 const NOTEBOOK_LINKS = [
   {
     title: "Exploring Math Assessment Data",
-    description: "Load the NAEP and PISA datasets, run descriptive statistics, plot trends over time, and try a basic clustering analysis — all in under 30 minutes.",
+    description: "Load the NAEP and PISA datasets, run descriptive statistics, plot trends over time, and try a basic clustering analysis, all in under 30 minutes.",
     colabUrl: "https://colab.research.google.com/github/rkn2/open-math-insights/blob/main/notebooks/01_exploring_math_data.ipynb",
   },
   {
@@ -135,7 +135,7 @@ export function ResearcherGuidePage() {
       <SectionHeading
         eyebrow="Researcher Guide"
         title="Share, prepare, and analyze open education data"
-        subtitle="A practical guide for education researchers — from de-identifying a classroom dataset to publishing it in an open repository and running your first analysis."
+        subtitle="A practical guide for education researchers. Topics range from de-identifying a classroom dataset to publishing it in an open repository and running your first analysis."
       />
 
       {/* ── Repository comparison ─────────────────────────── */}
@@ -146,7 +146,7 @@ export function ResearcherGuidePage() {
           as="h2"
         />
         <p className="mt-4 max-w-3xl text-sm leading-relaxed text-slate-600">
-          There is no single best repository — the right choice depends on your data, your
+          There is no single best repository. The right choice depends on your data, your
           audience, and your funder's requirements. The table below compares five repositories
           commonly used for education data. Platform policies change; we link to each
           repository's documentation rather than stating limits that may already be outdated.
@@ -195,7 +195,7 @@ export function ResearcherGuidePage() {
           as="h2"
         />
         <p className="mt-4 max-w-3xl text-sm leading-relaxed text-slate-600">
-          Under FERPA, student education records are protected — sharing them without consent
+          Under FERPA, student education records are protected. Sharing them without consent
           requires that all personally identifiable information (PII) is removed or that the
           data qualifies for a FERPA exception. This checklist is what OMI uses before tagging
           any dataset "Reviewed — No PII." It is not legal advice; consult your IRB or
@@ -303,7 +303,7 @@ export function ResearcherGuidePage() {
           as="h2"
         />
         <p className="mt-4 max-w-3xl text-sm leading-relaxed text-slate-600">
-          These Jupyter notebooks run in Google Colab — no install required. They load
+          These Jupyter notebooks run in Google Colab with no install required. They load
           real data from OMI's Data Depot and walk through the kind of exploratory analysis
           that a first look at education data usually calls for.
         </p>
@@ -344,13 +344,13 @@ export function ResearcherGuidePage() {
           <div className="mx-auto mt-8 max-w-3xl space-y-4 text-sm leading-relaxed text-slate-600">
             <p>
               <strong className="text-slate-900">What FERPA protects:</strong>{" "}
-              Education records — records directly related to a student and maintained by an
+              Education records are records directly related to a student and maintained by an
               educational agency or institution. This includes grades, test scores, disciplinary
               records, and most data generated in a school context.
             </p>
             <p>
               <strong className="text-slate-900">When you can share without consent:</strong>{" "}
-              FERPA permits disclosure of <em>de-identified</em> records — records from which all
+              FERPA permits disclosure of <em>de-identified</em> records, meaning records from which all
               personally identifiable information has been removed, and where the institution has
               made a reasonable determination that a student's identity cannot be ascertained
               through the remaining data, alone or in combination with other information.
@@ -358,7 +358,7 @@ export function ResearcherGuidePage() {
             <p>
               <strong className="text-slate-900">The "studies" exception (§99.31(a)(6)):</strong>{" "}
               Organizations conducting studies for or on behalf of an educational institution may
-              receive PII without consent under a formal data-sharing agreement — but published
+              receive PII without consent under a formal data-sharing agreement, but published
               results must still be de-identified. If you're publishing a <em>dataset</em>, not
               just study results, de-identification is the path.
             </p>

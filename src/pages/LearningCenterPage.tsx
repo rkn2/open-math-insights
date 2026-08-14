@@ -16,7 +16,7 @@ const GENERAL = [
 const TEACHER_TRACK = [
   {
     title: "Using Open Data in Your Classroom",
-    description: "Practical activities with real NAEP and PISA data — grade-appropriate ideas for bringing open data into math lessons.",
+    description: "Practical activities with real NAEP and PISA data, with grade-appropriate ideas for bringing open data into math lessons.",
     level: "Beginner" as const,
     duration: "25 min",
     href: "/learning-center/using-data-in-classroom",
@@ -30,7 +30,7 @@ const TEACHER_TRACK = [
   },
   {
     title: "Collecting Data in Your Classroom",
-    description: "What to measure, how to design good questions, how much data is enough, and when to bring in a researcher — a practical guide to classroom inquiry.",
+    description: "What to measure, how to design good questions, how much data is enough, and when to bring in a researcher. A practical guide to classroom inquiry.",
     level: "Beginner" as const,
     duration: "25 min",
     href: "/learning-center/collecting-classroom-data",
@@ -54,28 +54,28 @@ const RESEARCHER_TRACK = [
   },
   {
     title: "Schemas, Metadata & Annotation",
-    description: "The three layers of data documentation — what each means, why they matter for interoperability, and where CAMEL network teams diverge.",
+    description: "The three layers of data documentation, what each means, why they matter for interoperability, and where CAMEL network teams diverge.",
     level: "Intermediate" as const,
     duration: "30 min",
     href: "/learning-center/schemas-metadata-annotation",
   },
   {
     title: "Science of Learning for Math Data",
-    description: "The cognitive frameworks behind math education data — mathematical modeling, productive struggle, statistical reasoning, and why they shape what we measure.",
+    description: "The cognitive frameworks behind math education data, including mathematical modeling, productive struggle, statistical reasoning, and why they shape what we measure.",
     level: "Intermediate" as const,
     duration: "30 min",
     href: "/learning-center/science-of-learning",
   },
   {
     title: "Annotation Best Practices",
-    description: "How to build reliable annotation schemes — codebook design, coder training, inter-rater reliability, AI-assisted annotation, and iterative refinement.",
+    description: "How to build reliable annotation schemes, covering codebook design, coder training, inter-rater reliability, AI-assisted annotation, and iterative refinement.",
     level: "Intermediate" as const,
     duration: "30 min",
     href: "/learning-center/annotation-best-practices",
   },
   {
     title: "Intro to Machine Learning for Education Data",
-    description: "Clustering, classification, and feature importance — what they do, when to use them, and when not to. Includes a runnable Colab notebook.",
+    description: "Clustering, classification, and feature importance. What they do, when to use them, and when not to. Includes a runnable Colab notebook.",
     level: "Intermediate" as const,
     duration: "35 min",
     href: "/learning-center/intro-to-ml",
@@ -96,7 +96,7 @@ export function LearningCenterPage() {
       <SectionHeading
         eyebrow="Learning Center"
         title="Resources for teachers and researchers"
-        subtitle="Whether you teach math or study how it's taught — start here. Two tracks, one goal: making open education data accessible and useful."
+        subtitle="Courses for math teachers and education researchers. Two tracks, one shared goal of making open education data accessible and useful."
       />
 
       {/* ── Start here ────────────────────────────────── */}
@@ -131,8 +131,8 @@ export function LearningCenterPage() {
           <SectionHeading eyebrow="Researcher track" title="For education researchers" as="h2" />
         </div>
         <p className="mt-2 max-w-3xl text-sm text-slate-500">
-          Data science foundations for education researchers — from codebooks and annotation standards
-          to machine learning and statistical inference, grounded in real datasets and the questions
+          Data science foundations for education researchers, from codebooks and annotation standards
+          to machine learning and statistical inference. Grounded in real datasets and the questions
           the CAMEL network is working on.
         </p>
         <div className="mt-6 grid gap-6 sm:grid-cols-2">
@@ -149,7 +149,7 @@ export function LearningCenterPage() {
         </h2>
         <p className="mt-2 text-sm text-slate-600">
           The <Badge tone="teal">Getting Started</Badge> course covers everything you need for your
-          first session with OMI — metadata, licensing, citation, and loading data into a notebook.
+          first session with OMI, including metadata, licensing, citation, and loading data into a notebook.
         </p>
       </div>
     </div>

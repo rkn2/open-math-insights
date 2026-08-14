@@ -31,7 +31,7 @@ const TOOLS: {
   {
     key: "graphing-explorer",
     name: "Graphing Explorer",
-    description: "A real, in-browser plotting tool over live NAEP & PISA data — no install, no backend.",
+    description: "A real, in-browser plotting tool over live NAEP and PISA data. No install, no backend.",
     status: "available",
     icon: (
       <svg className="h-6 w-6" {...ICON_PROPS}>
@@ -70,7 +70,7 @@ const TOOL_TITLES: Record<Exclude<OpenTool, null>, string> = {
 };
 
 const STEPS = [
-  { title: "Launch", description: "Open a notebook or tool directly in your browser — no local setup." },
+  { title: "Launch", description: "Open a notebook or tool directly in your browser. No local setup required." },
   { title: "Explore", description: "Work with real, openly licensed math data using familiar tools like pandas and matplotlib." },
   { title: "Stay safe", description: "All datasets are de-identified and openly licensed. No student-identifying information is ever published on OMI." },
 ];
@@ -84,18 +84,18 @@ export function UseOmiPage() {
       <SectionHeading
         eyebrow="Use OMI · Accessible Compute"
         title="Tools to explore, analyze, and learn from open math data"
-        subtitle="No installs required — everything here runs in your browser, backed by lightweight, cost-conscious infrastructure."
+        subtitle="No installs required. Everything here runs in your browser, backed by lightweight, cost-conscious infrastructure."
       />
 
       <div className="mt-10 rounded-3xl border border-teal-100 bg-gradient-to-br from-teal-50 to-amber-50 p-8 sm:p-10">
         <div>
-          <Badge tone="teal">Works everywhere — no setup</Badge>
+          <Badge tone="teal">Works everywhere, no setup</Badge>
           <h2 className="mt-3 font-display text-2xl font-bold text-slate-900">
             Runnable notebooks on Google Colab
           </h2>
           <p className="mt-2 max-w-2xl text-slate-600">
             Starter notebooks that load real Data Depot datasets and walk through exploratory
-            analysis, trend visualization, and cross-dataset comparison — running on Google
+            analysis, trend visualization, and cross-dataset comparison. They run on Google
             Colab with pandas, matplotlib, and scikit-learn pre-installed. No local setup required.
           </p>
           <p className="mt-2 text-sm text-slate-500">
@@ -127,7 +127,7 @@ export function UseOmiPage() {
         <SectionHeading
           eyebrow="No compute needed"
           title="Static notebook previews"
-          subtitle="Real charts from real data, pre-rendered — viewable even with no Jupyter running at all, on this site or the deployed one."
+          subtitle="Real charts from real data, pre-rendered. Viewable even with no Jupyter running at all, on this site or the deployed one."
         />
         <div className="mt-8">
           <NotebookPreviewGallery />

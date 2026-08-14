@@ -60,10 +60,10 @@ export function ScienceOfLearningPage() {
         <SectionHeading eyebrow="Section 1" title="What is the science of learning?" as="h2" />
         <div className="mt-4 max-w-none space-y-4 text-sm leading-relaxed text-slate-600">
           <p>
-            The science of learning is the interdisciplinary study of how people learn — drawing on
+            The science of learning is the interdisciplinary study of how people learn, drawing on
             cognitive science, educational psychology, neuroscience, and discipline-specific
             education research. It's a broad field, but for math education data, three frameworks
-            matter most:
+            matter most.
           </p>
 
           <div className="grid gap-4 sm:grid-cols-3">
@@ -72,7 +72,7 @@ export function ScienceOfLearningPage() {
                 Mathematical understanding
               </h4>
               <p className="mt-1 text-sm text-slate-600">
-                How students build conceptual knowledge of mathematics — moving from procedures to
+                How students build conceptual knowledge of mathematics, moving from procedures to
                 understanding why those procedures work.
               </p>
             </Card>
@@ -86,7 +86,7 @@ export function ScienceOfLearningPage() {
             <Card>
               <h4 className="font-display font-bold text-slate-900">Reasoning with data</h4>
               <p className="mt-1 text-sm text-slate-600">
-                How students learn to collect, analyze, interpret, and question data — and the
+                How students learn to collect, analyze, interpret, and question data, and the
                 common misconceptions they hold along the way.
               </p>
             </Card>
@@ -95,7 +95,7 @@ export function ScienceOfLearningPage() {
           <p>
             These aren't abstract theories. They determine what we measure, what we annotate, and
             what patterns we look for in student data. A tutoring system log that records "three
-            incorrect attempts followed by a hint request" is a behavioral trace — but whether
+            incorrect attempts followed by a hint request" is a behavioral trace, but whether
             that trace represents productive struggle, a misconception, or simple disengagement
             depends on the learning theory you bring to the interpretation.
           </p>
@@ -103,7 +103,7 @@ export function ScienceOfLearningPage() {
           <div className="rounded-xl border border-teal-200 bg-teal-50 p-4">
             <p className="text-sm text-teal-800">
               <strong>Why this page exists:</strong> Every dataset on OMI was shaped by theoretical
-              choices — what to measure, how to categorize student responses, what counts as
+              choices: what to measure, how to categorize student responses, what counts as
               "proficiency." Understanding those choices helps you use the data responsibly and
               recognize what it can and cannot tell you.
             </p>
@@ -124,7 +124,7 @@ export function ScienceOfLearningPage() {
             students move between the real world and mathematics: understanding a situation,
             simplifying it, building a mathematical model, computing results, interpreting them
             back in context, and validating. Unlike textbook problems with one right answer,
-            modeling with real data is nonlinear — students cycle back and forth between phases.
+            modeling with real data is nonlinear. Students cycle back and forth between phases.
           </p>
 
           <div className="grid gap-4 sm:grid-cols-3">
@@ -150,7 +150,7 @@ export function ScienceOfLearningPage() {
               <Badge tone="primary">Phase 3</Badge>
               <h4 className="mt-3 font-display font-bold text-slate-900">Build a model</h4>
               <p className="mt-1 text-sm text-slate-600">
-                Translating the simplified situation into mathematical language — equations, graphs,
+                Translating the simplified situation into mathematical language: equations, graphs,
                 functions, or statistical representations.
               </p>
             </Card>
@@ -158,7 +158,7 @@ export function ScienceOfLearningPage() {
               <Badge tone="primary">Phase 4</Badge>
               <h4 className="mt-3 font-display font-bold text-slate-900">Compute</h4>
               <p className="mt-1 text-sm text-slate-600">
-                Working within the mathematical model to produce results — solving equations,
+                Working within the mathematical model to produce results: solving equations,
                 running calculations, fitting curves.
               </p>
             </Card>
@@ -186,14 +186,14 @@ export function ScienceOfLearningPage() {
           <p>
             When we annotate student work or build coding schemes for tutoring system logs, the
             modeling cycle tells us <em>what to look for</em>. Different errors at different phases
-            mean different things — a student who can't understand the problem context is in a
+            mean different things. A student who can't understand the problem context is in a
             fundamentally different place than one who builds an inappropriate model or one who
             computes correctly but misinterprets the result.
           </p>
           <p>
             Datasets like ASSISTments capture some of these phases (problem attempts, hint usage,
             time-on-task) but not all. The log can tell you that a student spent three minutes on
-            a problem and requested two hints — but it can't tell you whether the student was
+            a problem and requested two hints, but it can't tell you whether the student was
             struggling with the real-world context or with the mathematical formulation. That
             distinction requires annotation, and the annotation scheme you choose reflects which
             phases of the modeling cycle you consider important.
@@ -202,7 +202,7 @@ export function ScienceOfLearningPage() {
           <div className="rounded-xl border border-amber-200 bg-amber-50 p-4">
             <p className="text-sm text-amber-800">
               <strong>Key insight:</strong> The modeling cycle is nonlinear. Students don't move
-              through it in order — they loop back, skip phases, or get stuck cycling between two
+              through it in order. They loop back, skip phases, or get stuck cycling between two
               phases. Linear coding schemes that assume a fixed sequence will miss this behavior.
             </p>
           </div>
@@ -220,7 +220,7 @@ export function ScienceOfLearningPage() {
           <p>
             Productive struggle (Hiebert & Grouws, 2007; Kapur, 2008, 2016; Warshauer, 2015) is
             the idea that certain kinds of difficulty actually improve learning. Not all struggle is
-            equal — the research distinguishes{" "}
+            equal. The research distinguishes{" "}
             <strong className="text-slate-900">productive struggle</strong> (leads to deeper
             understanding) from{" "}
             <strong className="text-slate-900">unproductive frustration</strong> (leads to
@@ -271,7 +271,7 @@ export function ScienceOfLearningPage() {
                 Expressing misconceptions
               </h4>
               <p className="mt-1 text-sm text-slate-600">
-                The student's reasoning reveals a misunderstanding — not just a procedural error but
+                The student's reasoning reveals a misunderstanding, not just a procedural error but
                 a conceptual one. They may apply a rule incorrectly because they misunderstand why
                 it works.
               </p>
@@ -282,7 +282,7 @@ export function ScienceOfLearningPage() {
             Why this matters for data
           </h3>
           <p>
-            Tutoring system logs (like ASSISTments) capture behavioral signals of struggle —
+            Tutoring system logs (like ASSISTments) capture behavioral signals of struggle:
             repeated incorrect attempts, hint requests, long pauses, problem abandonment. But the
             behavioral signal alone doesn't tell you what <em>type</em> of struggle is happening.
             A student who requests a hint after 30 seconds of inactivity might be experiencing
@@ -290,7 +290,7 @@ export function ScienceOfLearningPage() {
             or simple off-task behavior.
           </p>
           <p>
-            That distinction requires annotation — and the annotation scheme you choose reflects
+            That distinction requires annotation, and the annotation scheme you choose reflects
             your theoretical commitments about what kinds of struggle matter. A scheme that only
             codes "struggle" vs. "no struggle" collapses all four types into one category and
             loses the information that makes the concept useful.
@@ -298,7 +298,7 @@ export function ScienceOfLearningPage() {
 
           <div className="rounded-xl border border-amber-200 bg-amber-50 p-4">
             <p className="text-sm text-amber-800">
-              <strong>Kapur (2016)</strong> showed that learning and performance are orthogonal — a
+              <strong>Kapur (2016)</strong> showed that learning and performance are orthogonal. A
               student can perform well without learning deeply (unproductive success) or fail
               initially but learn more (productive failure). This is why test scores alone don't
               capture learning.
@@ -323,7 +323,7 @@ export function ScienceOfLearningPage() {
             results, and dispositions like curiosity and skepticism.
           </p>
           <p>
-            Most students are not expert statistical thinkers — they're developing along these
+            Most students are not expert statistical thinkers. They're developing along these
             dimensions. Understanding where students are in that development helps us interpret
             their performance on assessments and their behavior in data-rich learning environments.
           </p>
@@ -333,7 +333,7 @@ export function ScienceOfLearningPage() {
           </h3>
           <p>
             Garfield (2002) identified misconceptions that students commonly hold about statistical
-            concepts. These aren't random errors — they're systematic patterns of reasoning that
+            concepts. These aren't random errors. They're systematic patterns of reasoning that
             show up reliably across populations:
           </p>
 
@@ -352,7 +352,7 @@ export function ScienceOfLearningPage() {
               <h4 className="mt-3 font-display font-bold text-slate-900">Sample size</h4>
               <p className="mt-1 text-sm text-slate-600">
                 Not understanding that larger samples are more reliable. Students may believe that a
-                poll of 10 people is just as trustworthy as one of 1,000 — or that both are equally
+                poll of 10 people is just as trustworthy as one of 1,000, or that both are equally
                 unreliable because "you can never be sure."
               </p>
             </Card>
@@ -371,7 +371,7 @@ export function ScienceOfLearningPage() {
               <p className="mt-1 text-sm text-slate-600">
                 Focusing on individual outcomes rather than distributions. Instead of reasoning
                 about what's likely across many trials, students predict what will happen in a
-                single case — treating probability as certainty.
+                single case, treating probability as certainty.
               </p>
             </Card>
           </div>
@@ -396,7 +396,7 @@ export function ScienceOfLearningPage() {
         />
         <div className="mt-4 max-w-none space-y-4 text-sm leading-relaxed text-slate-600">
           <p>
-            Data literacy goes beyond statistical reasoning — it includes understanding where data
+            Data literacy goes beyond statistical reasoning. It includes understanding where data
             came from, how it was collected, and what limitations that creates (Lehrer & Schauble,
             2000; Gould, 2017). Students developing data literacy learn to ask:{" "}
             <em>Who collected this? Why? What's missing? Can I trust it?</em>
@@ -411,7 +411,7 @@ export function ScienceOfLearningPage() {
             <Card>
               <Badge tone="primary">NAEP</Badge>
               <p className="mt-3 text-sm text-slate-600">
-                NAEP data represents a <em>sample</em>, not a census — understanding what that
+                NAEP data represents a <em>sample</em>, not a census. Understanding what that
                 means, how the sample was drawn, and what population it represents IS data
                 literacy. Not every student was tested, and the ones who were tested were chosen
                 through a specific process.
@@ -420,7 +420,7 @@ export function ScienceOfLearningPage() {
             <Card>
               <Badge tone="teal">PISA</Badge>
               <p className="mt-3 text-sm text-slate-600">
-                PISA compares countries with fundamentally different education systems —
+                PISA compares countries with fundamentally different education systems, and
                 understanding the limits of that comparison IS data literacy. A higher score in
                 Finland vs. the U.S. doesn't mean Finnish teaching methods would produce the same
                 results here.
@@ -429,8 +429,8 @@ export function ScienceOfLearningPage() {
             <Card>
               <Badge tone="amber">ASSISTments</Badge>
               <p className="mt-3 text-sm text-slate-600">
-                ASSISTments logs capture what happened in the software — clicks, answers,
-                timestamps — but not what the student was thinking. Understanding that gap between
+                ASSISTments logs capture what happened in the software (clicks, answers,
+                timestamps) but not what the student was thinking. Understanding that gap between
                 behavioral trace and cognitive process IS data literacy.
               </p>
             </Card>
@@ -456,7 +456,7 @@ export function ScienceOfLearningPage() {
           <p>
             Knowledge is tied to the activity and context where it's learned (Brown, Collins, &
             Duguid, 1989). Students who learn statistics on clean textbook datasets may struggle to
-            apply those skills to real, messy data — a phenomenon called{" "}
+            apply those skills to real, messy data, a phenomenon called{" "}
             <strong className="text-slate-900">"inert knowledge."</strong> The procedures are
             stored in memory but don't activate when the context changes.
           </p>
@@ -490,7 +490,7 @@ export function ScienceOfLearningPage() {
         <div className="mt-4 max-w-none space-y-4 text-sm leading-relaxed text-slate-600">
           <p>
             When you're building an annotation scheme, choosing what to measure in student data, or
-            interpreting patterns in assessment results, these frameworks shape your decisions —
+            interpreting patterns in assessment results, these frameworks shape your decisions,
             whether you're aware of them or not. Making the theoretical commitments explicit helps
             you make better choices and communicate them to others.
           </p>
@@ -534,8 +534,8 @@ export function ScienceOfLearningPage() {
             How you interpret patterns depends on your theory of learning
           </h3>
           <p>
-            A pattern in tutoring log data — say, a cluster of students who make many attempts,
-            request few hints, and eventually get the right answer — could be interpreted as
+            A pattern in tutoring log data, say a cluster of students who make many attempts,
+            request few hints, and eventually get the right answer, could be interpreted as
             productive struggle (Kapur), as developing persistence (a disposition in Wild &
             Pfannkuch's framework), or as inefficient help-seeking behavior. The data doesn't tell
             you which interpretation is right. Your theory of learning does.
@@ -549,7 +549,7 @@ export function ScienceOfLearningPage() {
             students <em>do</em> but not what they <em>think</em>. NAEP captures what students
             know at a single point but not how they got there. Classroom observations capture
             teacher-student interactions but not the student's internal reasoning. Recognizing
-            these gaps — and being explicit about them — is a mark of rigorous data practice.
+            these gaps, and being explicit about them, is a mark of rigorous data practice.
           </p>
 
           <div className="rounded-xl border border-teal-200 bg-teal-50 p-4">
@@ -636,7 +636,7 @@ export function ScienceOfLearningPage() {
                 Schemas, Metadata & Annotation
               </h4>
               <p className="mt-2 text-sm text-slate-600">
-                How the theoretical frameworks on this page connect to practical annotation work —
+                How the theoretical frameworks on this page connect to practical annotation work:
                 building codebooks, defining categories, and ensuring reliability.
               </p>
               <ButtonLink
@@ -651,7 +651,7 @@ export function ScienceOfLearningPage() {
             <Card hover>
               <h4 className="font-display font-bold text-slate-900">Statistical Foundations</h4>
               <p className="mt-2 text-sm text-slate-600">
-                The quantitative tools for analyzing education data — descriptive statistics,
+                The quantitative tools for analyzing education data: descriptive statistics,
                 confidence intervals, effect sizes, and inter-rater reliability.
               </p>
               <ButtonLink
@@ -666,7 +666,7 @@ export function ScienceOfLearningPage() {
             <Card hover>
               <h4 className="font-display font-bold text-slate-900">Codebooks</h4>
               <p className="mt-2 text-sm text-slate-600">
-                How to build and use codebooks — the bridge between the theoretical constructs
+                How to build and use codebooks, the bridge between the theoretical constructs
                 described here and the practical work of coding student data.
               </p>
               <ButtonLink
@@ -681,7 +681,7 @@ export function ScienceOfLearningPage() {
             <Card hover>
               <h4 className="font-display font-bold text-slate-900">Intro to ML</h4>
               <p className="mt-2 text-sm text-slate-600">
-                Machine learning approaches to education data — how the features you choose
+                Machine learning approaches to education data: how the features you choose
                 (shaped by these theories) determine what patterns the models can find.
               </p>
               <ButtonLink
@@ -702,7 +702,7 @@ export function ScienceOfLearningPage() {
         <h2 className="font-display text-2xl font-bold">Theory shapes data practice</h2>
         <p className="mt-2 text-teal-100">
           Every dataset, annotation scheme, and assessment was shaped by a theory of how students
-          learn. Now you know the frameworks — and you can read, use, and question education data
+          learn. Now you know the frameworks, and you can read, use, and question education data
           with that understanding.
         </p>
       </div>

@@ -40,8 +40,8 @@ const DATASETS_OVERVIEW = [
 
 const METADATA_FIELDS = [
   { field: "Grade Bands", meaning: "Which K–12 grades the data covers (K–2, 3–5, 6–8, 9–12)" },
-  { field: "Topics", meaning: "Subject areas — e.g., Assessment & Growth, Algebra I, International Comparison" },
-  { field: "License", meaning: "How you're allowed to reuse the data — CC-BY-4.0, CC0-1.0, or Public Domain" },
+  { field: "Topics", meaning: "Subject areas such as Assessment & Growth, Algebra I, and International Comparison" },
+  { field: "License", meaning: "How you're allowed to reuse the data (CC-BY-4.0, CC0-1.0, or Public Domain)" },
   { field: "PII Review Status", meaning: "Whether the dataset has been reviewed for personally identifiable information" },
   { field: "Contributor", meaning: "The organization that produced or curated the data" },
   { field: "Source URL", meaning: "Where the original data lives (e.g., NCES, OECD, Figshare)" },
@@ -64,7 +64,7 @@ export function GettingStartedCoursePage() {
         <SectionHeading
           eyebrow="Course · Beginner · 30 min"
           title="Getting Started with OMI Datasets"
-          subtitle="A guided tour of the Data Depot, dataset metadata, licensing, citation, and how to load data into a notebook — everything you need for your first session with OMI."
+          subtitle="A guided tour of the Data Depot, dataset metadata, licensing, citation, and loading data into a notebook. Everything you need for your first session with OMI."
         />
       </div>
 
@@ -94,7 +94,7 @@ export function GettingStartedCoursePage() {
           <p>
             <strong className="text-slate-900">Open Math Insights (OMI)</strong> is an open data
             platform for K–12 math education. It brings together openly licensed datasets, browser-based
-            analysis tools, and learning resources — all in one place, with no accounts or installs
+            analysis tools, and learning resources, all in one place, with no accounts or installs
             required.
           </p>
           <p>
@@ -103,7 +103,7 @@ export function GettingStartedCoursePage() {
           <div className="grid gap-4 sm:grid-cols-2">
             {[
               { title: "Data Depot", desc: "A curated catalog of openly licensed math datasets with standardized metadata, de-identification review, and citation info." },
-              { title: "Compute Tools", desc: "In-browser tools for exploring data — a graphing explorer, standards aligner, and runnable Jupyter notebooks on Google Colab." },
+              { title: "Compute Tools", desc: "In-browser tools for exploring data, including a graphing explorer, standards aligner, and runnable Jupyter notebooks on Google Colab." },
               { title: "Learning Center", desc: "Courses and tutorials (like this one) that teach data literacy using real, open data." },
               { title: "Community", desc: "A Slack workspace and contributor network for sharing datasets, asking questions, and collaborating." },
             ].map((pillar) => (
@@ -128,7 +128,7 @@ export function GettingStartedCoursePage() {
           <p>
             The <ButtonLink to="/data-depot" variant="ghost" size="sm">Data Depot</ButtonLink> is
             OMI's dataset catalog. Each dataset has a detail page with an overview, file list,
-            metadata card, and citation — everything you need to decide whether it fits your work
+            metadata card, and citation. Everything you need to decide whether it fits your work
             and how to use it properly.
           </p>
           <p>
@@ -172,7 +172,7 @@ export function GettingStartedCoursePage() {
         <SectionHeading eyebrow="Section 3" title="Reading a dataset's metadata" as="h2" />
         <div className="mt-4 space-y-4 text-sm leading-relaxed text-slate-600">
           <p>
-            Every dataset on OMI has a <strong>metadata card</strong> — a standardized set of fields
+            Every dataset on OMI has a <strong>metadata card</strong>, a standardized set of fields
             that tells you what the data covers, how it's licensed, and whether it's been reviewed for
             privacy. Here's what each field means:
           </p>
@@ -222,14 +222,14 @@ export function GettingStartedCoursePage() {
             <Card>
               <Badge tone="teal">CC-BY-4.0</Badge>
               <p className="mt-3 text-sm text-slate-600">
-                Use, share, and adapt for any purpose — including commercial — as long as you
+                Use, share, and adapt for any purpose, including commercial, as long as you
                 <strong> credit the original source</strong>. This is the most common license on OMI.
               </p>
             </Card>
             <Card>
               <Badge tone="primary">CC0-1.0</Badge>
               <p className="mt-3 text-sm text-slate-600">
-                Public domain dedication. No restrictions at all — you don't even need to give
+                Public domain dedication. No restrictions at all. You don't even need to give
                 credit (though it's good practice). Used for government-produced data.
               </p>
             </Card>
@@ -245,7 +245,7 @@ export function GettingStartedCoursePage() {
           <h3 className="mt-6 font-display text-base font-bold text-slate-900">How to cite a dataset</h3>
           <p>
             Each dataset's detail page includes a <strong>Citation</strong> tab with a ready-to-copy
-            citation string. Always cite the dataset by its provided citation — this gives credit to the
+            citation string. Always cite the dataset by its provided citation. This gives credit to the
             original contributors and helps others find the same data.
           </p>
           <p>
@@ -261,7 +261,7 @@ export function GettingStartedCoursePage() {
         <div className="mt-4 space-y-4 text-sm leading-relaxed text-slate-600">
           <p>
             The fastest way to start analyzing OMI data is with our pre-built Jupyter notebooks on
-            Google Colab. No install, no setup — just click and run.
+            Google Colab. No install, no setup. Just click and run.
           </p>
           <p className="rounded-lg border border-amber-200 bg-amber-50 px-4 py-2 text-sm text-amber-800">
             <strong>Google account required:</strong> Running notebook code cells in Colab requires a
@@ -272,7 +272,7 @@ export function GettingStartedCoursePage() {
             <Card hover>
               <h4 className="font-display font-bold text-slate-900">Exploring Math Assessment Data</h4>
               <p className="mt-2 text-sm text-slate-600">
-                Descriptive stats, trend plots, and a clustering analysis — a complete first look
+                Descriptive stats, trend plots, and a clustering analysis. A complete first look
                 at the NAEP and PISA datasets.
               </p>
               <a
@@ -287,7 +287,7 @@ export function GettingStartedCoursePage() {
             <Card hover>
               <h4 className="font-display font-bold text-slate-900">Comparing NAEP and PISA</h4>
               <p className="mt-2 text-sm text-slate-600">
-                What's comparable and what isn't — within-system trends, cross-system indexing,
+                What's comparable and what isn't. Within-system trends, cross-system indexing,
                 and a reference table of valid vs. invalid questions.
               </p>
               <a
@@ -349,7 +349,7 @@ pisa = pd.read_csv(
               <h4 className="font-display font-bold text-slate-900">Try the tools</h4>
               <p className="mt-1 text-sm text-slate-600">
                 Use the Graphing Explorer to plot NAEP and PISA data, or the Standards Aligner
-                to match problems to CCSS standards — all in your browser.
+                to match problems to CCSS standards, all in your browser.
               </p>
               <ButtonLink to="/use-omi" variant="outline" size="sm" className="mt-3">
                 Use OMI tools →
@@ -383,7 +383,7 @@ pisa = pd.read_csv(
       <div className="mt-16 rounded-3xl bg-gradient-to-br from-teal-600 to-primary-700 px-8 py-10 text-center text-white">
         <h2 className="font-display text-2xl font-bold">Course complete</h2>
         <p className="mt-2 text-teal-100">
-          You now know how to find, evaluate, cite, and load OMI datasets. Go build something.
+          You now know how to find, evaluate, cite, and load OMI datasets. Explore the Data Depot and start working with real data.
         </p>
       </div>
     </div>

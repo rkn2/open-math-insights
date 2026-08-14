@@ -9,19 +9,19 @@ const SPOTLIGHTS: { name: string; role: string; initials: string; quote: string 
     name: "CAMEL Network",
     role: "NSF Collaboratory",
     initials: "CN",
-    quote: "OMI is the open-data arm of the CAMEL collaboratory — five projects working together on K-12 math education data infrastructure.",
+    quote: "OMI is the open-data arm of the CAMEL collaboratory. Five projects work together on K-12 math education data infrastructure.",
   },
   {
     name: "NCES / NAEP",
     role: "Public Data Source",
     initials: "NR",
-    quote: "The Nation's Report Card provides the U.S. math achievement trends indexed in the Data Depot — publicly available, nationally representative, and updated every two years.",
+    quote: "The Nation's Report Card provides the U.S. math achievement trends indexed in the Data Depot. The data is publicly available, nationally representative, and updated every two years.",
   },
   {
     name: "Our World in Data / OECD",
     role: "Public Data Source",
     initials: "OW",
-    quote: "PISA math scores from Our World in Data provide the international lens — 80+ countries, openly licensed under CC-BY.",
+    quote: "PISA math scores from Our World in Data provide the international lens. The dataset covers 80+ countries and is openly licensed under CC-BY.",
   },
 ];
 
@@ -41,7 +41,7 @@ const EVENTS: { date: string; title: string; description: string; kind: "Recurri
 ];
 
 const STEPS = [
-  { title: "Connect", description: "Reach out to a CAMEL network team — they'll help with study design, de-identification, and data preparation. Contact: nap@psu.edu" },
+  { title: "Connect", description: "Reach out to a CAMEL network team for help with study design, de-identification, and data preparation. Contact nap@psu.edu." },
   { title: "Prepare", description: "Work with the team to de-identify your data, write a data dictionary, choose a license, and tag with grade band and topic metadata." },
   { title: "Publish", description: "Once reviewed, your dataset joins the Data Depot with full metadata, citation information, and a PII-clear status." },
 ];

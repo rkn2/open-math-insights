@@ -14,35 +14,35 @@ const TERMS: Term[] = [
   {
     term: "Annotation",
     definition:
-      "Human- or machine-applied labels on raw data. In education research: coding student work for error types, labeling problem-solving strategies, or marking productive vs. unproductive struggle. Different teams may use the term differently — the CAMEL network identified this as a key area where shared definitions are needed.",
+      "Human- or machine-applied labels on raw data. In education research, this includes coding student work for error types, labeling problem-solving strategies, or marking productive vs. unproductive struggle. Different teams may use the term differently. The CAMEL network identified this as a key area where shared definitions are needed.",
     category: "methods",
     seeAlso: ["Codebook", "Inter-Rater Reliability"],
   },
   {
     term: "CC-BY-4.0",
     definition:
-      "A Creative Commons license that allows anyone to use, share, and adapt the data for any purpose — including commercial — as long as they credit the original source. The most common license on OMI.",
+      "A Creative Commons license that allows anyone to use, share, and adapt the data for any purpose, including commercial, as long as they credit the original source. The most common license on OMI.",
     category: "infrastructure",
     seeAlso: ["CC0-1.0", "License"],
   },
   {
     term: "CC0-1.0",
     definition:
-      "A Creative Commons public domain dedication. No restrictions — you don't even need to give credit (though it's good practice). Typically used for government-produced data.",
+      "A Creative Commons public domain dedication. No restrictions. You don't even need to give credit (though it's good practice). Typically used for government-produced data.",
     category: "infrastructure",
     seeAlso: ["CC-BY-4.0", "License"],
   },
   {
     term: "Cluster Analysis",
     definition:
-      "An unsupervised machine learning technique that groups similar data points together. In education data: finding groups of countries with similar PISA trajectories, or identifying student learning profiles. K-Means is the most common algorithm. Clusters are descriptive — they show what groups exist, not why.",
+      "An unsupervised machine learning technique that groups similar data points together. In education data, this can mean finding groups of countries with similar PISA trajectories, or identifying student learning profiles. K-Means is the most common algorithm. Clusters are descriptive. They show what groups exist, not why.",
     category: "statistics",
     seeAlso: ["Machine Learning", "Feature Importance"],
   },
   {
     term: "Codebook",
     definition:
-      "A document that tells someone else what every variable in your dataset means — the key to reading the data. Includes variable names, descriptions, valid values, and coding schemes. More narrative than a data dictionary; meant for human understanding.",
+      "A document that tells someone else what every variable in your dataset means. It is the key to reading the data. Includes variable names, descriptions, valid values, and coding schemes. More narrative than a data dictionary; meant for human understanding.",
     category: "data",
     seeAlso: ["Data Dictionary", "Annotation", "Schema"],
   },
@@ -56,14 +56,14 @@ const TERMS: Term[] = [
   {
     term: "Correlation",
     definition:
-      "A statistical measure of how two variables move together (r ranges from −1 to +1). A positive correlation means they tend to increase together; negative means one increases as the other decreases. Correlation does not imply causation — two variables can be correlated because of a third factor.",
+      "A statistical measure of how two variables move together (r ranges from −1 to +1). A positive correlation means they tend to increase together; negative means one increases as the other decreases. Correlation does not imply causation. Two variables can be correlated because of a third factor.",
     category: "statistics",
     seeAlso: ["Effect Size"],
   },
   {
     term: "Data Dictionary",
     definition:
-      "A structured, technical specification of every column in a dataset: name, data type, valid values, units, and constraints. More machine-oriented than a codebook. Example: the NAEP dataset's data dictionary would specify that 'jurisdiction' is a string with valid values {NP, CA, FL, MA, NY, TX}.",
+      "A structured, technical specification of every column in a dataset, covering name, data type, valid values, units, and constraints. More machine-oriented than a codebook. For example, the NAEP dataset's data dictionary would specify that 'jurisdiction' is a string with valid values {NP, CA, FL, MA, NY, TX}.",
     category: "data",
     seeAlso: ["Codebook", "Schema", "Metadata"],
   },
@@ -91,42 +91,42 @@ const TERMS: Term[] = [
   {
     term: "Effect Size",
     definition:
-      "A measure of how large a difference or relationship is, independent of sample size. Cohen's d is the most common: d = 0.2 is small, 0.5 is medium, 0.8 is large. A statistically significant result can have a tiny effect size — meaning it's real but too small to matter in practice.",
+      "A measure of how large a difference or relationship is, independent of sample size. Cohen's d is the most common measure. A d of 0.2 is small, 0.5 is medium, and 0.8 is large. A statistically significant result can have a tiny effect size, meaning it's real but too small to matter in practice.",
     category: "statistics",
     seeAlso: ["Statistical Significance", "Confidence Interval"],
   },
   {
     term: "FAIR Principles",
     definition:
-      "A set of guidelines for scientific data management: Findable (metadata, DOIs), Accessible (open protocols), Interoperable (standard formats and schemas), Reusable (clear licensing, provenance). OMI's Data Depot is designed around these principles.",
+      "A set of guidelines for scientific data management. The four principles are Findable (metadata, DOIs), Accessible (open protocols), Interoperable (standard formats and schemas), and Reusable (clear licensing, provenance). OMI's Data Depot is designed around these principles.",
     category: "infrastructure",
     seeAlso: ["DOI", "Metadata", "License"],
   },
   {
     term: "Feature Importance",
     definition:
-      "In machine learning, a measure of how much each input variable contributes to a prediction. Methods include Gini importance, permutation importance, and SHAP values. In education: does prior correctness, time spent, or hint usage best predict mastery? Feature importance shows which variables the model relies on most — but importance ≠ causation.",
+      "In machine learning, a measure of how much each input variable contributes to a prediction. Methods include Gini importance, permutation importance, and SHAP values. In education research, this might mean asking whether prior correctness, time spent, or hint usage best predicts mastery. Feature importance shows which variables the model relies on most, but importance ≠ causation.",
     category: "statistics",
     seeAlso: ["Machine Learning", "Cluster Analysis"],
   },
   {
     term: "FERPA",
     definition:
-      "The Family Educational Rights and Privacy Act — a U.S. federal law that protects the privacy of student education records. FERPA applies to all schools receiving federal funding. Sharing student data without consent requires de-identification or a qualifying exception (e.g., the 'studies' exception under §99.31(a)(6)).",
+      "The Family Educational Rights and Privacy Act, a U.S. federal law that protects the privacy of student education records. FERPA applies to all schools receiving federal funding. Sharing student data without consent requires de-identification or a qualifying exception (e.g., the 'studies' exception under §99.31(a)(6)).",
     category: "privacy",
     seeAlso: ["De-identification", "PII", "IRB"],
   },
   {
     term: "Inter-Rater Reliability (IRR)",
     definition:
-      "A measure of how much two or more human coders agree when independently coding the same data. Cohen's kappa (κ) is the standard metric: κ ≥ 0.70 is the typical threshold for acceptable agreement. Kappa corrects for chance agreement — raw percent agreement alone is misleading.",
+      "A measure of how much two or more human coders agree when independently coding the same data. Cohen's kappa (κ) is the standard metric, where κ ≥ 0.70 is the typical threshold for acceptable agreement. Kappa corrects for chance agreement. Raw percent agreement alone is misleading.",
     category: "methods",
     seeAlso: ["Annotation", "Codebook", "Kappa"],
   },
   {
     term: "IRB (Institutional Review Board)",
     definition:
-      "A committee that reviews and approves research involving human subjects. Required before any data collection from students or teachers. IRB approval does not mean data can be published freely — published datasets must still be de-identified unless participants consented to identifiable data sharing.",
+      "A committee that reviews and approves research involving human subjects. Required before any data collection from students or teachers. IRB approval does not mean data can be published freely. Published datasets must still be de-identified unless participants consented to identifiable data sharing.",
     category: "privacy",
     seeAlso: ["FERPA", "De-identification"],
   },
@@ -140,7 +140,7 @@ const TERMS: Term[] = [
   {
     term: "License",
     definition:
-      "A legal document that specifies how data can be used. Without a license, downstream users cannot legally reuse your data. OMI publishes under three licenses: CC-BY-4.0 (attribution required), CC0-1.0 (public domain), and Public Domain. Always choose explicitly — 'no license' ≠ 'free to use.'",
+      "A legal document that specifies how data can be used. Without a license, downstream users cannot legally reuse your data. OMI publishes under three licenses. These are CC-BY-4.0 (attribution required), CC0-1.0 (public domain), and Public Domain. Always choose explicitly. 'No license' ≠ 'free to use.'",
     category: "infrastructure",
     seeAlso: ["CC-BY-4.0", "CC0-1.0"],
   },
@@ -161,21 +161,21 @@ const TERMS: Term[] = [
   {
     term: "Metadata",
     definition:
-      "Data about data. Dataset-level metadata describes who collected it, when, what population it covers, and what license applies. Variable-level metadata describes what each column means — that's essentially your data dictionary. Good metadata is what makes a dataset findable and reusable by someone who wasn't involved in collecting it.",
+      "Data about data. Dataset-level metadata describes who collected it, when, what population it covers, and what license applies. Variable-level metadata describes what each column means. That is essentially your data dictionary. Good metadata is what makes a dataset findable and reusable by someone who wasn't involved in collecting it.",
     category: "data",
     seeAlso: ["Data Dictionary", "Schema", "FAIR Principles"],
   },
   {
     term: "NAEP",
     definition:
-      "The National Assessment of Educational Progress — 'The Nation's Report Card.' A congressionally mandated U.S. assessment administered by NCES. Tests students in grades 4 and 8 (and sometimes 12) on a 0–500 scale linked across years for trend analysis. Scores are reported at national and state levels, never at the school or student level.",
+      "The National Assessment of Educational Progress, also called 'The Nation's Report Card.' A congressionally mandated U.S. assessment administered by NCES. Tests students in grades 4 and 8 (and sometimes 12) on a 0–500 scale linked across years for trend analysis. Scores are reported at national and state levels, never at the school or student level.",
     category: "data",
     seeAlso: ["PISA", "Scale Score"],
   },
   {
     term: "PII (Personally Identifiable Information)",
     definition:
-      "Any data element that could identify a specific individual, alone or in combination with other information. Direct PII: names, IDs, addresses, photos. Indirect PII: school name + grade + year in a small class. All PII must be removed before publishing education data on OMI.",
+      "Any data element that could identify a specific individual, alone or in combination with other information. Direct PII includes names, IDs, addresses, and photos. Indirect PII includes combinations like school name, grade, and year in a small class. All PII must be removed before publishing education data on OMI.",
     category: "privacy",
     seeAlso: ["De-identification", "FERPA", "Small-Cell Suppression"],
   },
@@ -189,49 +189,49 @@ const TERMS: Term[] = [
   {
     term: "Productive Struggle",
     definition:
-      "A learning state where students experience difficulty that leads to deeper understanding. Distinguished from unproductive frustration, which leads to disengagement. The concept comes from Kapur (2008, 2016) and Warshauer (2015). In education data, productive struggle is identified through behavioral signals — repeated attempts, self-correction, strategy changes — and is a common annotation target in coding schemes for student work.",
+      "A learning state where students experience difficulty that leads to deeper understanding. Distinguished from unproductive frustration, which leads to disengagement. The concept comes from Kapur (2008, 2016) and Warshauer (2015). In education data, productive struggle is identified through behavioral signals such as repeated attempts, self-correction, and strategy changes. It is a common annotation target in coding schemes for student work.",
     category: "methods",
     seeAlso: ["Annotation", "Codebook"],
   },
   {
     term: "Sample Size",
     definition:
-      "The number of observations in a dataset or analysis. Larger samples produce more precise estimates (narrower confidence intervals) and can detect smaller effects. Small samples can be misleading — a 20-point NAEP score difference based on 12 students means much less than the same difference based on 12,000.",
+      "The number of observations in a dataset or analysis. Larger samples produce more precise estimates (narrower confidence intervals) and can detect smaller effects. Small samples can be misleading. A 20-point NAEP score difference based on 12 students means much less than the same difference based on 12,000.",
     category: "statistics",
     seeAlso: ["Confidence Interval", "Small-Cell Suppression"],
   },
   {
     term: "Scale Score",
     definition:
-      "A score on a standardized, linked scale designed for comparison across years or groups. NAEP uses a 0–500 scale; PISA centers at 500 with SD=100. Scale scores from different assessments cannot be compared directly — a 240 on NAEP and a 480 on PISA are on completely different scales.",
+      "A score on a standardized, linked scale designed for comparison across years or groups. NAEP uses a 0–500 scale; PISA centers at 500 with SD=100. Scale scores from different assessments cannot be compared directly. A 240 on NAEP and a 480 on PISA are on completely different scales.",
     category: "data",
     seeAlso: ["NAEP", "PISA"],
   },
   {
     term: "Schema",
     definition:
-      "The structure of a dataset: what fields exist, their data types, and their relationships. Like a blueprint for a building. The NAEP dataset's schema is: year (integer), grade (integer), jurisdiction (string), jurisdiction_label (string), avg_scale_score (float). A schema is structural; a codebook adds meaning.",
+      "The structure of a dataset, including what fields exist, their data types, and their relationships. Like a blueprint for a building. The NAEP dataset's schema is year (integer), grade (integer), jurisdiction (string), jurisdiction_label (string), and avg_scale_score (float). A schema is structural; a codebook adds meaning.",
     category: "data",
     seeAlso: ["Data Dictionary", "Codebook", "Metadata"],
   },
   {
     term: "Situated Cognition",
     definition:
-      "The theory that knowledge is tied to the activity and context in which it is learned (Brown, Collins, & Duguid, 1989). Students who learn statistics on clean textbook data may struggle to apply those skills to real, messy data — a phenomenon called 'inert knowledge.' This framework explains why authentic data matters in math education.",
+      "The theory that knowledge is tied to the activity and context in which it is learned (Brown, Collins, & Duguid, 1989). Students who learn statistics on clean textbook data may struggle to apply those skills to real, messy data, a phenomenon called 'inert knowledge.' This framework explains why authentic data matters in math education.",
     category: "methods",
     seeAlso: ["Data Literacy"],
   },
   {
     term: "Small-Cell Suppression",
     definition:
-      "The practice of withholding or aggregating data cells that contain fewer than a threshold number of observations (typically 5). Serves two purposes: protects student privacy (small groups are more identifiable) and ensures statistical reliability (estimates from tiny groups are unreliable). Standard practice at NCES and most state education agencies.",
+      "The practice of withholding or aggregating data cells that contain fewer than a threshold number of observations (typically 5). Serves two purposes. It protects student privacy (small groups are more identifiable) and ensures statistical reliability (estimates from tiny groups are unreliable). Standard practice at NCES and most state education agencies.",
     category: "privacy",
     seeAlso: ["De-identification", "PII", "Sample Size"],
   },
   {
     term: "Statistical Significance",
     definition:
-      "A result is 'statistically significant' (typically p < .05) when it's unlikely to have occurred by chance alone. This says nothing about whether the result is large, important, or practically meaningful — only that it's unlikely to be zero. Always pair with effect size.",
+      "A result is 'statistically significant' (typically p < .05) when it's unlikely to have occurred by chance alone. This says nothing about whether the result is large, important, or practically meaningful. It only means the result is unlikely to be zero. Always pair with effect size.",
     category: "statistics",
     seeAlso: ["Effect Size", "Confidence Interval", "Sample Size"],
   },
@@ -276,7 +276,7 @@ export function GlossaryPage() {
       <SectionHeading
         eyebrow="Reference"
         title="Glossary"
-        subtitle="Definitions for terms used across OMI — data documentation, privacy, statistics, and infrastructure. Searchable and cross-referenced."
+        subtitle="Definitions for terms used across OMI, covering data documentation, privacy, statistics, and infrastructure. Searchable and cross-referenced."
       />
 
       <div className="mt-8 space-y-4">

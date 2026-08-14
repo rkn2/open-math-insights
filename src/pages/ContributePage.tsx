@@ -18,7 +18,7 @@ const PHASES = [
       },
       {
         label: "Choose a file format",
-        detail: "CSV for tabular data, JSON for structured metadata, Parquet for large datasets. Avoid Excel-only formats — they drop precision and embed formatting that breaks reproducibility.",
+        detail: "CSV for tabular data, JSON for structured metadata, Parquet for large datasets. Avoid Excel-only formats. They drop precision and embed formatting that breaks reproducibility.",
       },
       {
         label: "Write a data dictionary",
@@ -41,7 +41,7 @@ const PHASES = [
     status: "Fill out this form",
     items: [
       { label: "Dataset title", detail: "A descriptive name including the data source, grade levels, and year range." },
-      { label: "Summary", detail: "One or two sentences describing the dataset — what it contains and why it's useful." },
+      { label: "Summary", detail: "One or two sentences describing the dataset, including what it contains and why it's useful." },
       { label: "Grade bands", detail: "Which K-12 grades the data covers: K-2, 3-5, 6-8, 9-12 (select all that apply)." },
       { label: "Topics", detail: "Subject areas: e.g., Assessment & Growth, Algebra, Fractions, International Comparison." },
       { label: "License", detail: "Which open license you're publishing under." },
@@ -77,7 +77,7 @@ const PHASES = [
 
 const CHECKLIST = [
   "Dataset is de-identified (no direct PII, small cells suppressed, free text audited)",
-  "Data is in an open format (CSV, JSON, or Parquet — not Excel-only)",
+  "Data is in an open format (CSV, JSON, or Parquet, not Excel-only)",
   "Data dictionary is included (one file listing every column with types and descriptions)",
   "License is chosen (CC-BY-4.0, CC0-1.0, or Public Domain)",
   "SOURCE or README file explains provenance, population, and limitations",
@@ -95,7 +95,7 @@ export function ContributePage() {
       <SectionHeading
         eyebrow="Contribute"
         title="Share your data with the OMI community"
-        subtitle="A step-by-step process for preparing, submitting, and publishing education data on the Data Depot — from de-identification through review to publication."
+        subtitle="A step-by-step process for preparing, submitting, and publishing education data on the Data Depot. It covers de-identification through review to publication."
       />
 
       {/* ── Process overview ──────────────────────────── */}
