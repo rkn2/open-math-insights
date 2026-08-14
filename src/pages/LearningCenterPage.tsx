@@ -53,6 +53,20 @@ const RESEARCHER_TRACK = [
     href: "/learning-center/schemas-metadata-annotation",
   },
   {
+    title: "Science of Learning for Math Data",
+    description: "The cognitive frameworks behind math education data — mathematical modeling, productive struggle, statistical reasoning, and why they shape what we measure.",
+    level: "Intermediate" as const,
+    duration: "30 min",
+    href: "/learning-center/science-of-learning",
+  },
+  {
+    title: "Annotation Best Practices",
+    description: "How to build reliable annotation schemes — codebook design, coder training, inter-rater reliability, AI-assisted annotation, and iterative refinement.",
+    level: "Intermediate" as const,
+    duration: "30 min",
+    href: "/learning-center/annotation-best-practices",
+  },
+  {
     title: "Intro to Machine Learning for Education Data",
     description: "Clustering, classification, and feature importance — what they do, when to use them, and when not to. Includes a runnable Colab notebook.",
     level: "Intermediate" as const,

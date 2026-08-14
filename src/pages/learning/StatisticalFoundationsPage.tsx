@@ -617,6 +617,16 @@ export function StatisticalFoundationsPage() {
                 Open Data Depot →
               </ButtonLink>
             </Card>
+            <Card hover>
+              <h4 className="font-display font-bold text-slate-900">Science of Learning for Math Data</h4>
+              <p className="mt-2 text-sm text-slate-600">
+                The cognitive theories that determine what we measure in student data — from
+                productive struggle to the mathematical modeling cycle.
+              </p>
+              <ButtonLink to="/learning-center/science-of-learning" variant="outline" size="sm" className="mt-3">
+                Science of Learning →
+              </ButtonLink>
+            </Card>
           </div>
         </div>
       </section>

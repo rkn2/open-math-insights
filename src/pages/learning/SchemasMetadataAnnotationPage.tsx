@@ -523,6 +523,26 @@ export function SchemasMetadataAnnotationPage() {
               </ButtonLink>
             </Card>
             <Card hover>
+              <h4 className="font-display font-bold text-slate-900">Science of Learning for Math Data</h4>
+              <p className="mt-1 text-sm text-slate-600">
+                The cognitive frameworks — productive struggle, mathematical modeling, statistical
+                reasoning — that determine what annotation codes capture and why.
+              </p>
+              <ButtonLink to="/learning-center/science-of-learning" variant="outline" size="sm" className="mt-3">
+                Science of Learning →
+              </ButtonLink>
+            </Card>
+            <Card hover>
+              <h4 className="font-display font-bold text-slate-900">Annotation Best Practices</h4>
+              <p className="mt-1 text-sm text-slate-600">
+                How to build codebooks that work, train coders, measure reliability, and use AI as
+                a second coder — the methodology behind high-quality annotation.
+              </p>
+              <ButtonLink to="/learning-center/annotation-best-practices" variant="outline" size="sm" className="mt-3">
+                Annotation Best Practices →
+              </ButtonLink>
+            </Card>
+            <Card hover>
               <h4 className="font-display font-bold text-slate-900">Learning Center</h4>
               <p className="mt-1 text-sm text-slate-600">
                 Return to the full catalog of courses and tutorials for teachers, students,

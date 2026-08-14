@@ -68,6 +68,13 @@ const TERMS: Term[] = [
     seeAlso: ["Codebook", "Schema", "Metadata"],
   },
   {
+    term: "Data Literacy",
+    definition:
+      "The ability to read, work with, analyze, and reason about data, including understanding where data comes from, how it was collected, and what limitations it has (Gould, 2017). Goes beyond statistical reasoning to include data provenance, quality assessment, and critical evaluation of data-driven claims.",
+    category: "methods",
+    seeAlso: ["FAIR Principles", "Codebook"],
+  },
+  {
     term: "De-identification",
     definition:
       "The process of removing or obscuring personally identifiable information (PII) from a dataset so that individuals cannot be identified. Includes stripping direct identifiers (names, IDs), suppressing small cells (fewer than 5 students), and auditing free-text fields. Required under FERPA before publishing education data.",
@@ -145,6 +152,13 @@ const TERMS: Term[] = [
     seeAlso: ["Cluster Analysis", "Feature Importance"],
   },
   {
+    term: "Mathematical Modeling",
+    definition:
+      "The process of using mathematics to represent, analyze, and solve real-world problems. The modeling cycle (Blum & Leiss, 2007; GAISE II, 2020) describes how students move between understanding a situation, building a mathematical representation, computing results, and interpreting them back in context. In education data, modeling competencies are captured through annotation of student work and process data from computational environments.",
+    category: "methods",
+    seeAlso: ["Annotation"],
+  },
+  {
     term: "Metadata",
     definition:
       "Data about data. Dataset-level metadata describes who collected it, when, what population it covers, and what license applies. Variable-level metadata describes what each column means — that's essentially your data dictionary. Good metadata is what makes a dataset findable and reusable by someone who wasn't involved in collecting it.",
@@ -173,6 +187,13 @@ const TERMS: Term[] = [
     seeAlso: ["NAEP", "Scale Score"],
   },
   {
+    term: "Productive Struggle",
+    definition:
+      "A learning state where students experience difficulty that leads to deeper understanding. Distinguished from unproductive frustration, which leads to disengagement. The concept comes from Kapur (2008, 2016) and Warshauer (2015). In education data, productive struggle is identified through behavioral signals — repeated attempts, self-correction, strategy changes — and is a common annotation target in coding schemes for student work.",
+    category: "methods",
+    seeAlso: ["Annotation", "Codebook"],
+  },
+  {
     term: "Sample Size",
     definition:
       "The number of observations in a dataset or analysis. Larger samples produce more precise estimates (narrower confidence intervals) and can detect smaller effects. Small samples can be misleading — a 20-point NAEP score difference based on 12 students means much less than the same difference based on 12,000.",
@@ -192,6 +213,13 @@ const TERMS: Term[] = [
       "The structure of a dataset: what fields exist, their data types, and their relationships. Like a blueprint for a building. The NAEP dataset's schema is: year (integer), grade (integer), jurisdiction (string), jurisdiction_label (string), avg_scale_score (float). A schema is structural; a codebook adds meaning.",
     category: "data",
     seeAlso: ["Data Dictionary", "Codebook", "Metadata"],
+  },
+  {
+    term: "Situated Cognition",
+    definition:
+      "The theory that knowledge is tied to the activity and context in which it is learned (Brown, Collins, & Duguid, 1989). Students who learn statistics on clean textbook data may struggle to apply those skills to real, messy data — a phenomenon called 'inert knowledge.' This framework explains why authentic data matters in math education.",
+    category: "methods",
+    seeAlso: ["Data Literacy"],
   },
   {
     term: "Small-Cell Suppression",

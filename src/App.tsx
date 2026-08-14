@@ -16,6 +16,8 @@ import { CodebooksPage } from "@/pages/learning/CodebooksPage";
 import { SchemasMetadataAnnotationPage } from "@/pages/learning/SchemasMetadataAnnotationPage";
 import { IntroToMLPage } from "@/pages/learning/IntroToMLPage";
 import { StatisticalFoundationsPage } from "@/pages/learning/StatisticalFoundationsPage";
+import { ScienceOfLearningPage } from "@/pages/learning/ScienceOfLearningPage";
+import { AnnotationBestPracticesPage } from "@/pages/learning/AnnotationBestPracticesPage";
 import { GlossaryPage } from "@/pages/GlossaryPage";
 import { UseCasesPage } from "@/pages/UseCasesPage";
 import { ContributePage } from "@/pages/ContributePage";
@@ -40,6 +42,8 @@ export function App() {
           <Route path="learning-center/schemas-metadata-annotation" element={<SchemasMetadataAnnotationPage />} />
           <Route path="learning-center/intro-to-ml" element={<IntroToMLPage />} />
           <Route path="learning-center/statistical-foundations" element={<StatisticalFoundationsPage />} />
+          <Route path="learning-center/science-of-learning" element={<ScienceOfLearningPage />} />
+          <Route path="learning-center/annotation-best-practices" element={<AnnotationBestPracticesPage />} />
           <Route path="community" element={<CommunityPage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="researcher-guide" element={<ResearcherGuidePage />} />
