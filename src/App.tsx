@@ -9,6 +9,13 @@ import { CommunityPage } from "@/pages/CommunityPage";
 import { AboutPage } from "@/pages/AboutPage";
 import { ResearcherGuidePage } from "@/pages/ResearcherGuidePage";
 import { GettingStartedCoursePage } from "@/pages/GettingStartedCoursePage";
+import { UsingDataInClassroomPage } from "@/pages/learning/UsingDataInClassroomPage";
+import { UnderstandingStudentDataPage } from "@/pages/learning/UnderstandingStudentDataPage";
+import { ResearchersInClassroomPage } from "@/pages/learning/ResearchersInClassroomPage";
+import { CodebooksPage } from "@/pages/learning/CodebooksPage";
+import { SchemasMetadataAnnotationPage } from "@/pages/learning/SchemasMetadataAnnotationPage";
+import { IntroToMLPage } from "@/pages/learning/IntroToMLPage";
+import { StatisticalFoundationsPage } from "@/pages/learning/StatisticalFoundationsPage";
 import { NotFoundPage } from "@/pages/NotFoundPage";
 
 export function App() {
@@ -22,6 +29,13 @@ export function App() {
           <Route path="use-omi" element={<UseOmiPage />} />
           <Route path="learning-center" element={<LearningCenterPage />} />
           <Route path="learning-center/getting-started" element={<GettingStartedCoursePage />} />
+          <Route path="learning-center/using-data-in-classroom" element={<UsingDataInClassroomPage />} />
+          <Route path="learning-center/understanding-student-data" element={<UnderstandingStudentDataPage />} />
+          <Route path="learning-center/researchers-in-classroom" element={<ResearchersInClassroomPage />} />
+          <Route path="learning-center/codebooks" element={<CodebooksPage />} />
+          <Route path="learning-center/schemas-metadata-annotation" element={<SchemasMetadataAnnotationPage />} />
+          <Route path="learning-center/intro-to-ml" element={<IntroToMLPage />} />
+          <Route path="learning-center/statistical-foundations" element={<StatisticalFoundationsPage />} />
           <Route path="community" element={<CommunityPage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="researcher-guide" element={<ResearcherGuidePage />} />
