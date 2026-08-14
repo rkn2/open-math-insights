@@ -298,12 +298,187 @@ function formatScoreStats(
   return `The **${dataset.title}** dataset ${parts.join(", and ")}.`;
 }
 
+export interface QuickReply {
+  label: string;
+  value: string;
+}
+
 /** Return type for generateResponse — includes the dataset IDs cited. */
 export interface GeneratedResponse {
   text: string;
   groundedInData: boolean;
   /** Dataset IDs mentioned in this response, for rendering real links. */
   datasetIds: string[];
+  quickReplies?: QuickReply[];
+}
+
+// ---------------------------------------------------------------------------
+// Guided decision tree
+// ---------------------------------------------------------------------------
+
+const GUIDE_START_REPLIES: QuickReply[] = [
+  { label: "U.S. math trends", value: "__guide:us-trends" },
+  { label: "International comparison", value: "__guide:international" },
+  { label: "Student learning data", value: "__guide:student-learning" },
+  { label: "Not sure yet", value: "__guide:not-sure" },
+];
+
+const BACK_REPLY: QuickReply = { label: "Start over", value: "__guide:start" };
+const STATS_REPLY: QuickReply = { label: "Get live stats", value: "__guide:stats" };
+
+function handleGuidedFlow(key: string): GeneratedResponse | null {
+  switch (key) {
+    case "__guide:start":
+      return {
+        text: "What kind of data are you looking for?",
+        groundedInData: false,
+        datasetIds: [],
+        quickReplies: GUIDE_START_REPLIES,
+      };
+
+    case "__guide:us-trends": {
+      const ds = findDataset("naep-math-scale-scores-2003-2024");
+      return {
+        text:
+          `For U.S. math trends, the best fit is **${ds?.title}** — ${ds?.summary}\n\n` +
+          "It covers grades 4 and 8 for national public schools plus five states (CA, FL, MA, NY, TX), from 2003 to 2024.",
+        groundedInData: false,
+        datasetIds: ["naep-math-scale-scores-2003-2024"],
+        quickReplies: [
+          STATS_REPLY,
+          { label: "Compare with PISA", value: "__guide:international" },
+          BACK_REPLY,
+        ],
+      };
+    }
+
+    case "__guide:international": {
+      const ds = findDataset("pisa-math-scores-owid-2009-2022");
+      return {
+        text:
+          `For international comparison, the dataset is **${ds?.title}** — ${ds?.summary}\n\n` +
+          "It covers 80+ countries of 15-year-old students across PISA cycles from 2003 to 2022. " +
+          "Note: PISA uses its own scoring scale, so scores can't be directly compared to NAEP.",
+        groundedInData: false,
+        datasetIds: ["pisa-math-scores-owid-2009-2022"],
+        quickReplies: [
+          STATS_REPLY,
+          { label: "U.S. trends (NAEP)", value: "__guide:us-trends" },
+          BACK_REPLY,
+        ],
+      };
+    }
+
+    case "__guide:student-learning": {
+      const ds = findDataset("assistments-2009-2010-skill-builder");
+      return {
+        text:
+          `For individual student learning data, we have **${ds?.title}** — ${ds?.summary}\n\n` +
+          "This is student-level tutoring system data with 525k+ rows — correctness, hint usage, and skill labels. " +
+          "It's the only row-level dataset in the collection (NAEP and PISA are aggregate scores only). " +
+          "Note: the CSV is ~80 MB and hosted externally on Figshare.",
+        groundedInData: false,
+        datasetIds: ["assistments-2009-2010-skill-builder"],
+        quickReplies: [
+          { label: "See other datasets", value: "__guide:start" },
+          BACK_REPLY,
+        ],
+      };
+    }
+
+    case "__guide:not-sure":
+      return {
+        text: "No problem — let's narrow it down. What **grade level** are you most interested in?",
+        groundedInData: false,
+        datasetIds: [],
+        quickReplies: [
+          { label: "Elementary (K–5)", value: "__guide:grade-elementary" },
+          { label: "Middle school (6–8)", value: "__guide:grade-middle" },
+          { label: "High school (9–12)", value: "__guide:grade-high" },
+          { label: "All grades", value: "__guide:grade-all" },
+        ],
+      };
+
+    case "__guide:grade-elementary": {
+      const ds = findDataset("naep-math-scale-scores-2003-2024");
+      return {
+        text:
+          `For elementary-level data, your best option is **${ds?.title}** — it includes **grade 4** national and state scores.\n\n` +
+          "The ASSISTments dataset also covers some 3–5 content (fractions, basic algebra), but at the individual student level from a tutoring system rather than a standardized assessment.",
+        groundedInData: false,
+        datasetIds: [
+          "naep-math-scale-scores-2003-2024",
+          "assistments-2009-2010-skill-builder",
+        ],
+        quickReplies: [STATS_REPLY, BACK_REPLY],
+      };
+    }
+
+    case "__guide:grade-middle": {
+      return {
+        text:
+          "For middle school, you have two options:\n\n" +
+          "- **NAEP Math Scale Scores** — grade 8 aggregate trends by year and jurisdiction\n" +
+          "- **ASSISTments Skill Builder** — individual student tutoring data with skill-level detail (grades 3–8 content)\n\n" +
+          "NAEP is better for tracking trends over time; ASSISTments is better for studying how individual students learn.",
+        groundedInData: false,
+        datasetIds: [
+          "naep-math-scale-scores-2003-2024",
+          "assistments-2009-2010-skill-builder",
+        ],
+        quickReplies: [STATS_REPLY, BACK_REPLY],
+      };
+    }
+
+    case "__guide:grade-high": {
+      return {
+        text:
+          "For high school, the options are:\n\n" +
+          "- **PISA Math Scores** — international comparison of 15-year-olds (typically grade 9–10 in the U.S.)\n" +
+          "- **ASSISTments Skill Builder** — includes Algebra I content used by some 9–12 students\n\n" +
+          "PISA is better for cross-country benchmarking; ASSISTments is better for studying skill mastery at the individual level.",
+        groundedInData: false,
+        datasetIds: [
+          "pisa-math-scores-owid-2009-2022",
+          "assistments-2009-2010-skill-builder",
+        ],
+        quickReplies: [STATS_REPLY, BACK_REPLY],
+      };
+    }
+
+    case "__guide:grade-all": {
+      return {
+        text:
+          "Here are all **3 datasets** currently on OMI:\n\n" +
+          "- **NAEP Math Scale Scores** — U.S. national/state trends, grades 4 & 8, 2003–2024\n" +
+          "- **PISA Math Scores** — international comparison, 15-year-olds, 80+ countries, 2003–2022\n" +
+          "- **ASSISTments Skill Builder** — individual student tutoring logs, 525k rows, skill-level detail\n\n" +
+          "Each measures something different — NAEP and PISA are aggregate assessment scores, while ASSISTments is row-level learning data.",
+        groundedInData: false,
+        datasetIds: [
+          "naep-math-scale-scores-2003-2024",
+          "pisa-math-scores-owid-2009-2022",
+          "assistments-2009-2010-skill-builder",
+        ],
+        quickReplies: [STATS_REPLY, BACK_REPLY],
+      };
+    }
+
+    case "__guide:stats":
+      return {
+        text: "I can compute live statistics from the CSV data. Which dataset?",
+        groundedInData: false,
+        datasetIds: [],
+        quickReplies: [
+          { label: "NAEP stats", value: "What are the NAEP statistics?" },
+          { label: "PISA stats", value: "What are the PISA statistics?" },
+          BACK_REPLY,
+        ],
+      };
+
+    default:
+      return null;
+  }
 }
 
 /**
@@ -321,18 +496,26 @@ export async function generateResponse(query: string): Promise<GeneratedResponse
     };
   }
 
+  // Guided decision tree flow
+  if (trimmed.startsWith("__guide:")) {
+    const result = handleGuidedFlow(trimmed);
+    if (result) return result;
+  }
+
   // Greetings
   const lower = trimmed.toLowerCase();
   if (/^(hi|hello|hey|greetings)\b/.test(lower)) {
     return {
       text:
-        "Hello! I can help you explore the **3 datasets** currently indexed on Open Math Insights. Try asking things like:\n\n" +
-        "- What datasets cover middle school math?\n" +
-        "- What's the average NAEP score?\n" +
-        "- Do you have international comparison data?\n" +
-        "- What grade levels are covered?",
+        "Hello! I can help you explore the **3 datasets** currently indexed on Open Math Insights.\n\n" +
+        "You can type a question, or let me walk you through finding the right dataset:",
       groundedInData: false,
       datasetIds: [],
+      quickReplies: [
+        { label: "Help me find a dataset", value: "__guide:start" },
+        { label: "What datasets do you have?", value: "__guide:grade-all" },
+        { label: "Get live stats", value: "__guide:stats" },
+      ],
     };
   }
 
@@ -367,10 +550,14 @@ export async function generateResponse(query: string): Promise<GeneratedResponse
   if (results.length === 0) {
     return {
       text:
-        "I didn't find any matching datasets for that query. I can only search the **3 datasets** currently indexed on OMI (NAEP, ASSISTments, and PISA). " +
-        "Try asking about math scores, grade levels, assessment data, international comparisons, or tutoring system logs.",
+        "I didn't find any matching datasets for that query. I can only search the **3 datasets** currently indexed on OMI (NAEP, ASSISTments, and PISA).\n\n" +
+        "Want me to walk you through finding the right one?",
       groundedInData: false,
       datasetIds: [],
+      quickReplies: [
+        { label: "Help me find a dataset", value: "__guide:start" },
+        { label: "Show all datasets", value: "__guide:grade-all" },
+      ],
     };
   }
 

@@ -1,22 +1,23 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { ChatMessage } from "@/shared/types";
 import { MarkdownText } from "@/components/datasets/MarkdownText";
-import { generateResponse, prefetchCsvStats, shortLabel } from "@/lib/datasetSearch";
+import { generateResponse, prefetchCsvStats, shortLabel, type QuickReply } from "@/lib/datasetSearch";
 import { Link } from "react-router-dom";
 import { mockDatasets } from "@/data/mockDatasets";
 
 /** Extended message type that carries dataset IDs alongside content. */
-type ChatTurn = ChatMessage & { datasetIds?: string[] };
+type ChatTurn = ChatMessage & { datasetIds?: string[]; quickReplies?: QuickReply[] };
 
 const WELCOME_MESSAGE: ChatTurn = {
   role: "assistant",
   content:
-    "Welcome to **Dataset Discovery**! I can help you explore the open math datasets indexed on OMI.\n\n" +
-    "Try asking:\n" +
-    "- What datasets do you have?\n" +
-    "- What's the average NAEP math score?\n" +
-    "- Do you have data for middle school?\n" +
-    "- What international math data is available?",
+    "Welcome to **Dataset Discovery**! I can help you find the right open math dataset on OMI.\n\n" +
+    "Type a question, or use the buttons below to get started:",
+  quickReplies: [
+    { label: "Help me find a dataset", value: "__guide:start" },
+    { label: "What datasets do you have?", value: "__guide:grade-all" },
+    { label: "Get live stats", value: "__guide:stats" },
+  ],
 };
 
 interface DatasetChatProps {
@@ -67,11 +68,12 @@ export function DatasetChat({ onClose }: DatasetChatProps) {
     setLoading(true);
 
     try {
-      const { text, datasetIds } = await generateResponse(trimmed);
+      const { text, datasetIds, quickReplies } = await generateResponse(trimmed);
       const assistantMessage: ChatTurn = {
         role: "assistant",
         content: text,
         datasetIds,
+        quickReplies,
       };
       setMessages((prev) => [...prev, assistantMessage]);
     } catch {
@@ -87,6 +89,44 @@ export function DatasetChat({ onClose }: DatasetChatProps) {
       inputRef.current?.focus();
     }
   }, [input, loading]);
+
+  const handleQuickReply = useCallback(
+    async (qr: QuickReply) => {
+      if (loading) return;
+
+      // Clear quick replies from the message that was clicked
+      setMessages((prev) =>
+        prev.map((msg, i) =>
+          i === prev.length - 1 ? { ...msg, quickReplies: undefined } : msg,
+        ),
+      );
+
+      // Show the label as a user message (not the internal __guide: value)
+      const userMessage: ChatTurn = { role: "user", content: qr.label };
+      setMessages((prev) => [...prev, userMessage]);
+      setLoading(true);
+
+      try {
+        const { text, datasetIds, quickReplies } = await generateResponse(qr.value);
+        const assistantMessage: ChatTurn = {
+          role: "assistant",
+          content: text,
+          datasetIds,
+          quickReplies,
+        };
+        setMessages((prev) => [...prev, assistantMessage]);
+      } catch {
+        setMessages((prev) => [
+          ...prev,
+          { role: "assistant", content: "Sorry, something went wrong. Please try again." },
+        ]);
+      } finally {
+        setLoading(false);
+        inputRef.current?.focus();
+      }
+    },
+    [loading],
+  );
 
   const handleKeyDown = useCallback(
     (e: React.KeyboardEvent) => {
@@ -168,6 +208,21 @@ export function DatasetChat({ onClose }: DatasetChatProps) {
                       </Link>
                     );
                   })}
+                </div>
+              )}
+              {msg.role === "assistant" && msg.quickReplies && msg.quickReplies.length > 0 && (
+                <div className="mt-2 flex flex-wrap gap-2 pl-1">
+                  {msg.quickReplies.map((qr) => (
+                    <button
+                      key={qr.value}
+                      type="button"
+                      onClick={() => handleQuickReply(qr)}
+                      disabled={loading}
+                      className="rounded-lg border border-teal-200 bg-teal-50 px-3 py-1.5 text-xs font-medium text-teal-700 transition-colors hover:bg-teal-100 disabled:opacity-40"
+                    >
+                      {qr.label}
+                    </button>
+                  ))}
                 </div>
               )}
             </div>
