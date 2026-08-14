@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { useDataset } from "@/hooks/useDataset";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { Badge } from "@/components/ui/Badge";
-import { Button } from "@/components/ui/Button";
+import { Button, ButtonAnchor } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { Tabs } from "@/components/ui/Tabs";
 import { EmptyState } from "@/components/ui/EmptyState";
@@ -17,12 +17,10 @@ function citationFor(dataset: {
   doi: string;
   citationText?: string;
 }) {
-  // Public-external datasets carry their real citation verbatim (from SOURCE.md) —
-  // only the illustrative omi-consortium fixtures use this generated form, since
-  // those really are (fictionally) published by Open Math Insights.
+  // Real public-external datasets carry their verified citation verbatim (from SOURCE.md).
   if (dataset.citationText) return dataset.citationText;
   const year = new Date(dataset.publishedDate).getFullYear();
-  return `${dataset.contributor} (${year}). "${dataset.title}." Open Math Insights [publisher], Dataset, doi:${dataset.doi}`;
+  return `${dataset.contributor} (${year}). "${dataset.title}." doi:${dataset.doi}`;
 }
 
 function CopyCitation({ citation }: { citation: string }) {
@@ -101,10 +99,11 @@ export function DatasetDetailPage() {
               ))}
             </tbody>
           </table>
-          <p className="border-t border-slate-100 bg-slate-50 px-4 py-2.5 text-xs text-slate-400">
-            Downloads are disabled in this demo — this table mirrors the real Data Depot's file
-            listing UI.
-          </p>
+          {dataset.sourceUrl && (
+            <div className="border-t border-slate-100 bg-slate-50 px-4 py-2.5 text-xs text-slate-400">
+              This data is hosted externally. Use the "Access this dataset" button to visit the original source.
+            </div>
+          )}
         </div>
       ),
     },
@@ -171,6 +170,17 @@ export function DatasetDetailPage() {
         </div>
 
         <aside className="space-y-6">
+          {dataset.sourceUrl && (
+            <ButtonAnchor
+              href={dataset.sourceUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              size="lg"
+              className="w-full"
+            >
+              Access this dataset
+            </ButtonAnchor>
+          )}
           <Card>
             <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">License</p>
             <div className="mt-2">

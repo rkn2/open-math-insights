@@ -11,11 +11,10 @@ export function ImpactStatsStrip() {
   return (
     <section className="bg-gradient-to-r from-primary-700 to-teal-700">
       <div className="mx-auto max-w-7xl px-6 py-10 lg:px-8">
-        <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
-          <StatTile value={`${formatNumber(stats.datasetCount)}+`} label="Open datasets" loading={loading} />
-          <StatTile value={`${formatNumber(stats.recordCount)}+`} label="Problem & response records" loading={loading} />
-          <StatTile value={stats.dataStored} label="Data stored" loading={loading} />
-          <StatTile value={`${stats.contributingDistricts}`} label="Contributing districts" loading={loading} />
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
+          <StatTile value={`${formatNumber(stats.datasetCount)}`} label="Indexed datasets" loading={loading} />
+          <StatTile value={`${formatNumber(stats.recordCount)}`} label="Records across indexed sources" loading={loading} />
+          <StatTile value="3" label="Independent public sources" loading={loading} />
         </div>
       </div>
     </section>

@@ -49,7 +49,7 @@ export function Footer() {
           ))}
         </div>
         <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-slate-200 pt-6 text-xs text-slate-400 sm:flex-row">
-          <p>© 2026 Open Math Insights. Demo site — not affiliated with DesignSafe-CI, NHERI, or NSF.</p>
+          <p>Part of the CAMEL Phase II collaboratory proposal. Site content is illustrative and subject to change.</p>
           <p>Datasets openly licensed — see each dataset's citation for details.</p>
         </div>
       </div>

@@ -4,32 +4,9 @@ import { SlackCTA } from "@/components/community/SlackCTA";
 import { ContributorSpotlightCard } from "@/components/community/ContributorSpotlightCard";
 import { EventCard } from "@/components/community/EventCard";
 
-const SPOTLIGHTS = [
-  {
-    name: "Lincoln Middle School Math Dept",
-    role: "Featured Contributor",
-    initials: "LM",
-    quote: "We shared 3 datasets this quarter — seeing other teachers build on our data has been the best part.",
-  },
-  {
-    name: "Dr. Priya Nandan",
-    role: "Researcher Spotlight · Open Assessment Lab",
-    initials: "PN",
-    quote: "OMI made it possible to publish our proof dataset without a single privacy conversation — it's just not collected in the first place.",
-  },
-  {
-    name: "Ms. Alvarez",
-    role: "Community Spotlight · Algebra Readiness Study",
-    initials: "MA",
-    quote: "The Learning Center course got my whole department comfortable with the Jupyter Sandbox in an afternoon.",
-  },
-];
+const SPOTLIGHTS: { name: string; role: string; initials: string; quote: string }[] = [];
 
-const EVENTS = [
-  { date: "Sep 2", title: "OMI Community Call", description: "Monthly community call — updates, demos, and open Q&A.", kind: "Recurring" as const },
-  { date: "Sep 15", title: "Fall Data Contribution Sprint", description: "A guided sprint for districts preparing their first dataset submission.", kind: "Sprint" as const },
-  { date: "Oct 8", title: "K-12 Open Data in Math Ed", description: "Webinar series kickoff on open data practices in math education.", kind: "Webinar" as const },
-];
+const EVENTS: { date: string; title: string; description: string; kind: "Recurring" | "Sprint" | "Webinar" }[] = [];
 
 const STEPS = [
   { title: "Prepare data", description: "De-identify and review your data — no student, teacher, or school identifiers." },
@@ -52,20 +29,32 @@ export function CommunityPage() {
 
       <div className="mt-16">
         <SectionHeading eyebrow="Spotlights" title="From the community" />
-        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {SPOTLIGHTS.map((s) => (
-            <ContributorSpotlightCard key={s.name} {...s} />
-          ))}
-        </div>
+        {SPOTLIGHTS.length > 0 ? (
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {SPOTLIGHTS.map((s) => (
+              <ContributorSpotlightCard key={s.name} {...s} />
+            ))}
+          </div>
+        ) : (
+          <p className="mt-8 text-sm text-slate-500">
+            Community spotlights coming soon. As educators and researchers begin contributing data and tools, their stories will be featured here.
+          </p>
+        )}
       </div>
 
       <div className="mt-16">
         <SectionHeading eyebrow="Upcoming" title="Events & training" />
-        <div className="mt-8 grid gap-4">
-          {EVENTS.map((e) => (
-            <EventCard key={e.title} {...e} />
-          ))}
-        </div>
+        {EVENTS.length > 0 ? (
+          <div className="mt-8 grid gap-4">
+            {EVENTS.map((e) => (
+              <EventCard key={e.title} {...e} />
+            ))}
+          </div>
+        ) : (
+          <p className="mt-8 text-sm text-slate-500">
+            No upcoming events scheduled yet. Check back as the collaboratory develops.
+          </p>
+        )}
       </div>
 
       <div className="mt-16 rounded-3xl bg-slate-50 p-10">

@@ -59,10 +59,9 @@ const PILLARS = [
 ];
 
 const NEWS = [
-  { date: "Aug 2026", tag: "Data Depot", title: "New dataset: NAEP-style Grade 8 Released Items (2025)" },
-  { date: "Jul 2026", tag: "Use OMI", title: "OMI Jupyter Sandbox roadmap published — see the Use OMI page" },
-  { date: "Jun 2026", tag: "Community", title: "Community Spotlight: Lincoln Middle School Math Dept" },
-  { date: "May 2026", tag: "Learning Center", title: "New course: Teaching Fractions with Open Data" },
+  { date: "Aug 2026", tag: "Data Depot", title: "Indexed NAEP math scale scores (2003–2024) from the Nation's Report Card API" },
+  { date: "Aug 2026", tag: "Data Depot", title: "Indexed OECD PISA math scores (2009–2022) via Our World in Data" },
+  { date: "Aug 2026", tag: "Data Depot", title: "Indexed ASSISTments 2009–2010 skill-builder dataset from figshare" },
 ];
 
 export function HomePage() {
@@ -74,7 +73,7 @@ export function HomePage() {
       <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
         <SectionHeading
           eyebrow="Four pillars"
-          title="Everything a classroom or research team needs, in one place"
+          title="Standards, catalog, tools, and community — for K-12 math data that's open and trustworthy"
           subtitle="Modeled on the same open-cyberinfrastructure pattern that powers research data platforms — reimagined for K-12 math."
           align="center"
         />

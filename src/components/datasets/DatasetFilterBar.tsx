@@ -44,6 +44,7 @@ export function DatasetFilterBar({
         className={selectClass}
         value={gradeBand}
         onChange={(e) => onGradeBandChange(e.target.value as GradeBand | "all")}
+        aria-label="Filter by grade band"
       >
         <option value="all">All grade bands</option>
         {GRADE_BANDS.map((gb) => (
@@ -57,6 +58,7 @@ export function DatasetFilterBar({
         className={selectClass}
         value={topic}
         onChange={(e) => onTopicChange(e.target.value)}
+        aria-label="Filter by topic"
       >
         <option value="all">All topics</option>
         {availableTopics.map((t) => (
@@ -70,6 +72,7 @@ export function DatasetFilterBar({
         className={selectClass}
         value={license}
         onChange={(e) => onLicenseChange(e.target.value as DatasetLicense | "all")}
+        aria-label="Filter by license"
       >
         <option value="all">All licenses</option>
         {LICENSES.map((l) => (

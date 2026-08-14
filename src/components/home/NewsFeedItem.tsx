@@ -7,7 +7,7 @@ export function NewsFeedItem({ date, title, tag }: { date: string; title: string
         </span>
         <span className="text-sm font-semibold text-slate-800">{title}</span>
       </div>
-      <span className="flex-none text-xs text-slate-400">{date}</span>
+      <span className="flex-none text-xs text-slate-500">{date}</span>
     </li>
   );
 }

@@ -3,182 +3,11 @@ import type { Dataset, DatasetSummary, StatsResponse } from "@/shared/types";
 /**
  * Local fallback fixtures — used by the hooks in src/hooks/* whenever the real
  * API isn't reachable (e.g. running the frontend standalone with no backend
- * deployed yet). This keeps the demo fully browsable out of the box. The
- * authoritative mock data served by the real API lives in
- * infra/lambda/data/datasets.json — kept in sync by hand for now since this is
- * a scaffold, not a shipped product.
+ * deployed yet). Only real, externally-hosted public datasets are listed here.
+ * Each entry links to its original source via sourceUrl and carries a verified
+ * citation from the dataset's SOURCE.md.
  */
 export const mockDatasets: Dataset[] = [
-  {
-    id: "grade5-fraction-word-problems",
-    title: "Grade 5 Fraction Word-Problem Responses (Anonymized)",
-    summary: "12,400 de-identified student responses to open-ended fraction word problems.",
-    description:
-      "A collection of anonymized short-answer responses to 40 fraction word problems administered across 6 partner districts in the 2024–25 school year. Each response is tagged with the standard it targets and a rubric score (1–4). No student, teacher, or school identifiers are included — see the Metadata tab for the de-identification review notes.",
-    gradeBands: ["3-5"],
-    topics: ["Fractions", "Word Problems"],
-    license: "CC-BY-4.0",
-    piiReviewStatus: "reviewed-no-pii",
-    contributor: "OMI Data Collective",
-    publishedDate: "2025-02-14",
-    fileCount: 3,
-    totalSize: "84 MB",
-    doi: "10.5281/omi.24601",
-    files: [
-      { name: "responses_2024-25.csv", size: "61 MB", type: "CSV" },
-      { name: "item_bank.json", size: "1.8 MB", type: "JSON" },
-      { name: "rubric_and_codebook.pdf", size: "2.1 MB", type: "PDF" },
-    ],
-    relatedDatasetIds: ["k2-number-sense-assessment-bank", "middle-school-ratios-proportions"],
-  },
-  {
-    id: "algebra1-eoc-item-bank",
-    title: "Algebra I End-of-Course Item Bank",
-    summary: "540 released and openly licensed Algebra I end-of-course items with answer keys.",
-    description:
-      "A curated bank of Algebra I end-of-course assessment items released into the public domain or openly licensed by contributing states and districts, standardized into a single item format with difficulty tags and standard alignment.",
-    gradeBands: ["9-12"],
-    topics: ["Algebra I", "Assessment & Growth"],
-    license: "CC0-1.0",
-    piiReviewStatus: "reviewed-no-pii",
-    contributor: "Open Assessment Lab",
-    publishedDate: "2024-11-02",
-    fileCount: 2,
-    totalSize: "18 MB",
-    doi: "10.5281/omi.24187",
-    files: [
-      { name: "algebra1_items.jsonl", size: "16 MB", type: "JSONL" },
-      { name: "standards_crosswalk.csv", size: "2 MB", type: "CSV" },
-    ],
-    relatedDatasetIds: ["open-geometry-proof-dataset", "naep-style-grade8-released-items-2025"],
-  },
-  {
-    id: "district-math-growth-scores",
-    title: "District-Wide Math Growth Scores 2021–2024",
-    summary: "Aggregated, grade-band-level growth scores across 36 contributing districts.",
-    description:
-      "Three years of aggregated (never individual-student) math growth-score summaries, rolled up to grade-band and district level, published to support research on measuring growth in under-resourced districts. All values below school-level minimum-N thresholds are suppressed.",
-    gradeBands: ["6-8", "9-12"],
-    topics: ["Assessment & Growth"],
-    license: "CC-BY-4.0",
-    piiReviewStatus: "reviewed-no-pii",
-    contributor: "OMI Data Collective",
-    publishedDate: "2024-09-30",
-    fileCount: 4,
-    totalSize: "6 MB",
-    doi: "10.5281/omi.23904",
-    files: [
-      { name: "growth_scores_2021-2024.csv", size: "4.1 MB", type: "CSV" },
-      { name: "district_metadata.csv", size: "0.4 MB", type: "CSV" },
-      { name: "suppression_methodology.pdf", size: "1.2 MB", type: "PDF" },
-      { name: "readme.md", size: "8 KB", type: "Markdown" },
-    ],
-    relatedDatasetIds: ["algebra1-eoc-item-bank", "naep-style-grade8-released-items-2025"],
-  },
-  {
-    id: "open-geometry-proof-dataset",
-    title: "Open Geometry Proof Dataset",
-    summary: "3,200 student-written geometry proofs, hand-scored and machine-parsed.",
-    description:
-      "Student-written two-column and paragraph geometry proofs collected across high school geometry classrooms, each paired with a rubric score and a structured parse of the proof's logical steps — intended for research on automated proof assessment.",
-    gradeBands: ["9-12"],
-    topics: ["Geometry"],
-    license: "Public Domain",
-    piiReviewStatus: "reviewed-no-pii",
-    contributor: "Dr. Priya Nandan, Open Assessment Lab",
-    publishedDate: "2024-05-19",
-    fileCount: 3,
-    totalSize: "112 MB",
-    doi: "10.5281/omi.22811",
-    files: [
-      { name: "proofs_raw_text.jsonl", size: "94 MB", type: "JSONL" },
-      { name: "proofs_parsed_steps.json", size: "15 MB", type: "JSON" },
-      { name: "scoring_rubric.pdf", size: "3 MB", type: "PDF" },
-    ],
-    relatedDatasetIds: ["algebra1-eoc-item-bank"],
-  },
-  {
-    id: "k2-number-sense-assessment-bank",
-    title: "K-2 Number Sense Assessment Bank",
-    summary: "An openly licensed bank of early number-sense assessment tasks and scoring guides.",
-    description:
-      "One-on-one number-sense assessment tasks (counting, subitizing, comparing quantities) designed for K-2 classrooms, with audio-free scoring guides so they can be administered without recording student voices — a deliberate design choice to keep the dataset PII-free.",
-    gradeBands: ["K-2"],
-    topics: ["Number Sense"],
-    license: "CC0-1.0",
-    piiReviewStatus: "reviewed-no-pii",
-    contributor: "Lincoln Elementary Math Dept",
-    publishedDate: "2025-04-01",
-    fileCount: 2,
-    totalSize: "5 MB",
-    doi: "10.5281/omi.25102",
-    files: [
-      { name: "tasks_and_scoring_guide.pdf", size: "4.6 MB", type: "PDF" },
-      { name: "task_bank.csv", size: "0.4 MB", type: "CSV" },
-    ],
-    relatedDatasetIds: ["grade5-fraction-word-problems"],
-  },
-  {
-    id: "stats-probability-classroom-item-set",
-    title: "Statistics & Probability Classroom Item Set",
-    summary: "A middle-school statistics & probability item set with sample student work.",
-    description:
-      "A set of 210 statistics and probability items designed for middle-school classrooms, contributed with de-identified sample student responses illustrating common misconceptions, for use in teacher training and item-analysis research.",
-    gradeBands: ["6-8"],
-    topics: ["Statistics & Probability"],
-    license: "CC-BY-4.0",
-    piiReviewStatus: "reviewed-no-pii",
-    contributor: "OMI Data Collective",
-    publishedDate: "2024-08-12",
-    fileCount: 2,
-    totalSize: "22 MB",
-    doi: "10.5281/omi.23512",
-    files: [
-      { name: "item_set.csv", size: "3 MB", type: "CSV" },
-      { name: "sample_responses.jsonl", size: "19 MB", type: "JSONL" },
-    ],
-    relatedDatasetIds: ["middle-school-ratios-proportions", "naep-style-grade8-released-items-2025"],
-  },
-  {
-    id: "middle-school-ratios-proportions",
-    title: "Middle School Ratios & Proportions Problem Bank",
-    summary: "480 openly licensed ratio-and-proportion problems with worked solutions.",
-    description:
-      "A problem bank spanning unit rates, scale, and proportional relationships, contributed by a consortium of middle-school math departments, each item paired with a full worked solution for classroom or tutoring use.",
-    gradeBands: ["6-8"],
-    topics: ["Ratios & Proportions"],
-    license: "CC-BY-4.0",
-    piiReviewStatus: "reviewed-no-pii",
-    contributor: "Lincoln Middle School Math Dept",
-    publishedDate: "2025-01-22",
-    fileCount: 1,
-    totalSize: "9 MB",
-    doi: "10.5281/omi.24990",
-    files: [{ name: "ratios_proportions_bank.pdf", size: "9 MB", type: "PDF" }],
-    relatedDatasetIds: ["grade5-fraction-word-problems", "stats-probability-classroom-item-set"],
-  },
-  {
-    id: "naep-style-grade8-released-items-2025",
-    title: "NAEP-style Grade 8 Released Items (2025)",
-    summary: "150 grade 8 released items modeled on NAEP frameworks, with scoring keys.",
-    description:
-      "Grade 8 assessment items written to mirror the cognitive demand and format of NAEP math frameworks, released for open classroom and research use with full scoring keys and standard alignment.",
-    gradeBands: ["6-8"],
-    topics: ["Assessment & Growth"],
-    license: "Public Domain",
-    piiReviewStatus: "reviewed-no-pii",
-    contributor: "Open Assessment Lab",
-    publishedDate: "2025-06-03",
-    fileCount: 2,
-    totalSize: "14 MB",
-    doi: "10.5281/omi.25340",
-    files: [
-      { name: "released_items_2025.pdf", size: "11 MB", type: "PDF" },
-      { name: "scoring_keys.csv", size: "3 MB", type: "CSV" },
-    ],
-    relatedDatasetIds: ["algebra1-eoc-item-bank", "district-math-growth-scores"],
-  },
-
   // --- Real, publicly-sourced datasets (downloaded — see data/public/<id>/SOURCE.md) ---
   {
     id: "naep-math-scale-scores-2003-2024",
@@ -270,9 +99,8 @@ export const mockDatasetSummaries: DatasetSummary[] = mockDatasets.map(toDataset
 
 export const mockStats: StatsResponse = {
   datasetCount: mockDatasets.length,
-  // 42,300 illustrative records from the omi-consortium fixtures + 525,534 real
-  // ASSISTments rows + 132 real NAEP data points + 452 real PISA data points.
-  recordCount: 568_418,
-  dataStored: "1.9 TB",
-  contributingDistricts: 36,
+  // 132 NAEP data points + 525,534 ASSISTments rows + 452 PISA data points.
+  recordCount: 526_118,
+  dataStored: "83 MB",
+  contributingDistricts: 0,
 };

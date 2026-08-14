@@ -12,7 +12,7 @@ const PRINCIPLES = [
     title: "Cost-Conscious & Sustainable",
     icon: "💸",
     description:
-      "The site is static (S3 + CloudFront) and the API is serverless (API Gateway + Lambda) — nothing runs, and nothing costs money, when nobody's using it.",
+      "The site is statically hosted and the tools are designed to run only when needed — nothing runs, and nothing costs money, when nobody's using it.",
   },
   {
     title: "Built for Collaboration",
@@ -21,8 +21,6 @@ const PRINCIPLES = [
       "Datasets are openly licensed and citable, tools are free to use, and the community lives in the open on Slack — collaboration is the point, not an afterthought.",
   },
 ];
-
-const PARTNERS = ["Open Assessment Lab", "District Data Collective", "Math Ed Research Network", "Classroom Commons"];
 
 export function AboutPage() {
   return (
@@ -64,29 +62,15 @@ export function AboutPage() {
       <div className="mt-16">
         <SectionHeading eyebrow="Partners & supporters" title="Ecosystem" />
         <p className="mt-3 max-w-2xl text-sm text-slate-500">
-          Placeholder partner marks — this demo doesn't represent real institutional affiliations.
+          Partners will be listed here as the collaboratory grows.
         </p>
-        <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
-          {PARTNERS.map((name) => (
-            <div
-              key={name}
-              className="flex h-20 items-center justify-center rounded-xl border border-slate-100 bg-slate-50 px-4 text-center text-xs font-semibold text-slate-400"
-            >
-              {name}
-            </div>
-          ))}
-        </div>
       </div>
 
       <div className="mt-16 rounded-3xl bg-slate-900 px-8 py-10 text-center text-white">
         <h2 className="font-display text-2xl font-bold">Questions or feedback?</h2>
-        <p className="mt-2 text-slate-300">We'd love to hear from you.</p>
-        <a
-          href="mailto:hello@openmathinsights.org"
-          className="mt-5 inline-block font-semibold text-teal-300 hover:text-teal-200"
-        >
-          hello@openmathinsights.org
-        </a>
+        <p className="mt-2 text-slate-300">
+          Open Math Insights is part of the CAMEL NSF collaboratory. Reach out through the CAMEL network to get in touch with the team.
+        </p>
       </div>
     </div>
   );

@@ -25,7 +25,7 @@ const COURSES = [
   },
   {
     title: "Statistics for the Classroom: A Data-Driven Unit",
-    description: "A full unit plan for teaching statistics and probability using the Statistics & Probability item set.",
+    description: "A full unit plan for teaching statistics and probability using open datasets from the Data Depot.",
     level: "Advanced" as const,
     duration: "4 hr",
   },
