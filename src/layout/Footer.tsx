@@ -10,6 +10,7 @@ const COLUMNS = [
       { label: "Learning Center", to: "/learning-center" },
       { label: "Researcher Guide", to: "/researcher-guide" },
       { label: "Glossary", to: "/glossary" },
+      { label: "Use Cases", to: "/use-cases" },
     ],
   },
   {

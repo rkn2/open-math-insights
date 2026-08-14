@@ -17,6 +17,7 @@ import { SchemasMetadataAnnotationPage } from "@/pages/learning/SchemasMetadataA
 import { IntroToMLPage } from "@/pages/learning/IntroToMLPage";
 import { StatisticalFoundationsPage } from "@/pages/learning/StatisticalFoundationsPage";
 import { GlossaryPage } from "@/pages/GlossaryPage";
+import { UseCasesPage } from "@/pages/UseCasesPage";
 import { NotFoundPage } from "@/pages/NotFoundPage";
 
 export function App() {
@@ -41,6 +42,7 @@ export function App() {
           <Route path="about" element={<AboutPage />} />
           <Route path="researcher-guide" element={<ResearcherGuidePage />} />
           <Route path="glossary" element={<GlossaryPage />} />
+          <Route path="use-cases" element={<UseCasesPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
