@@ -66,34 +66,54 @@ export function AboutPage() {
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {[
             {
-              name: "NSF CAMEL Program",
-              role: "Funding & network",
-              description: "OMI is developed as part of the NSF CAMEL network (Award #2621173). The platform serves all five CAMEL collaboratory projects.",
+              name: "NSF CAMEL Network",
+              role: "Funding and collaboration",
+              description: "OMI serves all five Phase I CAMEL collaboratory projects and is being developed as shared infrastructure for Phase II.",
+            },
+            {
+              name: "Vanderbilt University",
+              role: "Infrastructure workstream lead",
+              description: "Allen leads the OMI infrastructure workstream, managing site architecture, hosting, and technical coordination across the collaboratory.",
             },
             {
               name: "Penn State University",
-              role: "Lead institution",
-              description: "PI Rebecca Napolitano and co-investigators in Architectural Engineering, Education, and Materials Science.",
+              role: "Collaboratory member",
+              description: "Rebecca Napolitano and the Modeling the Messy team contribute telemetry, annotation, and data translation frameworks.",
+            },
+            {
+              name: "University of Utah",
+              role: "Collaboratory member",
+              description: "Chenglu and the ALTA-CN team contribute learning analytics and AI methods for math education data.",
+            },
+            {
+              name: "University of Miami",
+              role: "Collaboratory member",
+              description: "Rui and the ALTA-CN team contribute learning analytics research across the CAMEL network.",
+            },
+            {
+              name: "SERP Institute",
+              role: "Collaboratory member",
+              description: "Allie and the From Errors to Outcomes team contribute research on student mathematical errors and problem-solving strategies.",
+            },
+            {
+              name: "Florida State University",
+              role: "Collaboratory member",
+              description: "The IDEAL-Math team contributes six existing K-5 datasets covering 90,000+ students and 3,000 teachers, along with training materials and data curation.",
             },
             {
               name: "NCES / Nation's Report Card",
-              role: "Data source",
+              role: "Public data source",
               description: "NAEP math achievement data covering national and state-level trends, publicly available and updated biennially.",
             },
             {
               name: "OECD / PISA",
-              role: "Data source",
+              role: "Public data source",
               description: "International math scores for 15-year-olds across 80+ countries, published via Our World in Data under CC-BY.",
             },
             {
               name: "ASSISTments / WPI",
-              role: "Data source",
+              role: "Public data source",
               description: "Student-level tutoring system data from Worcester Polytechnic Institute, openly shared on Figshare.",
-            },
-            {
-              name: "CSATS",
-              role: "Implementation partner",
-              description: "Penn State's Center for Science and the Schools, supporting teacher professional development and school partnerships.",
             },
           ].map((partner) => (
             <Card key={partner.name}>
