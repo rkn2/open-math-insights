@@ -68,37 +68,13 @@ export function AboutPage() {
             {
               name: "NSF CAMEL Network",
               role: "Funding and collaboration",
-              description: "OMI serves all five Phase I CAMEL collaboratory projects and is being developed as shared infrastructure for Phase II.",
+              description: "OMI serves all Phase I CAMEL collaboratory projects and is being developed as shared infrastructure for Phase II.",
             },
             {
-              name: "Vanderbilt University",
-              role: "Infrastructure workstream lead",
-              description: "Allen leads the OMI infrastructure workstream, managing site architecture, hosting, and technical coordination across the collaboratory.",
-            },
-            {
-              name: "Penn State University",
-              role: "Collaboratory member",
-              description: "Rebecca Napolitano and the Modeling the Messy team contribute telemetry, annotation, and data translation frameworks.",
-            },
-            {
-              name: "University of Utah",
-              role: "Collaboratory member",
-              description: "Chenglu and the ALTA-CN team contribute learning analytics and AI methods for math education data.",
-            },
-            {
-              name: "University of Miami",
-              role: "Collaboratory member",
-              description: "Rui and the ALTA-CN team contribute learning analytics research across the CAMEL network.",
-            },
-            {
-              name: "SERP Institute",
-              role: "Collaboratory member",
-              description: "Allie and the From Errors to Outcomes team contribute research on student mathematical errors and problem-solving strategies.",
-            },
-            {
-              name: "Florida State University",
-              role: "Collaboratory member",
-              description: "The IDEAL-Math team contributes six existing K-5 datasets covering 90,000+ students and 3,000 teachers, along with training materials and data curation.",
+              // TODO: Replace with full list of collaboratory institutions once finalized
+              name: "Collaboratory institutions",
+              role: "To be updated",
+              description: "The full list of participating institutions and their roles will be added here as the Phase II collaboratory takes shape.",
             },
             {
               name: "NCES / Nation's Report Card",
