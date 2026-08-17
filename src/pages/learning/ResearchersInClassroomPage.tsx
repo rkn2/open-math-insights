@@ -6,12 +6,11 @@ import { ButtonLink } from "@/components/ui/Button";
 
 const SECTIONS = [
   { id: "what-research-looks-like", label: "1. What classroom research looks like" },
-  { id: "what-camel-does", label: "2. What the CAMEL project does" },
-  { id: "your-rights", label: "3. Your rights as a teacher" },
-  { id: "student-privacy", label: "4. How student privacy is protected" },
-  { id: "what-you-get", label: "5. What you get out of it" },
-  { id: "what-leaves-what-stays", label: "6. What leaves your classroom vs. what stays" },
-  { id: "questions-to-ask", label: "7. Questions to ask before agreeing" },
+  { id: "your-rights", label: "2. Your rights as a teacher" },
+  { id: "student-privacy", label: "3. How student privacy is protected" },
+  { id: "what-you-get", label: "4. What you get out of it" },
+  { id: "what-leaves-what-stays", label: "5. What leaves your classroom vs. what stays" },
+  { id: "questions-to-ask", label: "6. Questions to ask before agreeing" },
 ];
 
 const DATA_FLOW = [
@@ -162,50 +161,8 @@ export function ResearchersInClassroomPage() {
       </section>
 
       {/* ── Section 2 ──────────────────────────────────── */}
-      <section id="what-camel-does" className="mt-20 scroll-mt-24">
-        <SectionHeading eyebrow="Section 2" title="What the CAMEL project does" as="h2" />
-        <div className="mt-4 space-y-4 text-sm leading-relaxed text-slate-600">
-          <p>
-            <strong className="text-slate-900">CAMEL</strong> is an NSF-funded research project
-            focused on capturing how students reason through math problems. The goal is to
-            understand not just whether a student got the right answer, but how they got there --
-            what strategies they tried, where they got stuck, and how they worked through
-            confusion.
-          </p>
-          <p>
-            Specifically, CAMEL captures student reasoning through:
-          </p>
-          <div className="grid gap-4 sm:grid-cols-2">
-            <Card>
-              <h4 className="font-display font-bold text-slate-900">Notebook telemetry</h4>
-              <p className="mt-1 text-sm text-slate-600">
-                When students work on math problems in a digital notebook, the system records
-                their interactions -- things like which steps they took, how they moved between
-                parts of a problem, and when they revised their work. Think of it as a record of
-                their problem-solving journey, not a test score.
-              </p>
-            </Card>
-            <Card>
-              <h4 className="font-display font-bold text-slate-900">Annotation of reasoning</h4>
-              <p className="mt-1 text-sm text-slate-600">
-                Trained researchers review student work and annotate the reasoning strategies
-                students used. This creates structured data about how students think, which can
-                reveal patterns across many classrooms that no single teacher could see alone.
-              </p>
-            </Card>
-          </div>
-          <p>
-            CAMEL is part of a broader network of research teams working on math education.
-            Open Math Insights is the open-data arm of the project -- the datasets, tools, and
-            resources on this site are built to serve the mission of improving how we understand
-            and support student reasoning in K-12 math.
-          </p>
-        </div>
-      </section>
-
-      {/* ── Section 3 ──────────────────────────────────── */}
       <section id="your-rights" className="mt-20 scroll-mt-24">
-        <SectionHeading eyebrow="Section 3" title="Your rights as a teacher" as="h2" />
+        <SectionHeading eyebrow="Section 2" title="Your rights as a teacher" as="h2" />
         <div className="mt-4 space-y-4 text-sm leading-relaxed text-slate-600">
           <p>
             Participating in education research is always voluntary. Here is what that means
@@ -248,9 +205,9 @@ export function ResearchersInClassroomPage() {
         </div>
       </section>
 
-      {/* ── Section 4 ──────────────────────────────────── */}
+      {/* ── Section 3 ──────────────────────────────────── */}
       <section id="student-privacy" className="mt-20 scroll-mt-24">
-        <SectionHeading eyebrow="Section 4" title="How student privacy is protected" as="h2" />
+        <SectionHeading eyebrow="Section 3" title="How student privacy is protected" as="h2" />
         <div className="mt-4 space-y-4 text-sm leading-relaxed text-slate-600">
           <p>
             Student privacy is not just a value -- it is backed by federal law, institutional
@@ -306,9 +263,9 @@ export function ResearchersInClassroomPage() {
         </div>
       </section>
 
-      {/* ── Section 5 ──────────────────────────────────── */}
+      {/* ── Section 4 ──────────────────────────────────── */}
       <section id="what-you-get" className="mt-20 scroll-mt-24">
-        <SectionHeading eyebrow="Section 5" title="What you get out of it" as="h2" />
+        <SectionHeading eyebrow="Section 4" title="What you get out of it" as="h2" />
         <div className="mt-4 space-y-4 text-sm leading-relaxed text-slate-600">
           <p>
             Research partnerships are not one-directional. When a study is well run, teachers
@@ -350,9 +307,9 @@ export function ResearchersInClassroomPage() {
         </div>
       </section>
 
-      {/* ── Section 6 ──────────────────────────────────── */}
+      {/* ── Section 5 ──────────────────────────────────── */}
       <section id="what-leaves-what-stays" className="mt-20 scroll-mt-24">
-        <SectionHeading eyebrow="Section 6" title="What leaves your classroom vs. what stays" as="h2" />
+        <SectionHeading eyebrow="Section 5" title="What leaves your classroom vs. what stays" as="h2" />
         <div className="mt-4 space-y-4 text-sm leading-relaxed text-slate-600">
           <p>
             One of the most important things to understand is the boundary between what
@@ -392,9 +349,9 @@ export function ResearchersInClassroomPage() {
         </div>
       </section>
 
-      {/* ── Section 7 ──────────────────────────────────── */}
+      {/* ── Section 6 ──────────────────────────────────── */}
       <section id="questions-to-ask" className="mt-20 scroll-mt-24">
-        <SectionHeading eyebrow="Section 7" title="Questions to ask before agreeing" as="h2" />
+        <SectionHeading eyebrow="Section 6" title="Questions to ask before agreeing" as="h2" />
         <div className="mt-4 space-y-4 text-sm leading-relaxed text-slate-600">
           <p>
             Before you say yes to a research partnership, you have every right to ask detailed
